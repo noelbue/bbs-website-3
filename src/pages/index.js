@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import Layout from "../components/Layout";
-import Button from "../components/Button";
-import ServiceCard from "../components/ServiceCard";
+import Layout from "../components/layout/Layout";
+import Button from "../components/ui/Button";
+import ServiceCard from "../components/ui/ServiceCard";
+import WhyUsCard from "../components/ui/WhyUsCard";
+import SectionTitle from "../components/ui/SectionTitle";
+import CardGrid from "../components/ui/CardGrid";
 import * as styles from "./index.module.css";
 
 const IndexPage = () => {
@@ -42,11 +45,8 @@ const IndexPage = () => {
         <div className={styles.heroBackground}></div>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            Publishing-Technologie neu gedacht.
-            <br />
-            <span className={styles.heroSubtitle}>
-              Automatisierung. Integration. Innovation.
-            </span>
+            Publishing-Technologie neu gedacht. Automatisierung. Integration.
+            Innovation.
           </h1>
           <p className={styles.heroText}>
             Als erfahrener Publishing-Experte entwickle ich massgeschneiderte
@@ -68,9 +68,10 @@ const IndexPage = () => {
       {/* Services Overview */}
       <section className={styles.services} ref={servicesRef}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>Services</h2>
-          <div className={styles.servicesGrid}>
+          <SectionTitle>Services</SectionTitle>
+          <CardGrid columns={2}>
             <ServiceCard
+              href="/services"
               icon={
                 <svg
                   width="40"
@@ -94,6 +95,7 @@ const IndexPage = () => {
             />
 
             <ServiceCard
+              href="/services"
               icon={
                 <svg
                   width="40"
@@ -131,6 +133,7 @@ const IndexPage = () => {
             />
 
             <ServiceCard
+              href="/services"
               icon={
                 <svg
                   width="40"
@@ -154,6 +157,7 @@ const IndexPage = () => {
             />
 
             <ServiceCard
+              href="/services"
               icon={
                 <svg
                   width="40"
@@ -189,6 +193,7 @@ const IndexPage = () => {
             />
 
             <ServiceCard
+              href="/services"
               icon={
                 <svg
                   width="40"
@@ -224,7 +229,7 @@ const IndexPage = () => {
               subtitle="Strategische Begleitung von A bis Z"
               description="Technische Expertise trifft auf Projektmanagement. Ich begleite Sie von der Strategie bis zur erfolgreichen Implementierung."
             />
-          </div>
+          </CardGrid>
           <div className={styles.servicesFooter}>
             <Button href="/services" variant="secondary">
               SERVICES
@@ -236,12 +241,11 @@ const IndexPage = () => {
       {/* Why Work With Us */}
       <section className={styles.whyUs} ref={whyUsRef}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>
-            Warum Sie mit uns arbeiten sollten
-          </h2>
-          <div className={styles.whyUsGrid}>
-            <div className={styles.whyUsCard}>
-              <div className={styles.whyUsIcon}>
+          <SectionTitle>Warum Sie mit uns arbeiten sollten</SectionTitle>
+          <CardGrid columns={3}>
+            <WhyUsCard
+              href="/ueber-mich"
+              icon={
                 <svg
                   width="48"
                   height="48"
@@ -257,16 +261,14 @@ const IndexPage = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </div>
-              <h3>Technische Tiefe</h3>
-              <p>
-                Über 10 Jahre Erfahrung in Publishing-Technologien. Von
-                InDesign-Scripting bis zu komplexen API-Integrationen.
-              </p>
-            </div>
+              }
+              title="Technische Tiefe"
+              description="Über 10 Jahre Erfahrung in Publishing-Technologien. Von InDesign-Scripting bis zu komplexen API-Integrationen."
+            />
 
-            <div className={styles.whyUsCard}>
-              <div className={styles.whyUsIcon}>
+            <WhyUsCard
+              href="/ueber-mich"
+              icon={
                 <svg
                   width="48"
                   height="48"
@@ -289,16 +291,14 @@ const IndexPage = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </div>
-              <h3>Praxisorientiert</h3>
-              <p>
-                Lösungen, die wirklich funktionieren. Keine Theorie – nur
-                bewährte Methoden aus diversen erfolgreichen Projekten.
-              </p>
-            </div>
+              }
+              title="Praxisorientiert"
+              description="Lösungen, die wirklich funktionieren. Keine Theorie – nur bewährte Methoden aus diversen erfolgreichen Projekten."
+            />
 
-            <div className={styles.whyUsCard}>
-              <div className={styles.whyUsIcon}>
+            <WhyUsCard
+              href="/ueber-mich"
+              icon={
                 <svg
                   width="48"
                   height="48"
@@ -335,23 +335,18 @@ const IndexPage = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </div>
-              <h3>Partnerschaftlich</h3>
-              <p>
-                Ich arbeite nicht nur für Sie, sondern mit Ihnen. Transparente
-                Kommunikation und langfristige Partnerschaften.
-              </p>
-            </div>
-          </div>
+              }
+              title="Partnerschaftlich"
+              description="Ich arbeite nicht nur für Sie, sondern mit Ihnen. Transparente Kommunikation und langfristige Partnerschaften."
+            />
+          </CardGrid>
         </div>
       </section>
 
       {/* About Section */}
       <section className={styles.about} ref={aboutRef}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>
-            Noel Bürgler – Ihr Publishing-Experte
-          </h2>
+          <SectionTitle>Noel Bürgler – Ihr Publishing-Experte</SectionTitle>
           <div className={styles.aboutContent}>
             <div className={styles.aboutImage}>
               <div className={styles.portraitPlaceholder}>

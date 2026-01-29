@@ -60,7 +60,7 @@
   --color-primary: #4844f5;
   --color-background-light: #f6f5fd;
   --color-text: #272570;
-  --color-text-gray: #6b6b6b;
+  --color-text-gray: #1f1f1f;
   --color-white: #ffffff;
   --color-grey-light: #f5f5f5;
   --color-grey: #e0e0e0;
@@ -75,6 +75,25 @@
   --spacing-lg: 4rem;
   --spacing-xl: 6rem;
   --spacing-2xl: 8rem;
+
+  /* Grid & Layout */
+  --gap-xs: 0.625rem; /* 10px */
+  --gap-sm: 1rem; /* 16px */
+  --gap-md: 1.5rem; /* 24px */
+  --gap-lg: 2rem; /* 32px */
+  --gap-xl: 3rem; /* 48px */
+
+  /* Section Spacing */
+  --section-padding: var(--spacing-2xl);
+  --section-padding-mobile: var(--spacing-lg);
+  --section-margin-bottom: var(--spacing-lg);
+
+  /* Background Offset */
+  --bg-offset-desktop: 2rem;
+  --bg-offset-mobile: 1rem;
+
+  --gap-cards: 1.5rem;
+  --gap-small: 0.625rem;
 
   --border-radius: 4px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

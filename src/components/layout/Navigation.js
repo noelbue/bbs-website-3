@@ -4,6 +4,7 @@ import * as styles from "./Navigation.module.css";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,14 @@ const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
@@ -26,12 +35,25 @@ const Navigation = () => {
           />
         </Link>
 
-        <ul className={styles.menu}>
+        <button
+          className={`${styles.hamburger} ${mobileMenuOpen ? styles.open : ""}`}
+          onClick={toggleMobileMenu}
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul
+          className={`${styles.menu} ${mobileMenuOpen ? styles.mobileOpen : ""}`}
+        >
           <li>
             <Link
               to="/"
               className={styles.menuLink}
               activeClassName={styles.active}
+              onClick={closeMobileMenu}
             >
               Home
             </Link>
@@ -41,6 +63,7 @@ const Navigation = () => {
               to="/services"
               className={styles.menuLink}
               activeClassName={styles.active}
+              onClick={closeMobileMenu}
             >
               Services
             </Link>
@@ -50,6 +73,7 @@ const Navigation = () => {
               to="/ueber-mich"
               className={styles.menuLink}
               activeClassName={styles.active}
+              onClick={closeMobileMenu}
             >
               Über mich
             </Link>
@@ -59,6 +83,7 @@ const Navigation = () => {
               to="/kontakt"
               className={styles.menuLink}
               activeClassName={styles.active}
+              onClick={closeMobileMenu}
             >
               Kontakt
             </Link>

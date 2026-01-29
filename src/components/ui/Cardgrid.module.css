@@ -1,0 +1,23 @@
+.cardGrid {
+  display: grid;
+  gap: var(--gap-md);
+}
+
+.gridAuto {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.gridTwo {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.gridThree {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-sm);
+  }
+}

@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.footerContent}>
-          <p>© {currentYear} Bürgler Business Solutions (CHE-258.321.787) | </p>
+          <p>© {currentYear} Bürgler Business Solutions (CHE-258.321.787)</p>
         </div>
       </div>
     </footer>

@@ -12,8 +12,8 @@
 .heroBackground {
   position: absolute;
   top: 0;
-  left: 2rem;
-  right: 2rem;
+  left: var(--bg-offset-desktop);
+  right: var(--bg-offset-desktop);
   bottom: 0;
   overflow: hidden;
   background-color: var(--color-background-light);
@@ -50,9 +50,48 @@
   flex-wrap: wrap;
 }
 
+/* Buttons */
+.btnPrimary,
+.btnSecondary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  letter-spacing: 0.5px;
+  font-family: var(--font-mono);
+}
+
+.btnPrimary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid var(--color-primary);
+}
+
+.btnPrimary:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(72, 68, 245, 0.2);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btnSecondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(72, 68, 245, 0.2);
+}
+
 /* Section Styles */
 .services,
-.whyUs,
 .about,
 .cta {
   padding: var(--spacing-2xl) 0;
@@ -73,63 +112,14 @@
 
 .sectionTitle {
   text-align: center;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
   font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 900;
 }
 
 /* Services Section */
 .services {
   background-color: var(--color-white);
-}
-
-.servicesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 0.625rem;
-  margin-bottom: var(--spacing-lg);
-}
-
-.serviceCard {
-  background-color: var(--color-background-light);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius);
-  transition: var(--transition);
-  box-shadow: 0 4px 8px rgba(39, 37, 112, 0.05);
-}
-
-.serviceCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(39, 37, 112, 0.1);
-}
-
-.serviceIcon {
-  width: 64px;
-  height: 64px;
-  background-color: var(--color-white);
-  border-radius: var(--border-radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--spacing-md);
-}
-
-.serviceCard h3 {
-  font-size: 1.5rem;
-  margin-bottom: var(--spacing-sm);
-  color: var(--color-text);
-}
-
-.serviceSubtitle {
-  font-weight: 600;
-  color: var(--color-text);
-  margin-bottom: var(--spacing-sm);
-  opacity: 0.8;
-}
-
-.serviceCard p {
-  line-height: 1.7;
-  color: var(--color-text);
-  opacity: 0.8;
 }
 
 .servicesFooter {
@@ -142,62 +132,23 @@
   position: relative;
   background-color: var(--color-white);
   padding: var(--spacing-2xl) 1.25rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 .whyUs::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 2rem;
-  right: 2rem;
+  left: var(--bg-offset-desktop);
+  right: var(--bg-offset-desktop);
   bottom: 0;
   background-color: var(--color-background-light);
   border-radius: var(--border-radius);
   z-index: -1;
-}
-
-.whyUsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 0.625rem;
-  position: relative;
-  z-index: 1;
-}
-
-.whyUsCard {
-  background-color: var(--color-white);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius);
-  text-align: center;
-  transition: var(--transition);
-}
-
-.whyUsCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(39, 37, 112, 0.1);
-}
-
-.whyUsIcon {
-  width: 64px;
-  height: 64px;
-  background-color: var(--color-background-light);
-  border-radius: var(--border-radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--spacing-md);
-}
-
-.whyUsCard h3 {
-  font-size: 1.5rem;
-  margin-bottom: var(--spacing-sm);
-  color: var(--color-text);
-}
-
-.whyUsCard p {
-  line-height: 1.7;
-  color: var(--color-text);
-  opacity: 0.8;
 }
 
 /* About Section */
@@ -270,8 +221,8 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 2rem;
-  right: 2rem;
+  left: var(--bg-offset-desktop);
+  right: var(--bg-offset-desktop);
   bottom: 0;
   background-color: var(--color-background-light);
   border-radius: var(--border-radius);
@@ -281,8 +232,7 @@
 .cta h2 {
   font-size: clamp(2rem, 4vw, 2.75rem);
   margin-bottom: var(--spacing-md);
-  position: relative;
-  z-index: 1;
+  font-weight: 900;
 }
 
 .cta p {
@@ -291,8 +241,6 @@
   max-width: 700px;
   margin: 0 auto var(--spacing-lg);
   opacity: 0.9;
-  position: relative;
-  z-index: 1;
 }
 
 .ctaButtons {
@@ -300,8 +248,6 @@
   gap: var(--spacing-md);
   justify-content: center;
   flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
 }
 
 /* Responsive Design */
@@ -319,19 +265,50 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: calc(100vh - 70px);
+    min-height: 60vh;
+    padding: 0 var(--bg-offset-mobile);
+    margin-top: 0;
+  }
+
+  .heroBackground {
+    left: 0;
+    right: 0;
   }
 
   .heroContent {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-md);
   }
 
-  .servicesGrid {
-    grid-template-columns: 1fr;
+  .heroTitle {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
   }
 
-  .whyUsGrid {
+  .heroText {
+    font-size: 1.125rem;
+  }
+
+  .whyUs {
+    padding: var(--section-padding-mobile) var(--bg-offset-mobile);
+  }
+
+  .whyUs::before {
+    left: 0;
+    right: 0;
+  }
+
+  .cta {
+    padding: var(--section-padding-mobile) var(--bg-offset-mobile);
+  }
+
+  .cta::before {
+    left: 0;
+    right: 0;
+  }
+
+  .aboutContent {
     grid-template-columns: 1fr;
+    text-align: center;
+    padding: var(--spacing-md);
   }
 
   .heroCta,
@@ -360,20 +337,7 @@
     height: 267px;
   }
 
-  .serviceCard,
-  .whyUsCard {
-    padding: var(--spacing-md);
-  }
-
   .aboutContent {
     padding: var(--spacing-md);
-  }
-
-  .whyUs {
-    padding: var(--spacing-xl) 1rem;
-  }
-
-  .cta {
-    padding: var(--spacing-xl) 1rem;
   }
 }

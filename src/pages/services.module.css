@@ -1,0 +1,47 @@
+/* Services Content */
+.servicesContent {
+  padding: var(--spacing-2xl) 0;
+  background-color: var(--color-white);
+}
+
+/* CTA Section */
+.cta {
+  background-color: var(--color-background-light);
+  text-align: center;
+  padding: var(--spacing-2xl) 1.25rem;
+}
+
+.cta h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: var(--spacing-md);
+  font-weight: 900;
+  color: var(--color-text);
+}
+
+.cta p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-lg);
+  color: var(--color-text-gray);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: var(--spacing-xl) var(--bg-offset-mobile);
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}

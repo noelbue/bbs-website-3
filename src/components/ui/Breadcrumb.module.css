@@ -1,0 +1,40 @@
+.breadcrumb {
+  margin-bottom: var(--spacing-md);
+}
+
+.breadcrumbList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.breadcrumbLink {
+  color: var(--color-text-gray);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumbSeparator {
+  margin: 0 0.5rem;
+  color: var(--color-text-gray);
+  font-size: 1.2rem;
+}
+
+.breadcrumbCurrent {
+  color: var(--color-primary);
+  font-weight: 600;
+}

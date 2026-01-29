@@ -6,6 +6,7 @@ import WhyUsCard from "../components/ui/WhyUsCard";
 import SectionTitle from "../components/ui/SectionTitle";
 import CardGrid from "../components/ui/CardGrid";
 import * as styles from "./index.module.css";
+import noelPortrait from "../assets/noel-buergler.png";
 
 const IndexPage = () => {
   const servicesRef = useRef(null);
@@ -349,8 +350,12 @@ const IndexPage = () => {
           <SectionTitle>Noel Bürgler – Ihr Publishing-Experte</SectionTitle>
           <div className={styles.aboutContent}>
             <div className={styles.aboutImage}>
-              <div className={styles.portraitPlaceholder}>
-                <span>PORTRAIT</span>
+              <div className={styles.portrait}>
+                <img
+                  src={noelPortrait}
+                  alt="Noel Bürgler"
+                  className={styles.portraitImage}
+                />
               </div>
             </div>
             <div className={styles.aboutText}>

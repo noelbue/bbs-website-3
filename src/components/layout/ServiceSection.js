@@ -8,7 +8,7 @@ const ServiceSection = ({ category, title, subtitle, offerings, techInfo }) => {
   return (
     <section className={styles.serviceSection}>
       <div className="container">
-        {/* Header */}
+        {/* Header Area */}
         <div className={styles.header}>
           <p className={styles.category}>{category}</p>
           <h2 className={styles.title}>{title}</h2>

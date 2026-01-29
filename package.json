@@ -1,0 +1,29 @@
+{
+  "name": "buergler-business-solutions",
+  "version": "1.0.0",
+  "description": "Corporate website for Bürgler Business Solutions",
+  "main": "index.js",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "keywords": [
+    "gatsby",
+    "publishing",
+    "automation"
+  ],
+  "author": "Noel Bürgler",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^5.16.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0"
+  }
+}

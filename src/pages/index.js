@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 import Layout from "../components/layout/Layout";
 import Button from "../components/ui/Button";
 import ServiceCard from "../components/ui/ServiceCard";
-import WhyUsCard from "../components/ui/WhyUsCard";
-import SectionTitle from "../components/ui/SectionTitle";
-import CardGrid from "../components/ui/CardGrid";
+import WhyUsCard from "../components/ui/Whyuscard";
+import SectionTitle from "../components/ui/Sectiontitle";
+import CardGrid from "../components/ui/Cardgrid";
 import * as styles from "./index.module.css";
 
 const IndexPage = () => {

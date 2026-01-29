@@ -1,7 +1,7 @@
 import React from "react";
 import CardGrid from "../ui/CardGrid";
-import OfferingCard from "../ui/Offeringcard";
-import TechInfoBox from "../ui/Techinfobox";
+import OfferingCard from "../ui/OfferingCard";
+import TechInfoBox from "../ui/TechInfobox";
 import * as styles from "./ServiceSection.module.css";
 
 const ServiceSection = ({ category, title, subtitle, offerings, techInfo }) => {

@@ -10,7 +10,7 @@ import {
   Handshake,
 } from "lucide-react";
 import Layout from "../components/layout/Layout";
-import Cta from "../components/layout/CTA";
+import Cta from "../components/layout/Cta";
 import Button from "../components/ui/Button";
 import ServiceCard from "../components/ui/ServiceCard";
 import WhyUsCard from "../components/ui/WhyUsCard";

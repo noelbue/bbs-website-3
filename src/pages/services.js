@@ -10,13 +10,13 @@ import {
 import Layout from "../components/layout/Layout";
 import PageHero from "../components/layout/PageHero";
 import ServiceSection from "../components/layout/ServiceSection";
-import Cta from "../components/layout/CTA";
+import Cta from "../components/layout/Cta";
 import SectionTitle from "../components/ui/SectionTitle";
 import CardGrid from "../components/ui/CardGrid";
 import InfoCard from "../components/ui/InfoCard";
 import ProjectSizeCard from "../components/ui/ProjectSizeCard";
 import SupportCard from "../components/ui/SupportCard";
-import Faq from "../components/ui/FAQ";
+import Faq from "../components/ui/Faq";
 import servicesData from "../data/services.json";
 import faqData from "../data/faq.json";
 import * as styles from "./services.module.css";

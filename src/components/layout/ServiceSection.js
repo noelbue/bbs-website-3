@@ -4,11 +4,18 @@ import OfferingCard from "../ui/OfferingCard";
 import TechInfoBox from "../ui/TechInfoBox";
 import * as styles from "./ServiceSection.module.css";
 
-const ServiceSection = ({ category, title, subtitle, offerings, techInfo }) => {
+const ServiceSection = ({
+  id,
+  category,
+  title,
+  subtitle,
+  offerings,
+  techInfo,
+}) => {
   return (
-    <section className={styles.serviceSection}>
+    <section id={id} className={styles.serviceSection}>
       <div className="container">
-        {/* Header Area */}
+        {/* Header */}
         <div className={styles.header}>
           <p className={styles.category}>{category}</p>
           <h2 className={styles.title}>{title}</h2>

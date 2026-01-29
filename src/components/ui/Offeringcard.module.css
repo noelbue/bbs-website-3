@@ -6,7 +6,7 @@
 }
 
 .offeringCard h3 {
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: var(--color-text);
   margin-bottom: var(--spacing-sm);
@@ -15,6 +15,6 @@
 
 .offeringCard p {
   line-height: 1.7;
-  color: var(--color-text-gray);
+  color: var(--color-text);
   margin: 0;
 }

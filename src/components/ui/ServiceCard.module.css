@@ -23,12 +23,13 @@
 .serviceIcon {
   width: 64px;
   height: 64px;
-  background-color: var(--color-white);
+  background-color: var(--color-primary);
   border-radius: var(--border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--spacing-md);
+  color: var(--color-white);
 }
 
 .serviceIcon svg {

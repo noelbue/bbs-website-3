@@ -1,0 +1,50 @@
+.supportCard {
+  background-color: var(--color-background-light);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  height: 100%;
+}
+
+.iconBox {
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-white);
+}
+
+.iconBox svg {
+  width: 32px;
+  height: 32px;
+}
+
+.supportCard h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.3;
+}
+
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+.itemList li {
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  padding-left: 0;
+}
+
+.itemList li:last-child {
+  margin-bottom: 0;
+}

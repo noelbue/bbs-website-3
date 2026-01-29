@@ -24,12 +24,13 @@
 .whyUsIcon {
   width: 64px;
   height: 64px;
-  background-color: var(--color-background-light);
+  background-color: var(--color-primary);
   border-radius: var(--border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--spacing-md);
+  color: var(--color-white);
 }
 
 .whyUsIcon svg {

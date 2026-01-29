@@ -1,11 +1,11 @@
-.offeringCard {
+.projectCard {
   background-color: var(--color-background-light);
   padding: var(--spacing-md);
   border-radius: var(--border-radius);
   height: 100%;
 }
 
-.offeringCard h3 {
+.projectCard h3 {
   font-size: 1.5rem;
   font-weight: 900;
   color: var(--color-text);
@@ -13,7 +13,7 @@
   line-height: 1.3;
 }
 
-.offeringCard p {
+.projectCard p {
   line-height: 1.7;
   color: var(--color-text);
   margin: 0;

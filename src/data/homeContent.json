@@ -1,0 +1,65 @@
+{
+  "services": {
+    "title": "Services",
+    "items": [
+      {
+        "icon": "Zap",
+        "title": "Publishing-Automatisierung",
+        "subtitle": "Optimierte Workflows für maximale Effizienz",
+        "description": "Automatisieren Sie Ihre Publishing-Prozesse mit modernen Lösungen und bewährten Tools. Ich entwickle individuelle Workflows, die Zeit sparen und Fehler reduzieren.",
+        "href": "/services#publishing-automation"
+      },
+      {
+        "icon": "Layers",
+        "title": "Content Management & Web-Entwicklung",
+        "subtitle": "Moderne Content-Lösungen für jeden Bedarf",
+        "description": "Von WordPress bis Headless CMS und Eigenentwicklung – ich implementiere die perfekte Content-Strategie für Ihre Anforderungen. Inklusive Custom Plugins, Themes und DAM-Integration.",
+        "href": "/services#content-management"
+      },
+      {
+        "icon": "Search",
+        "title": "System-Integration & Datenverarbeitung",
+        "subtitle": "Nahtlose Verbindungen zwischen Ihren Tools",
+        "description": "API-Entwicklung, Datenmigrationen und Schnittstellenprogrammierung. Ich sorge dafür, dass Ihre Systeme perfekt zusammenarbeiten.",
+        "href": "/services#system-integration"
+      },
+      {
+        "icon": "Brain",
+        "title": "KI-Publishing-Lösungen",
+        "subtitle": "Intelligente Automatisierung für die Zukunft",
+        "description": "Nutzen Sie KI-Technologien für effizientere Publishing-Prozesse. Von automatischer Contentverarbeitung bis zu intelligenten Workflows.",
+        "href": "/services#ai-publishing"
+      },
+      {
+        "icon": "Code",
+        "title": "Beratung & Projektleitung",
+        "subtitle": "Strategische Begleitung von A bis Z",
+        "description": "Technische Expertise trifft auf Projektmanagement. Ich begleite Sie von der Strategie bis zur erfolgreichen Implementierung.",
+        "href": "/services#consulting"
+      }
+    ]
+  },
+  "whyUs": {
+    "title": "Warum Sie mit uns arbeiten sollten",
+    "items": [
+      {
+        "icon": "Star",
+        "title": "Technische Tiefe",
+        "description": "Über 10 Jahre Erfahrung in Publishing-Technologien. Von InDesign-Scripting bis zu komplexen API-Integrationen.",
+        "href": "/ueber-mich"
+      },
+      {
+        "icon": "CheckCircle",
+        "title": "Praxisorientiert",
+        "description": "Lösungen, die wirklich funktionieren. Keine Theorie – nur bewährte Methoden aus diversen erfolgreichen Projekten.",
+        "href": "/ueber-mich"
+      },
+      {
+        "icon": "Handshake",
+        "title": "Partnerschaftlich",
+        "description": "Ich arbeite nicht nur für Sie, sondern mit Ihnen. Transparente Kommunikation und langfristige Partnerschaften.",
+        "href": "/ueber-mich"
+      }
+    ]
+  }
+}

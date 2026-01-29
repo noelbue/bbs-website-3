@@ -39,7 +39,7 @@
 .heroText {
   font-size: clamp(1.3rem, 2vw, 1.5rem);
   line-height: 1.8;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
   color: var(--color-text-gray);
 }
 
@@ -183,6 +183,7 @@
   font-weight: 600;
   color: var(--color-primary);
   font-size: 1.25rem;
+  overflow: hidden;
 }
 
 .portraitImage {
@@ -210,47 +211,6 @@
   margin-top: var(--spacing-md);
 }
 
-/* CTA Section */
-.cta {
-  position: relative;
-  background-color: var(--color-white);
-  text-align: center;
-  padding: var(--spacing-2xl) 1.25rem;
-}
-
-.cta::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: var(--bg-offset-desktop);
-  right: var(--bg-offset-desktop);
-  bottom: 0;
-  background-color: var(--color-background-light);
-  border-radius: var(--border-radius);
-  z-index: -1;
-}
-
-.cta h2 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  margin-bottom: var(--spacing-md);
-  font-weight: 900;
-}
-
-.cta p {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  max-width: 700px;
-  margin: 0 auto var(--spacing-lg);
-  opacity: 0.9;
-}
-
-.ctaButtons {
-  display: flex;
-  gap: var(--spacing-md);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 /* Responsive Design */
 @media (max-width: 968px) {
   .aboutContent {
@@ -258,7 +218,7 @@
     text-align: center;
   }
 
-  .portraitPlaceholder {
+  .portrait {
     width: 250px;
     height: 333px;
   }
@@ -297,15 +257,6 @@
     right: 0;
   }
 
-  .cta {
-    padding: var(--section-padding-mobile) var(--bg-offset-mobile);
-  }
-
-  .cta::before {
-    left: 0;
-    right: 0;
-  }
-
   .aboutContent {
     grid-template-columns: 1fr;
     text-align: center;
@@ -333,7 +284,7 @@
     padding: var(--spacing-xl) 0;
   }
 
-  .portraitPlaceholder {
+  .portrait {
     width: 200px;
     height: 267px;
   }

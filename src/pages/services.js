@@ -1,8 +1,24 @@
 import React from "react";
+import {
+  Clock,
+  Target,
+  MessageCircle,
+  Users,
+  Wrench,
+  HelpCircle,
+} from "lucide-react";
 import Layout from "../components/layout/Layout";
 import PageHero from "../components/layout/PageHero";
 import ServiceSection from "../components/layout/ServiceSection";
-import Button from "../components/ui/Button";
+import Cta from "../components/layout/CTA";
+import SectionTitle from "../components/ui/SectionTitle";
+import CardGrid from "../components/ui/CardGrid";
+import InfoCard from "../components/ui/InfoCard";
+import ProjectSizeCard from "../components/ui/ProjectSizeCard";
+import SupportCard from "../components/ui/SupportCard";
+import Faq from "../components/ui/FAQ";
+import servicesData from "../data/services.json";
+import faqData from "../data/faq.json";
 import * as styles from "./services.module.css";
 
 const ServicesPage = () => {
@@ -10,6 +26,21 @@ const ServicesPage = () => {
     { label: "Home", path: "/" },
     { label: "Services", path: "/services" },
   ];
+
+  // Icon Mapper
+  const iconMap = {
+    Clock: Clock,
+    Target: Target,
+    MessageCircle: MessageCircle,
+    Users: Users,
+    Wrench: Wrench,
+    HelpCircle: HelpCircle,
+  };
+
+  const getIcon = (iconName, size = 32) => {
+    const IconComponent = iconMap[iconName];
+    return IconComponent ? <IconComponent size={size} /> : null;
+  };
 
   return (
     <Layout>
@@ -19,67 +50,87 @@ const ServicesPage = () => {
         subtitle="Spezialisierte Lösungen für Publishing-Workflows und Content-Management"
       />
 
-      {/* Content Management & Web-Entwicklung */}
-      <ServiceSection
-        category="Content Management & Web-Entwicklung"
-        title="Moderne Content-Lösungen und Web-Entwicklung"
-        subtitle="Vom klassischen CMS bis zu modernen Headless-Architekturen und Eigenentwicklung"
-        offerings={[
-          {
-            title: "Headless CMS Implementierung",
-            description:
-              "Für moderne Anforderungen implementiere ich Headless CMS Lösungen wie Strapi oder Contentful und kümmere mich um die entsprechende API-Integration in Ihre bestehenden Systeme.",
-          },
-          {
-            title: "Custom Web-Entwicklung",
-            description:
-              "Bei der Custom Web-Entwicklung setze ich auf Next.js für performante Anwendungen und entwickle React-basierte Lösungen für spezielle Anforderungen.",
-          },
-          {
-            title: "WordPress Development",
-            description:
-              "Ich erstelle individuelle Themes und Plugins, optimiere die Performance bestehender Websites und übernehme die Wartung sowie Updates für einen reibungslosen Betrieb.",
-          },
-        ]}
-        techInfo={[
-          {
-            title: "Technologien",
-            items: [
-              "CMS: WordPress, Drupal, Craft CMS",
-              "Headless: Strapi, Contentful",
-              "Entwicklung: Next.js, React, PHP, JavaScript",
-              "DAM: Sharedien, pixx.io",
-            ],
-          },
-          {
-            title: "Wann macht welche Lösung Sinn?",
-            items: [
-              "WordPress: Einfache Bedienung, schnelle Umsetzung",
-              "Headless CMS: Flexibilität, Multi-Channel Publishing",
-              "Custom Development: Spezielle Anforderungen, maximale Kontrolle",
-            ],
-          },
-        ]}
-      />
+      {/* Service Sections */}
+      {servicesData.sections.map((section) => (
+        <ServiceSection
+          key={section.id}
+          id={section.id}
+          category={section.category}
+          title={section.title}
+          subtitle={section.subtitle}
+          offerings={section.offerings}
+          techInfo={section.techInfo}
+        />
+      ))}
 
-      {/* CTA Section */}
-      <section className={styles.cta}>
+      {/* Arbeitsweise */}
+      <section className={styles.workingStyle}>
         <div className="container">
-          <h2>Bereit für Ihr Projekt?</h2>
-          <p>
-            Lassen Sie uns gemeinsam die perfekte Lösung für Ihre Anforderungen
-            finden.
+          <SectionTitle>{servicesData.workingStyle.title}</SectionTitle>
+          <p className={styles.subtitle}>
+            {servicesData.workingStyle.subtitle}
           </p>
-          <div className={styles.ctaButtons}>
-            <Button href="/kontakt" variant="primary">
-              PROJEKT BESPRECHEN
-            </Button>
-            <Button href="/ueber-mich" variant="secondary">
-              MEHR ÜBER MICH
-            </Button>
-          </div>
+          <CardGrid columns={2}>
+            {servicesData.workingStyle.items.map((item, index) => (
+              <InfoCard
+                key={index}
+                icon={getIcon(item.icon)}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </CardGrid>
         </div>
       </section>
+
+      {/* Typische Projektgrößen */}
+      <section className={styles.projectSizes}>
+        <div className="container">
+          <SectionTitle>{servicesData.projectSizes.title}</SectionTitle>
+          <CardGrid columns={3}>
+            {servicesData.projectSizes.items.map((item, index) => (
+              <ProjectSizeCard
+                key={index}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </CardGrid>
+        </div>
+      </section>
+
+      {/* Support & Wartung */}
+      <section className={styles.support}>
+        <div className="container">
+          <SectionTitle>{servicesData.support.title}</SectionTitle>
+          <CardGrid columns={2}>
+            {servicesData.support.items.map((item, index) => (
+              <SupportCard
+                key={index}
+                icon={getIcon(item.icon)}
+                title={item.title}
+                items={item.items}
+              />
+            ))}
+          </CardGrid>
+        </div>
+      </section>
+
+      {/* Häufige Fragen */}
+      <section className={styles.faq}>
+        <div className="container">
+          <SectionTitle>{faqData.title}</SectionTitle>
+          <Faq items={faqData.items} />
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <Cta
+        title="Bereit für Ihr Projekt?"
+        description="Lassen Sie uns gemeinsam die perfekte Lösung für Ihre Anforderungen finden."
+        primaryButton={{ text: "PROJEKT BESPRECHEN", href: "/kontakt" }}
+        secondaryButton={{ text: "MEHR ÜBER MICH", href: "/ueber-mich" }}
+      />
     </Layout>
   );
 };

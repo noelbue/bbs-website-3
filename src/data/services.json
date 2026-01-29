@@ -1,0 +1,247 @@
+{
+  "sections": [
+    {
+      "id": "publishing-automation",
+      "category": "Publishing-Automatisierung",
+      "title": "Effiziente Workflows durch Automatisierung",
+      "subtitle": "Zeit sparen und Fehler reduzieren mit massgeschneiderten Automatisierungslösungen",
+      "offerings": [
+        {
+          "title": "InDesign Server Workflows",
+          "description": "Mit Adobe InDesign Server automatisiere ich Document-Generation und Template-basierte Produktionen. Ich entwickle massgeschneiderte Workflows für automatisierte Kataloge, Broschüren und mehrseitige Dokumente."
+        },
+        {
+          "title": "Enfocus Switch Automation",
+          "description": "Für Publishing-Workflows nutze ich Enfocus Switch, um komplexe Automatisierungen umzusetzen. Ich entwickle Custom Scripts für spezielle Anforderungen und integriere verschiedene Systeme nahtlos."
+        },
+        {
+          "title": "Print-to-Web & Digital Asset Management",
+          "description": "Ich schaffe Verbindungen zwischen Print- und Digital-Workflows und integriere DAM-Systeme wie Sharedien oder pixx.io für effizientes Asset Management."
+        }
+      ],
+      "techInfo": [
+        {
+          "title": "Technologien & Tools",
+          "items": [
+            "Adobe InDesign Server & ExtendScript",
+            "Enfocus Switch mit Custom Scripting",
+            "vjoon K4 Publishing System",
+            "axaio MadeToPrint",
+            "XMPie uStore für Web-to-Print"
+          ]
+        },
+        {
+          "title": "Typische Anwendungsfälle",
+          "items": [
+            "Automatische Katalog-Generierung aus Datenbanken",
+            "Template-basierte Dokument-Produktion",
+            "Qualitätssicherung durch automatische Preflight-Checks",
+            "Mehrsprachige Publikationen mit automatischen Workflows"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "content-management",
+      "category": "Content Management & Web-Entwicklung",
+      "title": "Moderne Content-Lösungen und Web-Entwicklung",
+      "subtitle": "Vom klassischen CMS bis zu modernen Headless-Architekturen und Eigenentwicklung",
+      "offerings": [
+        {
+          "title": "Headless CMS Implementierung",
+          "description": "Für moderne Anforderungen implementiere ich Headless CMS Lösungen wie Strapi oder Contentful und kümmere mich um die entsprechende API-Integration in Ihre bestehenden Systeme."
+        },
+        {
+          "title": "Custom Web-Entwicklung",
+          "description": "Bei der Custom Web-Entwicklung setze ich auf Next.js für performante Anwendungen und entwickle React-basierte Lösungen für spezielle Anforderungen."
+        },
+        {
+          "title": "WordPress Development",
+          "description": "Ich erstelle individuelle Themes und Plugins, optimiere die Performance bestehender Websites und übernehme die Wartung sowie Updates für einen reibungslosen Betrieb."
+        }
+      ],
+      "techInfo": [
+        {
+          "title": "Technologien",
+          "items": [
+            "CMS: WordPress, Drupal, Craft CMS",
+            "Headless: Strapi, Contentful",
+            "Entwicklung: Next.js, React, PHP, JavaScript",
+            "DAM: Sharedien, pixx.io"
+          ]
+        },
+        {
+          "title": "Wann macht welche Lösung Sinn?",
+          "items": [
+            "WordPress: Einfache Bedienung, schnelle Umsetzung",
+            "Headless CMS: Flexibilität, Multi-Channel Publishing",
+            "Custom Development: Spezielle Anforderungen, maximale Kontrolle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "system-integration",
+      "category": "System-Integration & Datenverarbeitung",
+      "title": "Verbindungen zwischen Ihren Systemen schaffen",
+      "subtitle": "API-Integration und Datenverarbeitung für nahtlose Workflows",
+      "offerings": [
+        {
+          "title": "API-Entwicklung & System-Integration",
+          "description": "Bei der API-Entwicklung und Integration implementiere ich REST APIs und schaffe zuverlässige Verbindungen zwischen verschiedenen Systemen, damit diese nahtlos zusammenarbeiten."
+        },
+        {
+          "title": "XML/JSON Datenverarbeitung",
+          "description": "Im Bereich Datenverarbeitung transformiere ich XML und JSON Daten automatisch und richte Systeme für den automatischen Import von Daten ein, was manuelle Arbeit erheblich reduziert."
+        },
+        {
+          "title": "Database Management & Setup",
+          "description": "Beim Database Management übernehme ich das Setup von MySQL und PostgreSQL Datenbanken und integriere Microsoft SQL Server in bestehende Infrastrukturen."
+        }
+      ],
+      "techInfo": [
+        {
+          "title": "Typische Integrationen",
+          "items": [
+            "Headless CMS Integration für Content-First Ansätze und Multi-Channel Publishing, DeepL und AI-APIs für automatische Übersetzungen und Content-Verarbeitung, ImageMagick Integration zur automatischen Bildverarbeitung und -optimierung, sowie XML-Export aus K4 für Print-to-Web Workflows"
+          ]
+        },
+        {
+          "title": "Technische Expertise",
+          "items": [
+            "APIs: REST, GraphQL",
+            "Datenformate: XML, JSON",
+            "Databases: MySQL, PostgreSQL, Microsoft SQL Server",
+            "Programmierung: PHP, JavaScript"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-publishing",
+      "category": "KI-Publishing-Lösungen",
+      "title": "KI-gestützte Optimierung für Publishing-Prozesse",
+      "subtitle": "Automatisierung durch intelligente Datenverarbeitung",
+      "offerings": [
+        {
+          "title": "Automatische Metadaten-Generierung",
+          "description": "Für die automatische Metadaten-Generierung setze ich KI-basierte Systeme ein, die Ihre Inhalte intelligent verschlagworten und automatisch kategorisieren, was die Organisation grosser Datenmengen erheblich vereinfacht."
+        },
+        {
+          "title": "Content-Automatisierung via APIs",
+          "description": "Bei der Content-Automatisierung integriere ich APIs für automatische Übersetzungen und entwickle Systeme zur Content-Generierung für Templates, die wiederkehrende Aufgaben reduzieren."
+        },
+        {
+          "title": "Interne KI-Lösungen & Training",
+          "description": "Besonders interessant sind interne KI-Lösungen, die mit Ihren eigenen Dokumenten trainiert werden. Diese Offline-Systeme bieten Ihnen Ressourcen-Unterstützung bei sensiblen Daten, ohne dass Informationen das Unternehmen verlassen müssen."
+        }
+      ],
+      "techInfo": [
+        {
+          "title": "Technologien",
+          "items": [
+            "APIs: OpenAI, DeepL, Google Translate",
+            "Tools: Custom Scripts, Automatisierungs-Workflows",
+            "Ansatz: Pragmatische Lösungen, die wirklich helfen"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consulting",
+      "category": "Beratung & Projektleitung",
+      "title": "Professionelle Projektbegleitung",
+      "subtitle": "Technische Expertise kombiniert mit zuverlässiger Projektleitung",
+      "offerings": [
+        {
+          "title": "Publishing-Strategieberatung & Tool-Evaluierung",
+          "description": "Bei der Publishing-Beratung evaluiere ich Tools und gebe Empfehlungen ab, die zu Ihren spezifischen Anforderungen passen. Dazu gehört auch die Analyse bestehender Workflows, um Optimierungspotentiale zu identifizieren."
+        },
+        {
+          "title": "Agile Projektleitung & Stakeholder-Management",
+          "description": "Als Projektleiter koordiniere ich zwischen verschiedenen Stakeholdern, setze Projekte agil um und sorge für transparente Kommunikation während des gesamten Projektverlaufs."
+        },
+        {
+          "title": "Technische Implementierung & Quality Assurance",
+          "description": "Bei der technischen Implementierung packe ich selbst mit an, führe umfassende Tests durch und stelle die Qualität der Lösung sicher, bevor sie in den produktiven Betrieb geht."
+        }
+      ],
+      "techInfo": [
+        {
+          "title": "Mein Ansatz",
+          "items": [
+            "Pragmatisch: Lösungen, die funktionieren",
+            "Transparent: Klare Kommunikation über Möglichkeiten und Grenzen",
+            "Zuverlässig: Termine und Budgets einhalten"
+          ]
+        }
+      ]
+    }
+  ],
+  "workingStyle": {
+    "title": "Arbeitsweise",
+    "subtitle": "Wie ich arbeite",
+    "items": [
+      {
+        "icon": "Clock",
+        "title": "Flexibel",
+        "description": "Remote und vor Ort möglich"
+      },
+      {
+        "icon": "Target",
+        "title": "Fokussiert",
+        "description": "Spezialisierung auf Publishing-Technologie"
+      },
+      {
+        "icon": "MessageCircle",
+        "title": "Ehrlich",
+        "description": "Klare Aussagen zu dem, was machbar ist"
+      },
+      {
+        "icon": "Users",
+        "title": "Verfügbar",
+        "description": "Als Nebenerwerb mit planbaren Kapazitäten"
+      }
+    ]
+  },
+  "projectSizes": {
+    "title": "Typische Projektgrössen",
+    "items": [
+      {
+        "title": "Kleine Projekte",
+        "description": "1-2 Wochen (WordPress-Setup, einfache Automatisierung)"
+      },
+      {
+        "title": "Mittlere Projekte",
+        "description": "1-2 Monate (CMS-Implementation, Tool-Integration)"
+      },
+      {
+        "title": "Grössere Projekte",
+        "description": "3-6 Monate (komplexe Workflows, Multi-System Integration)"
+      }
+    ]
+  },
+  "support": {
+    "title": "Support & Wartung",
+    "items": [
+      {
+        "icon": "Wrench",
+        "title": "Nach der Implementierung",
+        "items": [
+          "Bug-Fixes: Behebung von Problemen",
+          "Updates: Anpassungen bei Software-Updates",
+          "Erweiterungen: Zusätzliche Features nach Bedarf",
+          "Schulungen: Einweisung Ihrer Teams"
+        ]
+      },
+      {
+        "icon": "HelpCircle",
+        "title": "Support-Optionen",
+        "items": [
+          "On-Demand: Nach Bedarf, stundenweise Abrechnung",
+          "Wartungsvertrag: Regelmässige Betreuung (optional)"
+        ]
+      }
+    ]
+  }
+}

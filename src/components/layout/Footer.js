@@ -1,4 +1,3 @@
-import React from "react";
 import * as styles from "./Footer.module.css";
 
 const currentYear = new Date().getFullYear();

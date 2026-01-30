@@ -19,9 +19,8 @@
   color: var(--color-white);
 }
 
-.btnPrimary:hover {
-  background-color: transparent;
-  color: var(--color-primary);
+.btnPrimary:hover,
+.btnSecondary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(72, 68, 245, 0.2);
 }
@@ -29,11 +28,4 @@
 .btnSecondary {
   background-color: transparent;
   color: var(--color-primary);
-}
-
-.btnSecondary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(72, 68, 245, 0.2);
 }

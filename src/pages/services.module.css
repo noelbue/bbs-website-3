@@ -1,9 +1,3 @@
-/* Services Content */
-.servicesContent {
-  padding: var(--spacing-2xl) 0;
-  background-color: var(--color-white);
-}
-
 /* Arbeitsweise, Projektgrößen, Support, FAQ Sections */
 .workingStyle,
 .projectSizes,

@@ -1,4 +1,3 @@
-import React from "react";
 import * as styles from "./SkillsGrid.module.css";
 
 const SkillsGrid = ({ categories }) => {

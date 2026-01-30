@@ -1,14 +1,9 @@
-import React from 'react'
-import * as styles from './SupportCard.module.css'
+import * as styles from "./SupportCard.module.css";
 
 const SupportCard = ({ icon, title, items }) => {
   return (
     <div className={styles.supportCard}>
-      {icon && (
-        <div className={styles.iconBox}>
-          {icon}
-        </div>
-      )}
+      {icon && <div className={styles.iconBox}>{icon}</div>}
       <h3>{title}</h3>
       <ul className={styles.itemList}>
         {items.map((item, index) => (
@@ -16,7 +11,7 @@ const SupportCard = ({ icon, title, items }) => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default SupportCard
+export default SupportCard;

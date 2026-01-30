@@ -95,6 +95,10 @@
     flex-direction: column;
   }
 
+  .navWrapper.expanded {
+    max-height: 400px;
+  }
+
   .navItem {
     padding: var(--spacing-sm);
     font-size: 0.875rem;
@@ -103,14 +107,6 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .serviceNav {
-    top: 60px;
-  }
-
-  .toggleButton {
-    font-size: 0.8125rem;
-  }
-
   .navWrapper {
     justify-content: center;
     flex-wrap: wrap;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Zap,
   Layers,
@@ -15,7 +15,6 @@ const ServiceNav = () => {
 
   useEffect(() => {
     const handleHashChange = () => {
-      // Collapse when scrolling to a section via anchor
       if (window.location.hash) {
         setIsExpanded(false);
       }

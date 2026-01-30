@@ -1,5 +1,4 @@
-import React from 'react'
-import * as styles from './ProcessStep.module.css'
+import * as styles from "./ProcessStep.module.css";
 
 const ProcessStep = ({ number, title, description }) => {
   return (
@@ -8,7 +7,7 @@ const ProcessStep = ({ number, title, description }) => {
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default ProcessStep
+export default ProcessStep;

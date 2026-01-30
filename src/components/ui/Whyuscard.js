@@ -1,4 +1,3 @@
-import React from "react";
 import * as styles from "./WhyUsCard.module.css";
 
 const WhyUsCard = ({ icon, title, description, href }) => {

@@ -1,4 +1,3 @@
-import React from "react";
 import Breadcrumb from "../ui/Breadcrumb";
 import * as styles from "./PageHero.module.css";
 

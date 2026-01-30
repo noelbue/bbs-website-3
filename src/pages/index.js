@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Zap, Layers, Search, Brain, Code, Award, Users } from "lucide-react";
 import Layout from "../components/layout/Layout";
 import Seo from "../components/Seo";

@@ -1,4 +1,3 @@
-import React from "react";
 import * as styles from "./PassionCard.module.css";
 
 const PassionCard = ({ icon, title, description }) => {

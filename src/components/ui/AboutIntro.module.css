@@ -6,10 +6,6 @@
   margin-bottom: var(--spacing-2xl);
 }
 
-.imageContainer {
-  position: relative;
-}
-
 .imageContainer img {
   width: 100%;
   height: auto;

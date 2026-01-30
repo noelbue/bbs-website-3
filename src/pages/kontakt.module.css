@@ -126,13 +126,13 @@
 
   .contactMethods,
   .process {
-    padding: var(--section-padding-mobile) var(--bg-offset-mobile);
+    padding: var(--section-padding-mobile) 0;
   }
 
   .contactMethods::before,
   .process::before {
-    left: var(--bg-offset-mobile);
-    right: var(--bg-offset-mobile);
+    left: 0;
+    right: 0;
   }
 
   .introTitle {

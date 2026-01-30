@@ -195,11 +195,6 @@ p {
   animation: fadeIn 0.6s ease-out forwards;
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Selection */
 ::selection {
   background-color: var(--color-primary);

@@ -1,4 +1,3 @@
-import React from "react";
 import * as styles from "./ServiceCard.module.css";
 
 const ServiceCard = ({ icon, title, subtitle, description, href }) => {

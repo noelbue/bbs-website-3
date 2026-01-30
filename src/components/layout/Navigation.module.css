@@ -14,7 +14,6 @@
 }
 
 .container {
-  max-width: auto;
   margin: 0 auto;
   padding: 0 var(--bg-offset-desktop);
   display: flex;
@@ -174,10 +173,6 @@
 }
 
 @media (max-width: 480px) {
-  .container {
-    height: 60px;
-  }
-
   .logo svg,
   .logo img {
     width: 40px;

@@ -1,4 +1,4 @@
-import React from "react";
+import { Helmet } from "react-helmet";
 
 const SEO = ({ title, description, pathname = "", image, article = false }) => {
   const siteMetadata = {
@@ -19,7 +19,7 @@ const SEO = ({ title, description, pathname = "", image, article = false }) => {
   };
 
   return (
-    <>
+    <Helmet htmlAttributes={{ lang: "de-CH" }}>
       {/* Primary Meta */}
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
@@ -43,7 +43,7 @@ const SEO = ({ title, description, pathname = "", image, article = false }) => {
       {/* Viewport & Theme */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#4844F5" />
-    </>
+    </Helmet>
   );
 };
 

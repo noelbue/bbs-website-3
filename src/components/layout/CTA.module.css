@@ -22,8 +22,6 @@
   margin-bottom: var(--spacing-md);
   font-weight: 900;
   color: var(--color-text);
-  position: relative;
-  z-index: 1;
 }
 
 .cta p {
@@ -32,8 +30,6 @@
   max-width: 700px;
   margin: 0 auto var(--spacing-lg);
   color: var(--color-text-gray);
-  position: relative;
-  z-index: 1;
 }
 
 .ctaButtons {
@@ -41,6 +37,11 @@
   gap: var(--spacing-md);
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.cta h2,
+.cta p,
+.ctaButtons {
   position: relative;
   z-index: 1;
 }
@@ -52,8 +53,8 @@
   }
 
   .cta::before {
-    left: var(--bg-offset-mobile);
-    right: var(--bg-offset-mobile);
+    left: 0;
+    right: 0;
   }
 
   .ctaButtons {

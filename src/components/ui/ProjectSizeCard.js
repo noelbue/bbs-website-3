@@ -1,5 +1,4 @@
-import React from 'react'
-import * as styles from './ProjectSizeCard.module.css'
+import * as styles from "./ProjectSizeCard.module.css";
 
 const ProjectSizeCard = ({ title, description }) => {
   return (
@@ -7,7 +6,7 @@ const ProjectSizeCard = ({ title, description }) => {
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectSizeCard
+export default ProjectSizeCard;

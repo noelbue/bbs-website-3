@@ -5,7 +5,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   padding: var(--spacing-xl) 1.25rem;
 }
 

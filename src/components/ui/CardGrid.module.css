@@ -3,16 +3,13 @@
   gap: var(--gap-md);
 }
 
-.gridAuto {
+.gridAuto,
+.gridThree {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .gridTwo {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-}
-
-.gridThree {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 @media (max-width: 768px) {

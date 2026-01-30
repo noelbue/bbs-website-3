@@ -40,24 +40,24 @@
     ]
   },
   "whyUs": {
-    "title": "Warum Sie mit uns arbeiten sollten",
+    "title": "Warum Sie mit mir arbeiten sollten",
     "items": [
       {
-        "icon": "Star",
-        "title": "Technische Tiefe",
-        "description": "Über 10 Jahre Erfahrung in Publishing-Technologien. Von InDesign-Scripting bis zu komplexen API-Integrationen.",
+        "icon": "Award",
+        "title": "10+ Jahre Publishing-Erfahrung",
+        "description": "Von der Polygraf-Lehre bis zu Red Bull Media House – ich kenne die Branche von innen und aussen. Kein generisches Consulting, sondern echtes Praxis-Know-how.",
         "href": "/ueber-mich"
       },
       {
-        "icon": "CheckCircle",
-        "title": "Praxisorientiert",
-        "description": "Lösungen, die wirklich funktionieren. Keine Theorie – nur bewährte Methoden aus diversen erfolgreichen Projekten.",
+        "icon": "Code",
+        "title": "Entwickler & Architekt in einem",
+        "description": "Ich rede nicht nur über Lösungen, ich baue sie selbst. Von React-Apps bis zu komplexen Microservices – Code ist meine Muttersprache.",
         "href": "/ueber-mich"
       },
       {
-        "icon": "Handshake",
-        "title": "Partnerschaftlich",
-        "description": "Ich arbeite nicht nur für Sie, sondern mit Ihnen. Transparente Kommunikation und langfristige Partnerschaften.",
+        "icon": "Users",
+        "title": "Übersetzer zwischen Technik & Menschen",
+        "description": "Technologie sollte Menschen unterstützen, nicht überfordern. Ich erkläre komplexe Systeme so, dass sie jeder versteht.",
         "href": "/ueber-mich"
       }
     ]

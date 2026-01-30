@@ -1,16 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import {
-  Zap,
-  Layers,
-  Search,
-  Brain,
-  Code,
-  Star,
-  CheckCircle,
-  Handshake,
-} from "lucide-react";
+import { Zap, Layers, Search, Brain, Code, Award, Users } from "lucide-react";
 import Layout from "../components/layout/Layout";
-import Cta from "../components/layout/Cta";
+import Cta from "../components/layout/CTA";
 import Button from "../components/ui/Button";
 import ServiceCard from "../components/ui/ServiceCard";
 import WhyUsCard from "../components/ui/WhyUsCard";
@@ -32,9 +23,8 @@ const IndexPage = () => {
     Search: Search,
     Brain: Brain,
     Code: Code,
-    Star: Star,
-    CheckCircle: CheckCircle,
-    Handshake: Handshake,
+    Award: Award,
+    Users: Users,
   };
 
   const getIcon = (iconName, size = 40) => {

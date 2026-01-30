@@ -1,0 +1,118 @@
+{
+  "hero": {
+    "title": "Kontakt",
+    "subtitle": "Lass uns über dein Projekt sprechen"
+  },
+  "intro": {
+    "title": "Bereit für dein Projekt?",
+    "description": "Ob Publishing-Automatisierung, Web-Entwicklung oder IT-Beratung – ich freue mich, von deinem Projekt zu hören. Schreib mir einfach eine E-Mail oder ruf mich an, und wir schauen gemeinsam, wie ich dir helfen kann."
+  },
+  "contactMethods": [
+    {
+      "icon": "Mail",
+      "title": "E-Mail",
+      "value": "nb@b-business-solutions.ch",
+      "href": "mailto:nb@b-business-solutions.ch",
+      "description": "Am besten erreichst du mich per E-Mail. Ich antworte in der Regel innerhalb von 24 Stunden."
+    },
+    {
+      "icon": "Phone",
+      "title": "Telefon",
+      "value": "+41 78 783 28 14",
+      "href": "tel:+41787832814",
+      "description": "Für dringende Anfragen oder wenn du lieber direkt sprechen möchtest."
+    },
+    {
+      "icon": "MapPin",
+      "title": "Standort",
+      "value": "Horn, Schweiz",
+      "href": null,
+      "description": "Hauptsächlich remote, aber auch vor Ort in der Schweiz und im benachbarten Ausland."
+    }
+  ],
+  "availability": {
+    "title": "Verfügbarkeit",
+    "items": [
+      {
+        "icon": "Briefcase",
+        "text": "Ich arbeite nebenbei und plane Projekte im Voraus – bitte habe etwas Geduld bei der Terminplanung"
+      },
+      {
+        "icon": "Zap",
+        "text": "Kleinere Projekte starte ich oft innerhalb von 1-2 Wochen"
+      },
+      {
+        "icon": "Calendar",
+        "text": "Grössere Projekte nach individueller Absprache"
+      },
+      {
+        "icon": "Home",
+        "text": "Remote-Arbeit bevorzugt, vor-Ort Termine nach Vereinbarung"
+      },
+      {
+        "icon": "CheckCircle",
+        "text": "Ich sage ehrlich, ob und wann ich Zeit habe – keine falschen Versprechungen"
+      }
+    ]
+  },
+  "process": {
+    "title": "So läuft's ab",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Erstkontakt",
+        "description": "Schreib mir eine E-Mail mit einer kurzen Beschreibung deines Projekts. Was möchtest du erreichen? Was sind deine Anforderungen?"
+      },
+      {
+        "number": "02",
+        "title": "Kennenlernen",
+        "description": "Wir sprechen per Video-Call oder Telefon über dein Projekt. Ich höre zu, stelle Fragen und gebe erste Einschätzungen."
+      },
+      {
+        "number": "03",
+        "title": "Angebot",
+        "description": "Du bekommst ein transparentes Angebot mit Zeitschätzung und Kosten. Keine versteckten Gebühren, keine Überraschungen."
+      },
+      {
+        "number": "04",
+        "title": "Umsetzung",
+        "description": "Ich halte dich während des Projekts auf dem Laufenden. Regelmässige Updates, klare Kommunikation, ehrliches Feedback."
+      }
+    ]
+  },
+  "social": {
+    "title": "Wo du mich sonst noch findest",
+    "links": [
+      {
+        "icon": "Linkedin",
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/noelbuergler/",
+        "description": "Berufliches Netzwerk"
+      },
+      {
+        "icon": "Globe",
+        "label": "Persönliche Webseite",
+        "href": "https://noelbuergler.ch/",
+        "description": "Mehr über mich"
+      },
+      {
+        "icon": "Github",
+        "label": "GitHub",
+        "href": "https://github.com/noelbue",
+        "description": "Code & Projekte"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Noch Fragen?",
+    "description": "Schau dir die häufigsten Fragen auf der Services-Seite an oder schreib mir direkt.",
+    "primaryButton": {
+      "text": "E-MAIL SCHREIBEN",
+      "href": "mailto:nb@b-business-solutions.ch"
+    },
+    "secondaryButton": {
+      "text": "FAQ ANSEHEN",
+      "href": "/services#faq"
+    }
+  }
+}

@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import Layout from "../components/layout/Layout";
 import PageHero from "../components/layout/PageHero";
+import ServiceNav from "../components/layout/ServiceNav";
 import ServiceSection from "../components/layout/ServiceSection";
 import Cta from "../components/layout/Cta";
 import SectionTitle from "../components/ui/SectionTitle";
@@ -49,6 +50,9 @@ const ServicesPage = () => {
         title="Unsere Services"
         subtitle="Spezialisierte Lösungen für Publishing-Workflows und Content-Management"
       />
+
+      {/* Service Navigation */}
+      <ServiceNav />
 
       {/* Service Sections */}
       {servicesData.sections.map((section) => (

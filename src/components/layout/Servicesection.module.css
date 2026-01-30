@@ -1,6 +1,7 @@
 .serviceSection {
   padding: var(--spacing-2xl) 0;
   border-bottom: 1px solid var(--color-grey);
+  scroll-margin-top: 220px;
 }
 
 .serviceSection:last-child {
@@ -10,7 +11,7 @@
 /* Header */
 .header {
   text-align: center;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
 }
 
 .category {
@@ -26,12 +27,12 @@
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 900;
   color: var(--color-text);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
   line-height: 1.2;
 }
 
 .subtitle {
-  font-size: clamp(1.3rem, 2vw, 1.5rem);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
   color: var(--color-text-gray);
   line-height: 1.7;
   max-width: 800px;
@@ -39,16 +40,17 @@
 }
 
 /* Offerings Section */
-.offerings {
-  margin-bottom: 20px;
-}
-
 .offeringsTitle {
   text-align: center;
   font-size: clamp(1.5rem, 3vw, 1.875rem);
   font-weight: 900;
   color: var(--color-text);
   margin-bottom: var(--spacing-md);
+}
+
+/* Tech Info Section */
+.techInfo {
+  margin-top: 20px;
 }
 
 /* Responsive */
@@ -62,6 +64,10 @@
   }
 
   .offerings {
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .techInfo {
+    margin-top: var(--spacing-lg);
   }
 }

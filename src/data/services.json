@@ -8,15 +8,15 @@
       "offerings": [
         {
           "title": "InDesign Server Workflows",
-          "description": "Mit Adobe InDesign Server automatisiere ich Document-Generation und Template-basierte Produktionen. Ich entwickle massgeschneiderte Workflows für automatisierte Kataloge, Broschüren und mehrseitige Dokumente."
+          "description": "Mit InDesign Server automatisiere ich die Document-Generation. Template-basierte Produktionen für Kataloge, Broschüren, mehrseitige Dokumente – das System übernimmt die Arbeit, du sparst Zeit."
         },
         {
           "title": "Enfocus Switch Automation",
-          "description": "Für Publishing-Workflows nutze ich Enfocus Switch, um komplexe Automatisierungen umzusetzen. Ich entwickle Custom Scripts für spezielle Anforderungen und integriere verschiedene Systeme nahtlos."
+          "description": "Komplexe Publishing-Workflows mit Enfocus Switch. Custom Scripts für spezielle Anforderungen und nahtlose System-Integrationen – alles läuft automatisch."
         },
         {
           "title": "Print-to-Web & Digital Asset Management",
-          "description": "Ich schaffe Verbindungen zwischen Print- und Digital-Workflows und integriere DAM-Systeme wie Sharedien oder pixx.io für effizientes Asset Management."
+          "description": "Verbindungen zwischen Print und Digital. DAM-Systeme wie Sharedien oder pixx.io für effizientes Asset Management – deine Medien immer griffbereit."
         }
       ],
       "techInfo": [
@@ -24,10 +24,9 @@
           "title": "Technologien & Tools",
           "items": [
             "Adobe InDesign Server & ExtendScript",
-            "Enfocus Switch mit Custom Scripting",
-            "vjoon K4 Publishing System",
-            "axaio MadeToPrint",
-            "XMPie uStore für Web-to-Print"
+            "Enfocus Switch mit Custom Scripting (aktiv im Einsatz)",
+            "XMPie uStore für Web-to-Print",
+            "vjoon K4 (Support & Installation auf Anfrage)"
           ]
         },
         {
@@ -49,15 +48,15 @@
       "offerings": [
         {
           "title": "Headless CMS Implementierung",
-          "description": "Für moderne Anforderungen implementiere ich Headless CMS Lösungen wie Strapi oder Contentful und kümmere mich um die entsprechende API-Integration in Ihre bestehenden Systeme."
+          "description": "Moderne Anforderungen? Headless CMS wie Strapi oder Contentful. Ich kümmere mich um die API-Integration in deine bestehenden Systeme – nahtlos und ohne Kopfschmerzen."
         },
         {
           "title": "Custom Web-Entwicklung",
-          "description": "Bei der Custom Web-Entwicklung setze ich auf Next.js für performante Anwendungen und entwickle React-basierte Lösungen für spezielle Anforderungen."
+          "description": "Next.js für performante Anwendungen, React für spezielle Anforderungen. Ich entwickle massgeschneiderte Web-Lösungen, die genau zu deinen Bedürfnissen passen."
         },
         {
           "title": "WordPress Development",
-          "description": "Ich erstelle individuelle Themes und Plugins, optimiere die Performance bestehender Websites und übernehme die Wartung sowie Updates für einen reibungslosen Betrieb."
+          "description": "Individuelle Themes und Plugins, Performance-Optimierung, Wartung und Updates. WordPress, das wirklich funktioniert – zuverlässig und schnell."
         }
       ],
       "techInfo": [
@@ -88,15 +87,15 @@
       "offerings": [
         {
           "title": "API-Entwicklung & System-Integration",
-          "description": "Bei der API-Entwicklung und Integration implementiere ich REST APIs und schaffe zuverlässige Verbindungen zwischen verschiedenen Systemen, damit diese nahtlos zusammenarbeiten."
+          "description": "REST APIs implementieren, Systeme miteinander verbinden. Ich sorge dafür, dass deine Tools nahtlos zusammenarbeiten – keine Insellösungen mehr."
         },
         {
           "title": "XML/JSON Datenverarbeitung",
-          "description": "Im Bereich Datenverarbeitung transformiere ich XML und JSON Daten automatisch und richte Systeme für den automatischen Import von Daten ein, was manuelle Arbeit erheblich reduziert."
+          "description": "Automatische Transformation von XML und JSON Daten. Systeme für automatischen Daten-Import – weniger manuelle Arbeit, mehr Effizienz."
         },
         {
           "title": "Database Management & Setup",
-          "description": "Beim Database Management übernehme ich das Setup von MySQL und PostgreSQL Datenbanken und integriere Microsoft SQL Server in bestehende Infrastrukturen."
+          "description": "MySQL, PostgreSQL, Microsoft SQL Server – Setup, Integration in bestehende Infrastrukturen, und Optimierung für bessere Performance."
         }
       ],
       "techInfo": [
@@ -125,15 +124,15 @@
       "offerings": [
         {
           "title": "Automatische Metadaten-Generierung",
-          "description": "Für die automatische Metadaten-Generierung setze ich KI-basierte Systeme ein, die Ihre Inhalte intelligent verschlagworten und automatisch kategorisieren, was die Organisation grosser Datenmengen erheblich vereinfacht."
+          "description": "KI-basierte Systeme für intelligente Verschlagwortung und automatische Kategorisierung. Grosse Datenmengen organisieren sich praktisch von selbst."
         },
         {
           "title": "Content-Automatisierung via APIs",
-          "description": "Bei der Content-Automatisierung integriere ich APIs für automatische Übersetzungen und entwickle Systeme zur Content-Generierung für Templates, die wiederkehrende Aufgaben reduzieren."
+          "description": "Automatische Übersetzungen, Content-Generierung für Templates. APIs für wiederkehrende Aufgaben – mehr Zeit für die wichtigen Dinge."
         },
         {
           "title": "Interne KI-Lösungen & Training",
-          "description": "Besonders interessant sind interne KI-Lösungen, die mit Ihren eigenen Dokumenten trainiert werden. Diese Offline-Systeme bieten Ihnen Ressourcen-Unterstützung bei sensiblen Daten, ohne dass Informationen das Unternehmen verlassen müssen."
+          "description": "KI-Systeme trainiert mit deinen eigenen Dokumenten – etwa mit Open WebUI für interne KI-Plattformen. Offline-Lösungen für sensible Daten, Ressourcen-Unterstützung ohne Datenweitergabe."
         }
       ],
       "techInfo": [
@@ -141,6 +140,7 @@
           "title": "Technologien",
           "items": [
             "APIs: OpenAI, DeepL, Google Translate",
+            "Open WebUI: Interne KI-Plattformen",
             "Tools: Custom Scripts, Automatisierungs-Workflows",
             "Ansatz: Pragmatische Lösungen, die wirklich helfen"
           ]
@@ -155,15 +155,15 @@
       "offerings": [
         {
           "title": "Publishing-Strategieberatung & Tool-Evaluierung",
-          "description": "Bei der Publishing-Beratung evaluiere ich Tools und gebe Empfehlungen ab, die zu Ihren spezifischen Anforderungen passen. Dazu gehört auch die Analyse bestehender Workflows, um Optimierungspotentiale zu identifizieren."
+          "description": "Welches Tool passt wirklich zu dir? Ich evaluiere Tools, analysiere deine Workflows und gebe ehrliche Empfehlungen – keine Verkaufsmaschen, nur Lösungen die funktionieren."
         },
         {
           "title": "Agile Projektleitung & Stakeholder-Management",
-          "description": "Als Projektleiter koordiniere ich zwischen verschiedenen Stakeholdern, setze Projekte agil um und sorge für transparente Kommunikation während des gesamten Projektverlaufs."
+          "description": "Koordination zwischen verschiedenen Stakeholdern, agile Projektumsetzung. Transparente Kommunikation während des gesamten Projekts – du weisst immer, wo wir stehen."
         },
         {
           "title": "Technische Implementierung & Quality Assurance",
-          "description": "Bei der technischen Implementierung packe ich selbst mit an, führe umfassende Tests durch und stelle die Qualität der Lösung sicher, bevor sie in den produktiven Betrieb geht."
+          "description": "Ich packe selbst mit an. Umfassende Tests, Qualitätssicherung. Die Lösung geht erst live, wenn sie wirklich bereit ist."
         }
       ],
       "techInfo": [

@@ -1,0 +1,157 @@
+{
+  "hero": {
+    "title": "Über mich",
+    "subtitle": "Publishing-Experte, Web-Entwickler und IT-Architekt aus Leidenschaft"
+  },
+  "intro": {
+    "greeting": "Hi, ich bin Noel",
+    "subtitle": "25 Jahre alt, verheiratet, und seit über 10 Jahren in der Publishing- und IT-Welt unterwegs",
+    "description": "Ich bin jemand, der die Brücke zwischen Technologie und Menschen schlägt. Was als Lehre zum Polygrafen begann, hat sich zu einer Leidenschaft für komplexe Publishing-Systeme, moderne Web-Entwicklung und intelligente Automatisierung entwickelt. Heute bin ich Solutions Architect und stellvertretender IT-Leiter bei Brüggli Admedia AG – aber nebenbei auch immer noch Entwickler, Tüftler und Student.",
+    "image": "/assets/noel-buergler.png"
+  },
+  "journey": {
+    "title": "Mein Weg",
+    "subtitle": "Von der Druckerei zur modernen IT-Architektur",
+    "story": [
+      {
+        "title": "Der Anfang: Print & Publishing",
+        "description": "Mit 15 Jahren startete ich meine Lehre als Polygraf – klassisches Print-Handwerk mit Layout, Typografie und Druckvorstufe. Was mir damals schon auffiel: Viele Dinge liessen sich automatisieren. Also fing ich an, erste Scripts für InDesign zu schreiben. Das war mein Einstieg in die Programmierung."
+      },
+      {
+        "title": "Publishing-Systeme: Wenn es komplex wird",
+        "description": "Bei AVD Goldach und später Topix AG tauchte ich tief in die Welt der Publishing-Systeme ein. Enfocus Switch, InDesign Server – Systeme, die Zeitschriften, Magazine und Marketing-Materialien für grosse Kunden produzieren. Besonders stolz bin ich auf meine Zeit mit Red Bull Media House, wo ich deren komplette Enfocus-Switch-Umgebung betreute. Auch vjoon K4 kann ich supporten und installieren, nutze es aber heute nicht mehr aktiv."
+      },
+      {
+        "title": "Web-Entwicklung: Die andere Seite",
+        "description": "Parallel dazu entwickelte sich meine Leidenschaft für Web-Entwicklung. Von WordPress-Websites über React-Apps bis zu modernen Next.js-Projekten – ich mag die Vielfalt. 2021 gründete ich meine eigene Freelance-Tätigkeit als Frontend Developer und betreue seither verschiedene Kunden."
+      },
+      {
+        "title": "Heute: Solutions Architect & IT-Leader",
+        "description": "Seit Oktober 2025 bin ich bei Brüggli Admedia AG als Solutions Architect und stellvertretender IT-Leiter tätig. Hier bringe ich alles zusammen: IT-Infrastruktur, Publishing-Workflows, Web-Entwicklung und moderne Architekturen. Aktuell leite ich die Modernisierung des PostCard-Creator-Systems für die Schweizer Post – Migration von Legacy-Code zu modernen Microservices mit Node.js und Docker."
+      }
+    ]
+  },
+  "passion": {
+    "title": "Was mich antreibt",
+    "items": [
+      {
+        "icon": "Lightbulb",
+        "title": "Probleme elegant lösen",
+        "description": "Ich liebe es, wenn aus einem komplexen Problem eine einfache, wartbare Lösung wird. Code sollte nicht nur funktionieren, sondern auch verständlich sein."
+      },
+      {
+        "icon": "Users",
+        "title": "Technik für Menschen",
+        "description": "Am Ende zählt, dass die Lösung für alle funktioniert. Ich sehe mich als Übersetzer zwischen Technik und Menschen – Systeme sollen unterstützen, nicht komplizieren."
+      },
+      {
+        "icon": "Rocket",
+        "title": "Immer am Lernen",
+        "description": "Parallel zur Vollzeit-Arbeit studiere ich Informatik an der IU. Nicht weil ich muss, sondern weil mich Themen wie Softwarearchitektur, Kryptographie und Requirements Engineering faszinieren."
+      },
+      {
+        "icon": "Zap",
+        "title": "Automatisierung > Repetition",
+        "description": "Wenn ich etwas dreimal mache, automatisiere ich es beim vierten Mal. Workflows sollten effizient sein und Zeit für die wirklich wichtigen Dinge schaffen."
+      },
+      {
+        "icon": "Target",
+        "title": "Qualität vor Schnelligkeit",
+        "description": "Lieber einmal richtig als dreimal schnell. Gut durchdachte Architekturen zahlen sich langfristig aus – auch wenn sie anfangs mehr Zeit brauchen."
+      }
+    ]
+  },
+  "expertise": {
+    "title": "Womit ich arbeite",
+    "subtitle": "Technologien und Tools, die ich täglich nutze",
+    "categories": [
+      {
+        "title": "Publishing & Automation",
+        "skills": [
+          "Adobe InDesign Server & ExtendScript",
+          "Enfocus Switch & Custom Scripting",
+          "XMPie Web-to-Print",
+          "vjoon K4 (Support & Installation)"
+        ]
+      },
+      {
+        "title": "Web-Entwicklung",
+        "skills": [
+          "React.js & Next.js",
+          "TypeScript & JavaScript",
+          "Node.js & Express",
+          "Gatsby.js & Vite",
+          "HTML/CSS/SCSS & Tailwind"
+        ]
+      },
+      {
+        "title": "Backend & Datenbanken",
+        "skills": [
+          "PostgreSQL & MySQL",
+          "Microsoft SQL Server",
+          "REST APIs & GraphQL",
+          "Docker & Microservices",
+          "XML/JSON Processing"
+        ]
+      },
+      {
+        "title": "CMS & Plattformen",
+        "skills": [
+          "WordPress (Themes & Plugins)",
+          "Headless CMS (Strapi, Contentful)",
+          "Craft CMS",
+          "Supabase & Netlify"
+        ]
+      },
+      {
+        "title": "IT-Infrastruktur & Tools",
+        "skills": [
+          "Azure AD & Microsoft Intune",
+          "Active Directory",
+          "Apache Tomcat & IIS",
+          "Atlassian (Jira, Confluence, Bitbucket)",
+          "Odoo ERP & Open WebUI",
+          "Git & CI/CD Pipelines",
+          "Power BI"
+        ]
+      }
+    ]
+  },
+  "personal": {
+    "title": "Wenn ich nicht am Arbeiten bin",
+    "items": [
+      {
+        "icon": "Dumbbell",
+        "text": "Fitness und Gesundheit sind mir wichtig – regelmässiges Training hilft mir, den Kopf frei zu bekommen"
+      },
+      {
+        "icon": "Gamepad2",
+        "text": "Gaming als Ausgleich – manchmal braucht man einfach eine andere Welt"
+      },
+      {
+        "icon": "GraduationCap",
+        "text": "Studium neben der Arbeit – Computer Science an der IU, weil Lernen nie aufhört"
+      },
+      {
+        "icon": "Mountain",
+        "text": "Wandern in den Schweizer Bergen – die Natur hilft beim Abschalten und gibt neue Energie"
+      },
+      {
+        "icon": "Code",
+        "text": "Nebenprojekte – eigene Web-Projekte und Experimente mit neuen Technologien"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Lust auf ein Projekt zusammen?",
+    "description": "Ob Publishing-Automatisierung, Web-Entwicklung oder IT-Beratung – lass uns schauen, wie ich dir helfen kann.",
+    "primaryButton": {
+      "text": "PROJEKT BESPRECHEN",
+      "href": "/kontakt"
+    },
+    "secondaryButton": {
+      "text": "SERVICES ANSEHEN",
+      "href": "/services"
+    }
+  }
+}

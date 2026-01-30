@@ -20,10 +20,6 @@ const SEO = ({ title, description, pathname = "", image, article = false }) => {
 
   return (
     <>
-      {/* Document */}
-      <html lang={siteMetadata.lang} />
-      <meta charSet="utf-8" />
-
       {/* Primary Meta */}
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />

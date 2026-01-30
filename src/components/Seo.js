@@ -20,11 +20,15 @@ const SEO = ({ title, description, pathname = "", image, article = false }) => {
 
   return (
     <>
+      {/* Document */}
       <html lang={siteMetadata.lang} />
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
+
+      {/* Primary Meta */}
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="author" content={siteMetadata.author} />
+      <link rel="canonical" href={seo.url} />
 
       {/* Open Graph */}
       <meta property="og:title" content={seo.title} />
@@ -34,18 +38,15 @@ const SEO = ({ title, description, pathname = "", image, article = false }) => {
       <meta property="og:image" content={seo.image} />
       <meta property="og:locale" content="de_CH" />
 
-      {/* Twitter Card */}
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
 
-      {/* Viewport & Mobile */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      {/* Viewport & Theme */}
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#4844F5" />
-
-      {/* Canonical URL */}
-      <link rel="canonical" href={seo.url} />
     </>
   );
 };

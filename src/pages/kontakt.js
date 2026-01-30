@@ -13,6 +13,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import Layout from "../components/layout/Layout";
+import Seo from "../components/Seo";
 import PageHero from "../components/layout/PageHero";
 import Cta from "../components/layout/Cta";
 import SectionTitle from "../components/ui/SectionTitle";
@@ -153,11 +154,9 @@ const KontaktPage = () => {
 export default KontaktPage;
 
 export const Head = () => (
-  <>
-    <title>Kontakt – Bürgler Business Solutions</title>
-    <meta
-      name="description"
-      content="Bereit für dein Projekt? Lass uns über Publishing-Automatisierung, Web-Entwicklung oder IT-Beratung sprechen. Kontaktiere mich per E-Mail oder Telefon."
-    />
-  </>
+  <Seo
+    title="Kontakt – Bürgler Business Solutions"
+    description="Bereit für dein Projekt? Lass uns über Publishing-Automatisierung, Web-Entwicklung oder IT-Beratung sprechen. Kontaktiere mich per E-Mail oder Telefon."
+    pathname="/kontakt"
+  />
 );

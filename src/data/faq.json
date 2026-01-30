@@ -3,7 +3,7 @@
   "items": [
     {
       "question": "Wie schnell können Sie starten?",
-      "answer": "Ich plane Projekte voraus. Kleinere Sachen oft innerhalb von 1-2 Wochen, grössere Projekte sprechen wir ab. Keine Sorge – ich sage ehrlich, ob ich Zeit habe."
+      "answer": "Ich plane Projekte voraus. Kleinere Sachen oft innerhalb von 1-2 Wochen, grössere Projekte sprechen wir ab. Keine Sorge – ich sage ehrlich, ob und wann ich Zeit habe."
     },
     {
       "question": "Arbeiten Sie auch remote?",
@@ -20,6 +20,22 @@
     {
       "question": "Wie rechnen Sie ab?",
       "answer": "Stundenweise nach transparenten Tarifen. Vor Projektstart gibt's eine Einschätzung, damit du weisst, was auf dich zukommt. Detaillierte Preise gerne auf Anfrage."
+    },
+    {
+      "question": "Sind Sie Lizenz-Partner für die Publishing-Tools?",
+      "answer": "Nein, ich bin kein offizieller Partner von Adobe, Enfocus, vjoon oder anderen Tool-Herstellern. Ich biete Know-How, Installation, Customizing und Integration – aber keine Lizenzen. Für Lizenzen wende dich bitte direkt an die Hersteller oder deren autorisierten Partner."
+    },
+    {
+      "question": "Können Sie bestehende Systeme übernehmen?",
+      "answer": "Ja! Ich arbeite oft mit bestehenden Setups – Analyse, Optimierung, Erweiterung oder Migration. Gerade bei Legacy-Systemen kann ich helfen, diese zu modernisieren oder in neue Architekturen zu überführen."
+    },
+    {
+      "question": "Welche Programmiersprachen beherrschen Sie?",
+      "answer": "Hauptsächlich JavaScript/TypeScript (Node.js, React, Next.js), ExtendScript für InDesign, SQL für Datenbanken. Enfocus Switch Scripts mit Scripting Modul (node.js) ist eine meiner Spezialitäten."
+    },
+    {
+      "question": "Bieten Sie auch Schulungen an?",
+      "answer": "Ja, gerne! Ob für dein Team zu Enfocus Switch, InDesign Server, Workflow-Optimierung oder Web-Entwicklung – ich erkläre die Systeme so, dass sie jeder versteht und selbst weiterarbeiten kann."
     }
   ]
 }

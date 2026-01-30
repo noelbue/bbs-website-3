@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Zap, Layers, Search, Brain, Code, Award, Users } from "lucide-react";
 import Layout from "../components/layout/Layout";
+import Seo from "../components/Seo";
 import Cta from "../components/layout/Cta";
 import Button from "../components/ui/Button";
 import ServiceCard from "../components/ui/ServiceCard";
@@ -138,9 +139,17 @@ const IndexPage = () => {
             <div className={styles.aboutText}>
               <p>
                 Nach über 10 Jahren in der Publishing-Branche und zuletzt bei
-                der <strong>Topix AG</strong> habe ich mich auf die
-                Automatisierung und Integration von Publishing-Workflows
-                spezialisiert.
+                der{" "}
+                <a
+                  href="https://www.topix.ch/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.textLink}
+                >
+                  <strong>Topix AG</strong>
+                </a>{" "}
+                habe ich mich auf die Automatisierung und Integration von
+                Publishing-Workflows spezialisiert.
               </p>
               <p>Meine Mission: Komplexe Technologie einfach nutzbar machen.</p>
               <div className={styles.aboutButton}>
@@ -167,11 +176,9 @@ const IndexPage = () => {
 export default IndexPage;
 
 export const Head = () => (
-  <>
-    <title>Bürgler Business Solutions – Publishing-Technologie Experte</title>
-    <meta
-      name="description"
-      content="Publishing-Technologie neu gedacht. Automatisierung. Integration. Innovation. Massgeschneiderte Lösungen für Ihre digitalen und Print-Publishing-Prozesse."
-    />
-  </>
+  <Seo
+    title="Bürgler Business Solutions – Publishing-Technologie Experte"
+    description="Publishing-Technologie neu gedacht. Automatisierung. Integration. Innovation. Massgeschneiderte Lösungen für Ihre digitalen und Print-Publishing-Prozesse."
+    pathname="/"
+  />
 );

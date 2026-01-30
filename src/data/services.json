@@ -7,16 +7,28 @@
       "subtitle": "Zeit sparen und Fehler reduzieren mit massgeschneiderten Automatisierungslösungen",
       "offerings": [
         {
+          "title": "Content-First Workflows",
+          "description": "Inhalte aus CMS direkt in Print-Workflows. Headless CMS liefert strukturierte Daten (ICML, XML, JSON), Publishing-System produziert automatisch – von Web zu Print in Sekunden."
+        },
+        {
           "title": "InDesign Server Workflows",
-          "description": "Mit InDesign Server automatisiere ich die Document-Generation. Template-basierte Produktionen für Kataloge, Broschüren, mehrseitige Dokumente – das System übernimmt die Arbeit, du sparst Zeit."
+          "description": "Mit Adobe InDesign Server automatisiere ich die Document-Generation. Template-basierte Produktionen für Kataloge, Broschüren, mehrseitige Dokumente – inklusive ExtendScript-Entwicklung für spezielle Anforderungen. Das System übernimmt die Arbeit, du sparst Zeit."
         },
         {
           "title": "Enfocus Switch Automation",
-          "description": "Komplexe Publishing-Workflows mit Enfocus Switch. Custom Scripts für spezielle Anforderungen und nahtlose System-Integrationen – alles läuft automatisch."
+          "description": "Komplexe Publishing-Workflows mit Enfocus Switch. Custom Scripts mit dem Scripting Module (unterstützt Node.js und deren Packages) für moderne JavaScript-Integration und nahtlose System-Integrationen – alles läuft automatisch."
         },
         {
-          "title": "Print-to-Web & Digital Asset Management",
-          "description": "Verbindungen zwischen Print und Digital. DAM-Systeme wie Sharedien oder pixx.io für effizientes Asset Management – deine Medien immer griffbereit."
+          "title": "vjoon K4 Integration & Customizing",
+          "description": "Integration von vjoon K4 in Publishing-Workflows. Installation, Support und API-Integration mit anderen Systemen wie InDesign Server und Enfocus Switch – für nahtlose Redaktionssysteme."
+        },
+        {
+          "title": "EasyCatalog Automatisierung",
+          "description": "Katalog-Produktion mit EasyCatalog. Automatische Produktdaten-Integration in InDesign-Templates – von Datenbank zu fertigem Katalog in Minuten statt Tagen."
+        },
+        {
+          "title": "Digital Asset Management",
+          "description": "DAM-Systeme wie Sharedien oder Frontify für effizientes Asset Management – deine Medien immer griffbereit, überall verfügbar."
         }
       ],
       "techInfo": [
@@ -24,18 +36,18 @@
           "title": "Technologien & Tools",
           "items": [
             "Adobe InDesign Server & ExtendScript",
-            "Enfocus Switch mit Custom Scripting (aktiv im Einsatz)",
-            "XMPie uStore für Web-to-Print",
-            "vjoon K4 (Support & Installation auf Anfrage)"
+            "Enfocus Switch mit Custom Scripting (Scripting Module unterstützt Node.js)",
+            "vjoon K4 (Installation, Support & API-Integration)",
+            "EasyCatalog (Implementierung & Customizing)",
+            "XMPie uStore für Web-to-Print"
           ]
         },
         {
-          "title": "Typische Anwendungsfälle",
+          "title": "Wichtiger Hinweis",
           "items": [
-            "Automatische Katalog-Generierung aus Datenbanken",
-            "Template-basierte Dokument-Produktion",
-            "Qualitätssicherung durch automatische Preflight-Checks",
-            "Mehrsprachige Publikationen mit automatischen Workflows"
+            "Ich bin kein offizieller Lizenz-Partner dieser Tools",
+            "Ich biete Know-How, Installation, Customizing und Integration",
+            "Langjährige Praxis-Erfahrung mit diesen Systemen"
           ]
         }
       ]
@@ -44,50 +56,51 @@
       "id": "content-management",
       "category": "Content Management & Web-Entwicklung",
       "title": "Moderne Content-Lösungen und Web-Entwicklung",
-      "subtitle": "Vom klassischen CMS bis zu modernen Headless-Architekturen und Eigenentwicklung",
+      "subtitle": "Content-First Ansätze: Vom klassischen CMS bis zu modernen Headless-Architekturen",
       "offerings": [
         {
-          "title": "Headless CMS Implementierung",
-          "description": "Moderne Anforderungen? Headless CMS wie Strapi oder Contentful. Ich kümmere mich um die API-Integration in deine bestehenden Systeme – nahtlos und ohne Kopfschmerzen."
+          "title": "Headless CMS & Content-First",
+          "description": "Moderne Content-First Architekturen mit Strapi oder Contentful. Inhalte einmal pflegen, überall nutzen – Website, App, Print, alles aus einer Quelle."
         },
         {
           "title": "Custom Web-Entwicklung",
-          "description": "Next.js für performante Anwendungen, React für spezielle Anforderungen. Ich entwickle massgeschneiderte Web-Lösungen, die genau zu deinen Bedürfnissen passen."
+          "description": "Next.js für performante Anwendungen, React für spezielle Anforderungen. Ich entwickle massgeschneiderte Web-Lösungen, die genau zu deinen Bedürfnissen passen – modern, schnell, wartbar."
         },
         {
           "title": "WordPress Development",
-          "description": "Individuelle Themes und Plugins, Performance-Optimierung, Wartung und Updates. WordPress, das wirklich funktioniert – zuverlässig und schnell."
+          "description": "Individuelle WordPress Themes und Plugins, Performance-Optimierung, Wartung und Updates. WordPress, das wirklich funktioniert – zuverlässig und schnell."
         }
       ],
       "techInfo": [
         {
           "title": "Technologien",
           "items": [
-            "CMS: WordPress, Drupal, Craft CMS",
-            "Headless: Strapi, Contentful",
-            "Entwicklung: Next.js, React, PHP, JavaScript",
-            "DAM: Sharedien, pixx.io"
+            "Headless CMS: Strapi, Contentful",
+            "Traditional CMS: WordPress, Drupal, Craft CMS",
+            "Frameworks: Next.js, React, Gatsby",
+            "Backend: Node.js, Express, REST APIs"
           ]
         },
         {
-          "title": "Wann macht welche Lösung Sinn?",
+          "title": "Wann welche Lösung?",
           "items": [
-            "WordPress: Einfache Bedienung, schnelle Umsetzung",
-            "Headless CMS: Flexibilität, Multi-Channel Publishing",
-            "Custom Development: Spezielle Anforderungen, maximale Kontrolle"
+            "Headless CMS → Content-First, Multi-Channel, moderne Architekturen",
+            "WordPress → Klassische Websites, Blogs, einfache Shops",
+            "Drupal → Enterprise, komplexe Strukturen, hohe Sicherheitsanforderungen",
+            "Custom → Spezielle Anforderungen, die Standard-CMS nicht abdecken"
           ]
         }
       ]
     },
     {
       "id": "system-integration",
-      "category": "System-Integration & Datenverarbeitung",
-      "title": "Verbindungen zwischen Ihren Systemen schaffen",
-      "subtitle": "API-Integration und Datenverarbeitung für nahtlose Workflows",
+      "category": "System-Integration & APIs",
+      "title": "Systeme verbinden, Daten fliessen lassen",
+      "subtitle": "Nahtlose Integration verschiedener Systeme für durchgängige Workflows",
       "offerings": [
         {
           "title": "API-Entwicklung & System-Integration",
-          "description": "REST APIs implementieren, Systeme miteinander verbinden. Ich sorge dafür, dass deine Tools nahtlos zusammenarbeiten – keine Insellösungen mehr."
+          "description": "REST APIs implementieren, Systeme miteinander verbinden. vjoon K4 mit InDesign Server, Headless CMS mit Print-Workflows – ich sorge dafür, dass deine Tools nahtlos zusammenarbeiten."
         },
         {
           "title": "XML/JSON Datenverarbeitung",
@@ -100,18 +113,21 @@
       ],
       "techInfo": [
         {
-          "title": "Typische Integrationen",
+          "title": "Integrations-Beispiele",
           "items": [
-            "Headless CMS Integration für Content-First Ansätze und Multi-Channel Publishing, DeepL und AI-APIs für automatische Übersetzungen und Content-Verarbeitung, ImageMagick Integration zur automatischen Bildverarbeitung und -optimierung, sowie XML-Export aus K4 für Print-to-Web Workflows"
+            "Headless CMS → InDesign Server → PDF",
+            "vjoon K4 ← → Enfocus Switch",
+            "EasyCatalog ← Produktdatenbank",
+            "Web-Formulare → Print-Templates → Automatische Produktion"
           ]
         },
         {
-          "title": "Technische Expertise",
+          "title": "Technologien",
           "items": [
-            "APIs: REST, GraphQL",
-            "Datenformate: XML, JSON",
-            "Databases: MySQL, PostgreSQL, Microsoft SQL Server",
-            "Programmierung: PHP, JavaScript"
+            "REST APIs, GraphQL",
+            "XML/JSON Processing",
+            "Database: MySQL, PostgreSQL, MSSQL",
+            "Message Queues für robuste Workflows"
           ]
         }
       ]
@@ -119,8 +135,8 @@
     {
       "id": "ai-publishing",
       "category": "KI-Publishing-Lösungen",
-      "title": "KI-gestützte Optimierung für Publishing-Prozesse",
-      "subtitle": "Automatisierung durch intelligente Datenverarbeitung",
+      "title": "KI-gestützte Optimierung für Publishing",
+      "subtitle": "Intelligente Automatisierung für moderne Publishing-Prozesse",
       "offerings": [
         {
           "title": "Automatische Metadaten-Generierung",
@@ -150,8 +166,8 @@
     {
       "id": "consulting",
       "category": "Beratung & Projektleitung",
-      "title": "Professionelle Projektbegleitung",
-      "subtitle": "Technische Expertise kombiniert mit zuverlässiger Projektleitung",
+      "title": "Strategische Beratung und agile Projektumsetzung",
+      "subtitle": "Von der Tool-Evaluierung bis zur erfolgreichen Implementierung",
       "offerings": [
         {
           "title": "Publishing-Strategieberatung & Tool-Evaluierung",
@@ -159,7 +175,7 @@
         },
         {
           "title": "Agile Projektleitung & Stakeholder-Management",
-          "description": "Koordination zwischen verschiedenen Stakeholdern, agile Projektumsetzung. Transparente Kommunikation während des gesamten Projekts – du weisst immer, wo wir stehen."
+          "description": "Koordination zwischen verschiedenen Stakeholdern, agile Projektumsetzung mit Jira, Dokumentation in Confluence. Transparente Kommunikation während des gesamten Projekts – du weisst immer, wo wir stehen."
         },
         {
           "title": "Technische Implementierung & Quality Assurance",
@@ -168,11 +184,21 @@
       ],
       "techInfo": [
         {
-          "title": "Mein Ansatz",
+          "title": "Tools & Methoden",
           "items": [
-            "Pragmatisch: Lösungen, die funktionieren",
-            "Transparent: Klare Kommunikation über Möglichkeiten und Grenzen",
-            "Zuverlässig: Termine und Budgets einhalten"
+            "Atlassian Suite: Jira, Confluence, Jira Service Management, Bitbucket",
+            "Agile Methoden: Scrum, Kanban",
+            "Dokumentation: Technische Specs, User Stories, Workflows",
+            "Testing: Unit Tests, Integration Tests, UAT"
+          ]
+        },
+        {
+          "title": "Projekt-Phasen",
+          "items": [
+            "Discovery: Requirements Engineering, Stakeholder-Interviews",
+            "Planning: Roadmap, Sprint-Planning, Ressourcen-Planung",
+            "Execution: Entwicklung, Reviews, Testing",
+            "Go-Live: Deployment, Training, Support"
           ]
         }
       ]
@@ -222,25 +248,16 @@
     ]
   },
   "support": {
-    "title": "Support & Wartung",
     "items": [
       {
         "icon": "Wrench",
-        "title": "Nach der Implementierung",
-        "items": [
-          "Bug-Fixes: Behebung von Problemen",
-          "Updates: Anpassungen bei Software-Updates",
-          "Erweiterungen: Zusätzliche Features nach Bedarf",
-          "Schulungen: Einweisung Ihrer Teams"
-        ]
+        "title": "Laufender Support",
+        "description": "Wartung bestehender Systeme, Updates, Anpassungen – damit alles reibungslos läuft."
       },
       {
         "icon": "HelpCircle",
-        "title": "Support-Optionen",
-        "items": [
-          "On-Demand: Nach Bedarf, stundenweise Abrechnung",
-          "Wartungsvertrag: Regelmässige Betreuung (optional)"
-        ]
+        "title": "Technische Beratung",
+        "description": "Fragen zu bestehenden Setups? Zweitmeinung gewünscht? Ich helfe gerne weiter."
       }
     ]
   }

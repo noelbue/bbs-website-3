@@ -25,8 +25,21 @@
 }
 
 .contactMethods {
-  padding: var(--spacing-2xl) 0;
+  position: relative;
+  padding: var(--spacing-2xl) 1.25rem;
+  overflow: hidden;
+}
+
+.contactMethods::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--bg-offset-desktop);
+  right: var(--bg-offset-desktop);
+  bottom: 0;
   background-color: var(--color-background-light);
+  border-radius: var(--border-radius);
+  z-index: -1;
 }
 
 .availability {
@@ -67,13 +80,28 @@
 }
 
 .process {
-  padding: var(--spacing-2xl) 0;
+  position: relative;
+  padding: var(--spacing-2xl) 1.25rem;
+  overflow: hidden;
+}
+
+.process::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--bg-offset-desktop);
+  right: var(--bg-offset-desktop);
+  bottom: 0;
   background-color: var(--color-background-light);
+  border-radius: var(--border-radius);
+  z-index: -1;
 }
 
 .processSteps {
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .social {
@@ -91,11 +119,20 @@
 
 @media (max-width: 768px) {
   .intro,
-  .contactMethods,
   .availability,
-  .process,
   .social {
     padding: var(--spacing-xl) 0;
+  }
+
+  .contactMethods,
+  .process {
+    padding: var(--section-padding-mobile) var(--bg-offset-mobile);
+  }
+
+  .contactMethods::before,
+  .process::before {
+    left: var(--bg-offset-mobile);
+    right: var(--bg-offset-mobile);
   }
 
   .introTitle {
@@ -105,4 +142,11 @@
   .introDescription {
     font-size: 1rem;
   }
+}
+
+/* Ensure content is above background */
+.process .container,
+.contactMethods .container {
+  position: relative;
+  z-index: 1;
 }

@@ -1,9 +1,20 @@
 .cta {
   position: relative;
-  background-color: var(--color-background-light);
   text-align: center;
   padding: var(--spacing-2xl) 1.25rem;
-  border-top: 1px solid var(--color-grey);
+  overflow: hidden;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--bg-offset-desktop);
+  right: var(--bg-offset-desktop);
+  bottom: 0;
+  background-color: var(--color-background-light);
+  border-radius: var(--border-radius);
+  z-index: -1;
 }
 
 .cta h2 {
@@ -11,14 +22,18 @@
   margin-bottom: var(--spacing-md);
   font-weight: 900;
   color: var(--color-text);
+  position: relative;
+  z-index: 1;
 }
 
 .cta p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   max-width: 700px;
   margin: 0 auto var(--spacing-lg);
   color: var(--color-text-gray);
+  position: relative;
+  z-index: 1;
 }
 
 .ctaButtons {
@@ -26,12 +41,19 @@
   gap: var(--spacing-md);
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .cta {
     padding: var(--section-padding-mobile) var(--bg-offset-mobile);
+  }
+
+  .cta::before {
+    left: var(--bg-offset-mobile);
+    right: var(--bg-offset-mobile);
   }
 
   .ctaButtons {

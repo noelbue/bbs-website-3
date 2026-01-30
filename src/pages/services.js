@@ -8,6 +8,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import Layout from "../components/layout/Layout";
+import Seo from "../components/Seo";
 import PageHero from "../components/layout/PageHero";
 import ServiceNav from "../components/layout/ServiceNav";
 import ServiceSection from "../components/layout/ServiceSection";
@@ -16,8 +17,7 @@ import SectionTitle from "../components/ui/SectionTitle";
 import CardGrid from "../components/ui/CardGrid";
 import InfoCard from "../components/ui/InfoCard";
 import ProjectSizeCard from "../components/ui/ProjectSizeCard";
-import SupportCard from "../components/ui/SupportCard";
-import Faq from "../components/ui/Faq";
+import Faq from "../components/ui/FAQ";
 import servicesData from "../data/services.json";
 import faqData from "../data/faq.json";
 import * as styles from "./services.module.css";
@@ -48,7 +48,7 @@ const ServicesPage = () => {
       <PageHero
         breadcrumbItems={breadcrumbItems}
         title="Unsere Services"
-        subtitle="Spezialisierte Lösungen für Publishing-Workflows und Content-Management"
+        subtitle="Spezialisierte Lösungen für Publishing-Workflows, Web-Entwicklung und Content-Management"
       />
 
       {/* Service Navigation */}
@@ -106,14 +106,14 @@ const ServicesPage = () => {
       {/* Support & Wartung */}
       <section className={styles.support}>
         <div className="container">
-          <SectionTitle>{servicesData.support.title}</SectionTitle>
+          <SectionTitle>Support & Wartung</SectionTitle>
           <CardGrid columns={2}>
             {servicesData.support.items.map((item, index) => (
-              <SupportCard
+              <InfoCard
                 key={index}
                 icon={getIcon(item.icon)}
                 title={item.title}
-                items={item.items}
+                description={item.description}
               />
             ))}
           </CardGrid>
@@ -142,11 +142,9 @@ const ServicesPage = () => {
 export default ServicesPage;
 
 export const Head = () => (
-  <>
-    <title>Services – Bürgler Business Solutions</title>
-    <meta
-      name="description"
-      content="Spezialisierte Lösungen für Publishing-Workflows und Content-Management. Von Automatisierung bis KI-Integration."
-    />
-  </>
+  <Seo
+    title="Services – Bürgler Business Solutions"
+    description="Spezialisierte Lösungen für Publishing-Workflows und Content-Management. Von Automatisierung bis KI-Integration."
+    pathname="/services"
+  />
 );

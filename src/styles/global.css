@@ -210,3 +210,32 @@ html {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
+
+/* Background Section Pattern */
+.section-with-background {
+  position: relative;
+  padding: var(--section-padding) 1.25rem;
+}
+
+.section-with-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--bg-offset-desktop);
+  right: var(--bg-offset-desktop);
+  bottom: 0;
+  background-color: var(--color-background-light);
+  border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .section-with-background {
+    padding: var(--section-padding-mobile) var(--bg-offset-mobile);
+  }
+
+  .section-with-background::before {
+    left: var(--bg-offset-mobile);
+    right: var(--bg-offset-mobile);
+  }
+}

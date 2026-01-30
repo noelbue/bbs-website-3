@@ -4,8 +4,21 @@
 }
 
 .journey {
-  padding: var(--spacing-2xl) 0;
+  position: relative;
+  padding: var(--spacing-2xl) 1.25rem;
+  overflow: hidden;
+}
+
+.journey::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--bg-offset-desktop);
+  right: var(--bg-offset-desktop);
+  bottom: 0;
   background-color: var(--color-background-light);
+  border-radius: var(--border-radius);
+  z-index: -1;
 }
 
 .subtitle {
@@ -80,8 +93,21 @@
 }
 
 .expertise {
-  padding: var(--spacing-2xl) 0;
+  position: relative;
+  padding: var(--spacing-2xl) 1.25rem;
+  overflow: hidden;
+}
+
+.expertise::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--bg-offset-desktop);
+  right: var(--bg-offset-desktop);
+  bottom: 0;
   background-color: var(--color-background-light);
+  border-radius: var(--border-radius);
+  z-index: -1;
 }
 
 .personal {
@@ -123,11 +149,20 @@
 
 @media (max-width: 768px) {
   .intro,
-  .journey,
   .passion,
-  .expertise,
   .personal {
     padding: var(--spacing-xl) 0;
+  }
+
+  .journey,
+  .expertise {
+    padding: var(--section-padding-mobile) var(--bg-offset-mobile);
+  }
+
+  .journey::before,
+  .expertise::before {
+    left: var(--bg-offset-mobile);
+    right: var(--bg-offset-mobile);
   }
 
   .timeline {
@@ -147,4 +182,11 @@
   .timelineItem:hover .timelineDot {
     transform: translateY(-50%) scale(1.2);
   }
+}
+
+/* Ensure content is above background */
+.expertise .container,
+.journey .container {
+  position: relative;
+  z-index: 1;
 }

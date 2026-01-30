@@ -12,6 +12,7 @@ import {
   Code,
 } from "lucide-react";
 import Layout from "../components/layout/Layout";
+import Seo from "../components/Seo";
 import PageHero from "../components/layout/PageHero";
 import Cta from "../components/layout/Cta";
 import SectionTitle from "../components/ui/SectionTitle";
@@ -147,11 +148,9 @@ const UeberMichPage = () => {
 export default UeberMichPage;
 
 export const Head = () => (
-  <>
-    <title>Über mich – Bürgler Business Solutions</title>
-    <meta
-      name="description"
-      content="Publishing-Experte, Web-Entwickler und IT-Architekt aus Leidenschaft. Über 10 Jahre Erfahrung in Publishing-Systemen und moderner Web-Entwicklung."
-    />
-  </>
+  <Seo
+    title="Über mich – Bürgler Business Solutions"
+    description="Publishing-Experte, Web-Entwickler und IT-Architekt aus Leidenschaft. Über 10 Jahre Erfahrung in Publishing-Systemen und moderner Web-Entwicklung."
+    pathname="/ueber-mich"
+  />
 );

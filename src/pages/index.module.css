@@ -207,6 +207,17 @@
   font-weight: 600;
 }
 
+.textLink {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition);
+  border-bottom: 2px solid transparent;
+}
+
+.textLink:hover {
+  border-bottom-color: var(--color-primary);
+}
+
 .aboutButton {
   margin-top: var(--spacing-md);
 }

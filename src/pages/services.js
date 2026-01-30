@@ -17,7 +17,7 @@ import SectionTitle from "../components/ui/SectionTitle";
 import CardGrid from "../components/ui/CardGrid";
 import InfoCard from "../components/ui/InfoCard";
 import ProjectSizeCard from "../components/ui/ProjectSizeCard";
-import Faq from "../components/ui/FAQ";
+import Faq from "../components/ui/Faq";
 import servicesData from "../data/services.json";
 import faqData from "../data/faq.json";
 import * as styles from "./services.module.css";

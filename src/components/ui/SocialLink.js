@@ -1,3 +1,4 @@
+import React from "react";
 import * as styles from "./SocialLink.module.css";
 
 const SocialLink = ({ icon, label, href, description }) => {

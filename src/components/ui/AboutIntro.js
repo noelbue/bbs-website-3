@@ -1,3 +1,4 @@
+import React from "react";
 import * as styles from "./AboutIntro.module.css";
 
 const AboutIntro = ({ greeting, subtitle, description, image }) => {

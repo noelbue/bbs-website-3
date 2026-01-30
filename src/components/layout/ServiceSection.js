@@ -1,3 +1,4 @@
+import React from "react";
 import CardGrid from "../ui/CardGrid";
 import OfferingCard from "../ui/OfferingCard";
 import TechInfoBox from "../ui/TechInfoBox";

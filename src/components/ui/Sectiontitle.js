@@ -1,3 +1,4 @@
+import React from "react";
 import * as styles from "./SectionTitle.module.css";
 
 const SectionTitle = ({ children, className = "" }) => {

@@ -1,3 +1,4 @@
+import React from "react";
 import * as styles from "./SupportCard.module.css";
 
 const SupportCard = ({ icon, title, items }) => {

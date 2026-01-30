@@ -1,3 +1,4 @@
+import React from "react";
 import * as styles from "./ProcessStep.module.css";
 
 const ProcessStep = ({ number, title, description }) => {

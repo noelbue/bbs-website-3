@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import * as styles from "./Navigation.module.css";

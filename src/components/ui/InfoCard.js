@@ -1,3 +1,4 @@
+import React from "react";
 import * as styles from "./InfoCard.module.css";
 
 const InfoCard = ({ icon, title, description }) => {

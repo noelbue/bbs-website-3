@@ -1,3 +1,4 @@
+import React from "react";
 import * as styles from "./ProjectSizeCard.module.css";
 
 const ProjectSizeCard = ({ title, description }) => {

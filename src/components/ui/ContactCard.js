@@ -1,3 +1,4 @@
+import React from "react";
 import * as styles from "./ContactCard.module.css";
 
 const ContactCard = ({ icon, title, value, href, description }) => {

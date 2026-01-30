@@ -21,6 +21,7 @@ const SEO = ({ title, description, pathname = "", image, article = false }) => {
   return (
     <>
       <html lang={siteMetadata.lang} />
+      <meta charset="utf-8" />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="author" content={siteMetadata.author} />

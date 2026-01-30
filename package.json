@@ -1,6 +1,6 @@
 {
   "name": "buergler-business-solutions",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Corporate website for Bürgler Business Solutions",
   "main": "index.js",
   "scripts": {

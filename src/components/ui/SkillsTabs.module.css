@@ -1,0 +1,200 @@
+.skills {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: var(--gap-lg);
+  align-items: start;
+}
+
+.tabs {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tab:hover {
+  background: var(--color-white);
+}
+
+.tabActive {
+  background: var(--color-white);
+  border-color: var(--color-line);
+  box-shadow: var(--shadow-card);
+}
+
+.tabIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tabActive .tabIcon {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.tabLabel {
+  line-height: 1.25;
+}
+
+.count {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-text-gray);
+}
+
+.pane {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  min-height: 320px;
+  box-shadow: var(--shadow-card);
+}
+
+.paneTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.25rem;
+}
+
+.paneDesc {
+  color: var(--color-text-gray);
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+}
+
+.tier {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 0.75rem 1rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--color-line);
+  align-items: start;
+}
+
+.tierLabel {
+  display: grid;
+  grid-template-columns: 10px auto;
+  column-gap: 0.5rem;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-gray);
+  padding-top: 0.35rem;
+}
+
+.tierLabel i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: block;
+}
+
+.tierLabel small {
+  grid-column: 2;
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-text-gray);
+}
+
+.tier0 i {
+  opacity: 1;
+  background: var(--color-accent);
+}
+
+.tier1 i {
+  opacity: 0.55;
+}
+
+.tier2 i {
+  opacity: 0.25;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+@media (max-width: 900px) {
+  .skills {
+    grid-template-columns: 1fr;
+    gap: var(--gap-md);
+  }
+
+  .tabs {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .tab {
+    flex: 0 0 auto;
+    width: auto;
+    scroll-snap-align: start;
+    background: var(--color-white);
+    border-color: var(--color-line);
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .tabActive {
+    border-color: var(--color-primary);
+  }
+
+  .count {
+    display: none;
+  }
+
+  .pane {
+    min-height: 0;
+    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
+  }
+
+  .tier {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .tierLabel {
+    padding-top: 0;
+  }
+}

@@ -5,7 +5,8 @@
   },
   "intro": {
     "title": "Bereit für dein Projekt?",
-    "description": "Ob Publishing-Automatisierung, Web-Entwicklung oder IT-Beratung – ich freue mich, von deinem Projekt zu hören. Schreib mir einfach eine E-Mail oder ruf mich an, und wir schauen gemeinsam, wie ich dir helfen kann."
+    "description": "Ob Publishing-Automatisierung, Web-Entwicklung oder IT-Beratung – ich freue mich, von deinem Projekt zu hören. Schreib mir einfach eine E-Mail oder ruf mich an, und wir schauen gemeinsam, wie ich dir helfen kann.",
+    "note": "Antwort innert 24 h · Kostenloses Erstgespräch · Kein Verkaufspitch"
   },
   "contactMethods": [
     {
@@ -13,7 +14,7 @@
       "title": "E-Mail",
       "value": "nb@b-business-solutions.ch",
       "href": "mailto:nb@b-business-solutions.ch",
-      "description": "Am besten erreichst du mich per E-Mail. Ich antworte in der Regel innerhalb von 24 Stunden."
+      "description": "Der schnellste Weg. Ich antworte in der Regel innerhalb von 24 Stunden."
     },
     {
       "icon": "Phone",
@@ -35,23 +36,28 @@
     "items": [
       {
         "icon": "Briefcase",
-        "text": "Ich arbeite nebenbei und plane Projekte im Voraus – bitte habe etwas Geduld bei der Terminplanung"
+        "text": "Ich arbeite nebenbei und plane Projekte im Voraus – Termine brauchen etwas Vorlauf.",
+        "title": "Nebenerwerb"
       },
       {
         "icon": "Zap",
-        "text": "Kleinere Projekte starte ich oft innerhalb von 1-2 Wochen"
+        "text": "Kleinere Projekte starte ich oft innerhalb von ein bis zwei Wochen.",
+        "title": "Schneller Start"
       },
       {
         "icon": "Calendar",
-        "text": "Grössere Projekte nach individueller Absprache"
+        "text": "Grössere Projekte nach individueller Absprache und mit festem Zeitfenster.",
+        "title": "Grössere Projekte"
       },
       {
         "icon": "Home",
-        "text": "Remote-Arbeit bevorzugt, vor-Ort Termine nach Vereinbarung"
+        "text": "Remote bevorzugt, Termine vor Ort nach Vereinbarung in der Schweiz und im Nachbarland.",
+        "title": "Remote first"
       },
       {
         "icon": "CheckCircle",
-        "text": "Ich sage ehrlich, ob und wann ich Zeit habe – keine falschen Versprechungen"
+        "text": "Ich sage ehrlich, ob und wann ich Zeit habe – keine falschen Versprechungen.",
+        "title": "Ehrliche Antwort"
       }
     ]
   },
@@ -61,24 +67,33 @@
       {
         "number": "01",
         "title": "Erstkontakt",
-        "description": "Schreib mir eine E-Mail mit einer kurzen Beschreibung deines Projekts. Was möchtest du erreichen? Was sind deine Anforderungen?"
+        "description": "Schreib mir eine E-Mail mit einer kurzen Beschreibung deines Projekts. Was möchtest du erreichen? Was sind deine Anforderungen?",
+        "duration": "Tag 0",
+        "outcome": "Eine kurze Beschreibung genügt"
       },
       {
         "number": "02",
         "title": "Kennenlernen",
-        "description": "Wir sprechen per Video-Call oder Telefon über dein Projekt. Ich höre zu, stelle Fragen und gebe erste Einschätzungen."
+        "description": "Wir sprechen per Video-Call oder Telefon über dein Projekt. Ich höre zu, stelle Fragen und gebe erste Einschätzungen.",
+        "duration": "30 Minuten",
+        "outcome": "Erste Einschätzung, ehrlich"
       },
       {
         "number": "03",
         "title": "Angebot",
-        "description": "Du bekommst ein transparentes Angebot mit Zeitschätzung und Kosten. Keine versteckten Gebühren, keine Überraschungen."
+        "description": "Du bekommst ein transparentes Angebot mit Zeitschätzung und Kosten. Keine versteckten Gebühren, keine Überraschungen.",
+        "duration": "Innert 3 Arbeitstagen",
+        "outcome": "Zeitschätzung und Kosten"
       },
       {
         "number": "04",
         "title": "Umsetzung",
-        "description": "Ich halte dich während des Projekts auf dem Laufenden. Regelmässige Updates, klare Kommunikation, ehrliches Feedback."
+        "description": "Ich halte dich während des Projekts auf dem Laufenden. Regelmässige Updates, klare Kommunikation, ehrliches Feedback.",
+        "duration": "Je nach Grösse",
+        "outcome": "Regelmässige Updates"
       }
-    ]
+    ],
+    "subtitle": "Vier Schritte vom ersten Mail bis zur Umsetzung. Klick dich durch oder lass es laufen."
   },
   "social": {
     "title": "Wo du mich sonst noch findest",
@@ -114,5 +129,22 @@
       "text": "FAQ ANSEHEN",
       "href": "/services#faq"
     }
+  },
+  "quickStart": {
+    "title": "Damit ich schnell antworten kann",
+    "items": [
+      {
+        "label": "Ausgangslage",
+        "text": "Welche Systeme sind im Spiel? Was funktioniert heute nicht?"
+      },
+      {
+        "label": "Ziel",
+        "text": "Was soll am Ende anders sein – weniger Handarbeit, neue Kanäle, weniger Fehler?"
+      },
+      {
+        "label": "Rahmen",
+        "text": "Zeitfenster und ungefähres Budget, falls schon bekannt."
+      }
+    ]
   }
 }

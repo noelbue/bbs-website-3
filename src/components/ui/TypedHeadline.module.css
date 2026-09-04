@@ -1,0 +1,30 @@
+.wrap {
+  display: inline;
+}
+
+.accent {
+  font-style: normal;
+  color: var(--color-primary);
+}
+
+.caret {
+  display: inline-block;
+  width: 0.08em;
+  height: 0.85em;
+  margin-left: 0.06em;
+  vertical-align: -0.08em;
+  background: var(--color-primary);
+  opacity: 0;
+  border-radius: 1px;
+}
+
+.caretOn {
+  opacity: 1;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

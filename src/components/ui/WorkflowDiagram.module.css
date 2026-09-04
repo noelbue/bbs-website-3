@@ -1,0 +1,194 @@
+.figure {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.node {
+  fill: var(--color-white);
+  stroke: var(--color-line);
+  stroke-width: 1.5;
+}
+
+.hot {
+  stroke: var(--color-primary);
+}
+
+.out {
+  stroke: var(--color-accent);
+}
+
+.labelOut {
+  fill: var(--color-accent);
+}
+
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.08em;
+  fill: var(--color-text-gray);
+}
+
+.name {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  fill: var(--color-text);
+}
+
+.nameSmall {
+  font-size: 9.2px;
+  letter-spacing: -0.01em;
+}
+
+.caption {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  fill: var(--color-text-gray);
+}
+
+.rail {
+  fill: none;
+  stroke: var(--color-line);
+  stroke-width: 1.5;
+}
+
+.flow {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 7;
+  animation: flow 2.4s linear infinite;
+}
+
+.swap {
+  animation: swapIn 0.5s ease both;
+  transform-origin: center;
+}
+
+.swap .node {
+  animation: nodeIn 0.5s ease both;
+}
+
+.swap .flow {
+  animation:
+    flow 2.4s linear infinite,
+    drawIn 0.6s ease both;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 0.25rem;
+}
+
+.legendTitle {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text);
+  padding-left: 0.9rem;
+  position: relative;
+}
+
+.legendTitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.dots {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 999px;
+  border: 0;
+  background: var(--color-line);
+  cursor: pointer;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.dot:hover {
+  background: var(--color-primary-dark);
+}
+
+.dotActive {
+  width: 22px;
+  background: var(--color-primary);
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes swapIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes nodeIn {
+  from {
+    stroke-dashoffset: 300;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow,
+  .swap,
+  .swap .node,
+  .swap .flow {
+    animation: none;
+  }
+}
+
+/* Verbindungen zur Ausgabe-Ebene in Mint (nach .flow, damit es gewinnt) */
+.flow.flowOut {
+  stroke: var(--color-accent);
+}

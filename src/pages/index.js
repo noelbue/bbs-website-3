@@ -1,6 +1,4 @@
-import React from "react";
-import { useEffect, useRef } from "react";
-import { Zap, Layers, Search, Brain, Code, Award, Users } from "lucide-react";
+import React, { useCallback, useState } from "react";
 import Layout from "../components/layout/Layout";
 import Seo from "../components/Seo";
 import Cta from "../components/layout/Cta";
@@ -9,112 +7,109 @@ import ServiceCard from "../components/ui/ServiceCard";
 import WhyUsCard from "../components/ui/WhyUsCard";
 import SectionTitle from "../components/ui/SectionTitle";
 import CardGrid from "../components/ui/CardGrid";
+import WorkflowDiagram, { SCENARIOS } from "../components/ui/WorkflowDiagram";
+import TypedHeadline from "../components/ui/TypedHeadline";
+import TrustStrip from "../components/ui/TrustStrip";
+import { getIcon } from "../components/ui/icons";
 import homeContent from "../data/homeContent.json";
 import noelPortrait from "../assets/noel-buergler.png";
 import * as styles from "./index.module.css";
 
-const IndexPage = () => {
-  const servicesRef = useRef(null);
-  const whyUsRef = useRef(null);
-  const aboutRef = useRef(null);
-
-  // Icon Mapper
-  const iconMap = {
-    Zap: Zap,
-    Layers: Layers,
-    Search: Search,
-    Brain: Brain,
-    Code: Code,
-    Award: Award,
-    Users: Users,
-  };
-
-  const getIcon = (iconName, size = 40) => {
-    const IconComponent = iconMap[iconName];
-    return IconComponent ? <IconComponent size={size} /> : null;
-  };
-
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(styles.visible);
-        }
-      });
-    }, observerOptions);
-
-    const elements = [servicesRef.current, whyUsRef.current, aboutRef.current];
-    elements.forEach((el) => el && observer.observe(el));
-
-    return () => observer.disconnect();
+/** Hero mit getippter Headline; nur dieser Teil rendert beim Szenario-Wechsel neu. */
+const HomeHero = ({ hero, trust }) => {
+  const [headline, setHeadline] = useState(SCENARIOS[0].headline);
+  const handleScenario = useCallback((scenario) => {
+    setHeadline(scenario.headline);
   }, []);
 
   return (
-    <Layout>
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroBackground}></div>
-        <div className={styles.heroContent}>
+    <section className={styles.hero}>
+      <div className={styles.heroBackground}></div>
+      <div className={`container ${styles.heroInner}`}>
+        <div className={styles.heroText}>
+          <span className={styles.eyebrow}>{hero.eyebrow}</span>
           <h1 className={styles.heroTitle}>
-            Publishing-Technologie neu gedacht. Automatisierung. Integration.
-            Innovation.
+            <TypedHeadline text={headline} />
           </h1>
-          <p className={styles.heroText}>
-            Als erfahrener Publishing-Experte entwickle ich massgeschneiderte
-            Lösungen für Ihre digitalen und Print-Publishing-Prozesse. Von der
-            Beratung bis zur Implementierung – ich bringe Ihre Workflows auf das
-            nächste Level.
-          </p>
+          <p className={styles.heroLead}>{hero.lead}</p>
           <div className={styles.heroCta}>
-            <Button href="/kontakt" variant="primary">
-              PROJEKT BESPRECHEN
+            <Button href={hero.primary.href} variant="primary" icon>
+              {hero.primary.text}
             </Button>
-            <Button href="/services" variant="secondary">
-              SERVICES ENTDECKEN
+            <Button href={hero.secondary.href} variant="secondary">
+              {hero.secondary.text}
             </Button>
           </div>
+          {hero.trustLine && (
+            <p className={styles.heroNote}>{hero.trustLine}</p>
+          )}
         </div>
-      </section>
+        <div className={styles.heroVisual}>
+          <WorkflowDiagram onChange={handleScenario} />
+        </div>
+        <TrustStrip
+          label={trust.label}
+          items={trust.items}
+          note={
+            <>
+              <b>{trust.noteStrong}</b> {trust.noteText}
+            </>
+          }
+        />
+      </div>
+    </section>
+  );
+};
 
-      {/* Services Overview */}
-      <section className={styles.services} ref={servicesRef}>
+const IndexPage = () => {
+  const { hero, trust, services, whyUs } = homeContent;
+
+  return (
+    <Layout>
+      <HomeHero hero={hero} trust={trust} />
+
+      {/* Services */}
+      <section className={styles.services}>
         <div className="container">
-          <SectionTitle>{homeContent.services.title}</SectionTitle>
-          <CardGrid columns={2}>
-            {homeContent.services.items.map((service, index) => (
+          <SectionTitle
+            eyebrow={services.eyebrow}
+            subtitle={services.subtitle}
+            align="left"
+          >
+            {services.title}
+          </SectionTitle>
+          <div className={styles.bento}>
+            {services.items.map((service) => (
               <ServiceCard
-                key={index}
+                key={service.title}
                 href={service.href}
-                icon={getIcon(service.icon)}
+                icon={getIcon(service.icon, 24)}
+                kicker={service.kicker}
                 title={service.title}
-                subtitle={service.subtitle}
                 description={service.description}
+                tags={service.tags}
+                featured={Boolean(service.featured)}
               />
             ))}
-          </CardGrid>
+          </div>
           <div className={styles.servicesFooter}>
-            <Button href="/services" variant="secondary">
-              SERVICES
+            <Button href="/services" variant="secondary" icon>
+              Alle Services
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Why Work With Us */}
-      <section className={styles.whyUs} ref={whyUsRef}>
+      {/* Warum ich */}
+      <section className={styles.whyUs}>
         <div className="container">
-          <SectionTitle>{homeContent.whyUs.title}</SectionTitle>
+          <SectionTitle eyebrow={whyUs.eyebrow}>{whyUs.title}</SectionTitle>
           <CardGrid columns={3}>
-            {homeContent.whyUs.items.map((item, index) => (
+            {whyUs.items.map((item) => (
               <WhyUsCard
-                key={index}
+                key={item.title}
                 href={item.href}
-                icon={getIcon(item.icon, 48)}
+                icon={getIcon(item.icon, 28)}
                 title={item.title}
                 description={item.description}
               />
@@ -123,24 +118,37 @@ const IndexPage = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className={styles.about} ref={aboutRef}>
+      {/* Über mich */}
+      <section className={styles.about}>
         <div className="container">
-          <SectionTitle>Noel Bürgler – Ihr Publishing-Experte</SectionTitle>
-          <div className={styles.aboutContent}>
+          <SectionTitle eyebrow="Über mich">
+            Noel Bürgler – Ihr Publishing-Experte
+          </SectionTitle>
+          <div className={styles.aboutContent} data-reveal>
             <div className={styles.aboutImage}>
-              <div className={styles.portrait}>
-                <img
-                  src={noelPortrait}
-                  alt="Noel Bürgler"
-                  className={styles.portraitImage}
-                />
+              <div className={styles.portraitWrap}>
+                <div className={styles.portrait}>
+                  <img
+                    src={noelPortrait}
+                    alt="Noel Bürgler"
+                    className={styles.portraitImage}
+                    width="300"
+                    height="400"
+                    loading="lazy"
+                  />
+                </div>
+                <span className={`${styles.badge} ${styles.badgeTop}`}>
+                  <b>10+</b> Jahre Publishing
+                </span>
+                <span className={`${styles.badge} ${styles.badgeBottom}`}>
+                  <i className={styles.pulse} aria-hidden="true" />
+                  Kapazität für neue Projekte
+                </span>
               </div>
             </div>
             <div className={styles.aboutText}>
               <p>
-                Nach über 10 Jahren in der Publishing-Branche und zuletzt bei
-                der{" "}
+                Über 10 Jahre in der Publishing-Branche – von der{" "}
                 <a
                   href="https://www.topix.ch/"
                   target="_blank"
@@ -149,13 +157,24 @@ const IndexPage = () => {
                 >
                   <strong>Topix AG</strong>
                 </a>{" "}
-                habe ich mich auf die Automatisierung und Integration von
-                Publishing-Workflows spezialisiert.
+                bis zur{" "}
+                <a
+                  href="https://www.brueggli-admedia.ch/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.textLink}
+                >
+                  <strong>Brüggli Admedia AG</strong>
+                </a>
+                , wo ich heute als Solution Architect die
+                Systemmodernisierung für die Schweizerische Post mitentwickle.
+                Mein Fokus: Automatisierung und Integration von
+                Publishing-Workflows – zunehmend mit KI-gestützter Entwicklung.
               </p>
               <p>Meine Mission: Komplexe Technologie einfach nutzbar machen.</p>
               <div className={styles.aboutButton}>
-                <Button href="/ueber-mich" variant="secondary">
-                  ÜBER MICH
+                <Button href="/ueber-mich" variant="secondary" icon>
+                  Über mich
                 </Button>
               </div>
             </div>
@@ -163,7 +182,6 @@ const IndexPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <Cta
         title="Bereit für effizientere Publishing-Prozesse?"
         description="Lassen Sie uns in einem Beratungsgespräch Ihre Herausforderungen besprechen und gemeinsam die perfekte Lösung entwickeln."
@@ -179,7 +197,7 @@ export default IndexPage;
 export const Head = () => (
   <Seo
     title="Bürgler Business Solutions – Publishing-Technologie Experte"
-    description="Publishing-Technologie neu gedacht. Automatisierung. Integration. Innovation. Massgeschneiderte Lösungen für Ihre digitalen und Print-Publishing-Prozesse."
+    description="Publishing-Workflows, die von selbst laufen. Automatisierung, Integration und KI-gestützte Entwicklung für digitale und Print-Publishing-Prozesse aus der Schweiz."
     pathname="/"
   />
 );

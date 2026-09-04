@@ -1,45 +1,130 @@
 {
+  "hero": {
+    "eyebrow": "Publishing-Technologie · Schweiz",
+    "lead": "Ich automatisiere und integriere Print- und Digital-Publishing: von InDesign Server über Enfocus Switch bis zum Headless CMS. Als Solution Architect, der selbst entwickelt.",
+    "primary": {
+      "text": "Projekt besprechen",
+      "href": "/kontakt"
+    },
+    "secondary": {
+      "text": "Services entdecken",
+      "href": "/services"
+    },
+    "trustLine": "Kostenloses Erstgespräch · Antwort innert 24 h · ehrliche Einschätzung"
+  },
+  "trust": {
+    "label": "Vertraut von",
+    "noteStrong": "10+ Jahre",
+    "noteText": "Publishing-Systeme",
+    "items": [
+      {
+        "name": "Red Bull Media House",
+        "logo": "/images/clients/red-bull-media-house.svg",
+        "height": 40,
+        "url": "https://www.redbullmediahouse.com/"
+      },
+      {
+        "name": "Schweizerische Post",
+        "logo": "/images/clients/schweizerische-post.svg",
+        "height": 40,
+        "url": "https://www.post.ch/"
+      },
+      {
+        "name": "Swisstopo",
+        "logo": "/images/clients/swisstopo.png",
+        "height": 50,
+        "url": "https://www.swisstopo.admin.ch/"
+      },
+      {
+        "name": "REWE Group (RG Verlag)",
+        "logo": "/images/clients/rg-verlag.png",
+        "url": "https://rgverlag.co.at/"
+      },
+      {
+        "name": "Mattenbach Gruppe",
+        "logo": "/images/clients/mattenbach.svg",
+        "url": "https://www.mattenbach.ch/"
+      },
+      {
+        "name": "seitwärts",
+        "logo": "/images/clients/seitwaerts.svg",
+        "url": "https://www.seitwaerts.ch/"
+      },
+      {
+        "name": "AVD Goldach AG",
+        "logo": "/images/clients/avd-goldach.svg",
+        "url": "https://avd.ch/"
+      }
+    ]
+  },
   "services": {
-    "title": "Services",
+    "eyebrow": "Services",
+    "title": "Fünf Wege, Publishing schneller zu machen",
+    "subtitle": "Von der Automatisierung bis zur Beratung. Alles aus einer Hand, alles selbst gebaut.",
     "items": [
       {
         "icon": "Zap",
+        "kicker": "Kernkompetenz",
         "title": "Publishing-Automatisierung",
-        "subtitle": "Optimierte Workflows für maximale Effizienz",
-        "description": "Automatisieren Sie Ihre Publishing-Prozesse mit modernen Lösungen und bewährten Tools. Ich entwickle individuelle Workflows, die Zeit sparen und Fehler reduzieren.",
-        "href": "/services#publishing-automation"
+        "description": "InDesign Server, Enfocus Switch, vjoon K4 und EasyCatalog: Workflows, die aus strukturierten Daten fertige Publikationen machen – ohne Handarbeit, ohne Fehler.",
+        "tags": [
+          "InDesign Server",
+          "Enfocus Switch",
+          "vjoon K4"
+        ],
+        "href": "/services#publishing-automation",
+        "featured": true
       },
       {
         "icon": "Layers",
+        "kicker": "Content & Web",
         "title": "Content Management & Web-Entwicklung",
-        "subtitle": "Moderne Content-Lösungen für jeden Bedarf",
-        "description": "Von WordPress bis Headless CMS und Eigenentwicklung – ich implementiere die perfekte Content-Strategie für Ihre Anforderungen. Inklusive Custom Plugins, Themes und DAM-Integration.",
+        "description": "Headless CMS, Next.js und WordPress. Inhalte einmal pflegen, überall ausspielen – auf der Website, in der App und im Print.",
+        "tags": [
+          "Next.js",
+          "Contentful",
+          "WordPress"
+        ],
         "href": "/services#content-management"
       },
       {
-        "icon": "Search",
-        "title": "System-Integration & Datenverarbeitung",
-        "subtitle": "Nahtlose Verbindungen zwischen Ihren Tools",
-        "description": "API-Entwicklung, Datenmigrationen und Schnittstellenprogrammierung. Ich sorge dafür, dass Ihre Systeme perfekt zusammenarbeiten.",
+        "icon": "Plug",
+        "kicker": "Integration",
+        "title": "System-Integration & APIs",
+        "description": "REST, GraphQL, XML und JSON. Ich sorge dafür, dass Ihre Systeme miteinander reden.",
+        "tags": [
+          "REST APIs",
+          "Datenmigration"
+        ],
         "href": "/services#system-integration"
       },
       {
-        "icon": "Brain",
+        "icon": "Sparkles",
+        "kicker": "KI",
         "title": "KI-Publishing-Lösungen",
-        "subtitle": "Intelligente Automatisierung für die Zukunft",
-        "description": "Nutzen Sie KI-Technologien für effizientere Publishing-Prozesse. Von automatischer Contentverarbeitung bis zu intelligenten Workflows.",
+        "description": "Metadaten, OCR, Transkription. Evaluiert, datenschutzkonform und produktiv im Einsatz.",
+        "tags": [
+          "Claude Code",
+          "OCR",
+          "nDSG"
+        ],
         "href": "/services#ai-publishing"
       },
       {
-        "icon": "Code",
+        "icon": "Compass",
+        "kicker": "Beratung",
         "title": "Beratung & Projektleitung",
-        "subtitle": "Strategische Begleitung von A bis Z",
-        "description": "Technische Expertise trifft auf Projektmanagement. Ich begleite Sie von der Strategie bis zur erfolgreichen Implementierung.",
+        "description": "Tool-Evaluation, Anforderungen, agile Umsetzung. Ich packe selbst mit an.",
+        "tags": [
+          "Requirements",
+          "Scrum"
+        ],
         "href": "/services#consulting"
       }
     ]
   },
   "whyUs": {
+    "eyebrow": "Warum ich",
     "title": "Warum Sie mit mir arbeiten sollten",
     "items": [
       {

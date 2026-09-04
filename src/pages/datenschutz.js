@@ -9,7 +9,7 @@ const DatenschutzPage = () => {
     <Layout>
       <div className={styles.datenschutz}>
         <div className="container">
-          <SectionTitle>Datenschutzerklärung</SectionTitle>
+          <SectionTitle as="h1">Datenschutzerklärung</SectionTitle>
 
           <div className={styles.content}>
             <section className={styles.section}>

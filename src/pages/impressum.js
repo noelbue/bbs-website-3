@@ -9,7 +9,7 @@ const ImpressumPage = () => {
     <Layout>
       <div className={styles.impressum}>
         <div className="container">
-          <SectionTitle>Impressum</SectionTitle>
+          <SectionTitle as="h1">Impressum</SectionTitle>
 
           <div className={styles.content}>
             <section className={styles.section}>

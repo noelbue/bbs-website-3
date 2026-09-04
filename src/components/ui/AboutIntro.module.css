@@ -3,14 +3,35 @@
   grid-template-columns: 300px 1fr;
   gap: var(--spacing-xl);
   align-items: center;
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: 0;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.imageContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  transform: translate(12px, 12px);
+  transition: transform 0.35s ease;
+}
+
+.imageContainer:hover::before {
+  transform: translate(5px, 5px);
 }
 
 .imageContainer img {
+  position: relative;
   width: 100%;
   height: auto;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-md);
   object-fit: cover;
+  background: var(--color-background-light);
+  display: block;
 }
 
 .content {

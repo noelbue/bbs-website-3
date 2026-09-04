@@ -1,0 +1,183 @@
+.strip {
+  --bleed: var(--bg-offset-desktop);
+  display: grid;
+  gap: 1rem;
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  border-top: 1px dashed var(--color-line);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-gray);
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--color-text-gray);
+}
+
+.note b {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+/* Laufband über die volle Breite der Hero-Fläche */
+.marquee {
+  width: calc(100vw - 2 * var(--bleed));
+  margin-left: calc(50% - 50vw + var(--bleed));
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  padding: 0.5rem 0;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+/* Eine Kopie der Logoreihe; Abstand nach dem letzten Logo = Abstand zwischen Logos */
+.copy {
+  list-style: none;
+  margin: 0;
+  padding: 0 5rem 0 0;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.marquee:hover .track,
+.marquee:focus-within .track {
+  animation-play-state: paused;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  min-width: 200px;
+}
+
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin: -4px -6px;
+}
+
+.logo {
+  height: 34px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: 0.7;
+  filter: var(--logo-filter);
+  transition:
+    opacity 0.25s ease,
+    filter 0.25s ease,
+    transform 0.25s ease;
+}
+
+.link:hover .logo,
+.link:focus-visible .logo {
+  opacity: 1;
+  filter: none;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  opacity: 0.72;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.link:hover .wordmark {
+  opacity: 1;
+  color: var(--color-primary);
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@media (max-width: 768px) {
+  .strip {
+    --bleed: 0px;
+  }
+
+  .track {
+    animation-duration: 40s;
+  }
+
+  .copy {
+    gap: 3rem;
+    padding-right: 3rem;
+  }
+
+  .item {
+    min-width: 150px;
+  }
+
+  .logo {
+    height: 28px;
+    max-width: 140px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    width: auto;
+    margin-left: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .track {
+    animation: none;
+    width: auto;
+  }
+
+  .copy {
+    flex-wrap: wrap;
+    gap: 1.5rem 2.5rem;
+    padding-right: 0;
+  }
+
+  .copy[aria-hidden="true"] {
+    display: none;
+  }
+
+  .item {
+    min-width: 0;
+  }
+}

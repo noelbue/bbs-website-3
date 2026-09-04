@@ -1,47 +1,60 @@
 .whyUsCard {
+  position: relative;
   background-color: var(--color-white);
   padding: var(--spacing-md);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
   text-align: center;
-  transition: var(--transition);
-  box-shadow: 0 4px 8px rgba(39, 37, 112, 0.05);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  box-shadow: var(--shadow-card);
   text-decoration: none;
   display: block;
   color: inherit;
-  cursor: pointer;
-  position: relative;
-}
-
-.whyUsCard * {
-  pointer-events: none;
 }
 
 .whyUsCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(39, 37, 112, 0.12);
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-hover);
 }
 
 .whyUsIcon {
-  width: 64px;
-  height: 64px;
-  background-color: var(--color-primary);
-  border-radius: var(--border-radius);
+  width: var(--icon-lg);
+  height: var(--icon-lg);
+  background-color: var(--color-primary-soft);
+  border-radius: var(--radius-icon);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto var(--spacing-md);
-  color: var(--color-white);
+  margin: 0 auto var(--spacing-sm);
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.whyUsIcon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .whyUsCard h3 {
-  font-size: 1.5rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.6rem;
   color: var(--color-text);
-  font-weight: 900;
 }
 
 .whyUsCard p {
-  line-height: 1.7;
-  color: var(--color-text);
-  opacity: 0.8;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: var(--color-text-gray);
+  margin: 0;
+}
+
+.whyUsCard:hover .whyUsIcon {
+  transform: rotate(-6deg) scale(1.06);
 }

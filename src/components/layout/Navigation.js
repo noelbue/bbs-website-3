@@ -1,7 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "gatsby";
+import Button from "../ui/Button";
+import ThemeToggle from "../ui/ThemeToggle";
 import * as styles from "./Navigation.module.css";
+
+const menuItems = [
+  { to: "/", label: "Home" },
+  { to: "/services", label: "Services" },
+  { to: "/ueber-mich", label: "Über mich" },
+  { to: "/kontakt", label: "Kontakt" },
+];
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -12,7 +21,7 @@ const Navigation = () => {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -25,21 +34,32 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={styles.container}>
+    <header className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
+      <nav className={styles.container} aria-label="Hauptnavigation">
         <Link to="/" className={styles.logo}>
           <img
             src="/images/bbs-logo.svg"
             alt="Bürgler Business Solutions"
             width="48"
             height="48"
+            className={styles.logoLight}
+          />
+          <img
+            src="/images/bbs-logo-dark.svg"
+            alt=""
+            width="48"
+            height="48"
+            className={styles.logoDark}
+            aria-hidden="true"
           />
         </Link>
 
         <button
           className={`${styles.hamburger} ${mobileMenuOpen ? styles.open : ""}`}
           onClick={toggleMobileMenu}
-          aria-label="Menu"
+          aria-label={mobileMenuOpen ? "Menü schliessen" : "Menü öffnen"}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="main-menu"
         >
           <span></span>
           <span></span>
@@ -47,51 +67,32 @@ const Navigation = () => {
         </button>
 
         <ul
+          id="main-menu"
           className={`${styles.menu} ${mobileMenuOpen ? styles.mobileOpen : ""}`}
         >
-          <li>
-            <Link
-              to="/"
-              className={styles.menuLink}
-              activeClassName={styles.active}
-              onClick={closeMobileMenu}
-            >
-              Home
-            </Link>
+          {menuItems.map((item) => (
+            <li key={item.to}>
+              <Link
+                to={item.to}
+                className={styles.menuLink}
+                activeClassName={styles.active}
+                onClick={closeMobileMenu}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+          <li className={styles.themeItem}>
+            <ThemeToggle />
           </li>
-          <li>
-            <Link
-              to="/services"
-              className={styles.menuLink}
-              activeClassName={styles.active}
-              onClick={closeMobileMenu}
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/ueber-mich"
-              className={styles.menuLink}
-              activeClassName={styles.active}
-              onClick={closeMobileMenu}
-            >
-              Über mich
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/kontakt"
-              className={styles.menuLink}
-              activeClassName={styles.active}
-              onClick={closeMobileMenu}
-            >
-              Kontakt
-            </Link>
+          <li className={styles.ctaItem}>
+            <Button href="/kontakt" variant="primary" size="sm" icon>
+              Projekt besprechen
+            </Button>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 

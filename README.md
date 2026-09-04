@@ -10,7 +10,7 @@ Professional website showcasing Publishing-Automation, Web Development, and IT C
 
 - **[Gatsby](https://www.gatsbyjs.com/)** - React-based static site generator
 - **[React](https://reactjs.org/)** - UI component library
-- **[React Helmet](https://github.com/nfl/react-helmet)** - SEO & meta tag management
+- **Gatsby Head API** - SEO, Meta-Tags und JSON-LD (kein react-helmet)
 - **CSS Modules** - Component-scoped styling
 - **[Lucide React](https://lucide.dev/)** - Icon library
 - **SF Pro Display & SF Mono** - Custom Apple fonts (locally hosted)
@@ -51,7 +51,7 @@ src/
 ├── components/
 │   ├── layout/          # Header, Footer, Navigation, CTA, ServiceNav
 │   ├── ui/              # Reusable UI components (Button, Card, etc.)
-│   └── Seo.js           # SEO component with React Helmet
+│   └── Seo.js           # SEO component (Gatsby Head API, JSON-LD)
 ├── data/                # JSON content files
 │   ├── homeContent.json
 │   ├── services.json
@@ -293,7 +293,6 @@ Telefon: +41 78 783 28 14
 ### React
 
 - [React Documentation](https://react.dev/)
-- [React Helmet](https://github.com/nfl/react-helmet)
 
 ### Icons
 

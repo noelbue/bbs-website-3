@@ -1,0 +1,75 @@
+.chip {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  color: var(--color-text);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Glanz, der beim Hover einmal über den Chip läuft */
+.chip::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  left: -70%;
+  width: 45%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.65),
+    transparent
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chip:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px -10px rgba(15, 159, 123, 0.6);
+}
+
+.chip:hover::after {
+  animation: chipShine 0.7s ease forwards;
+}
+
+@keyframes chipShine {
+  from {
+    left: -70%;
+    opacity: 1;
+  }
+  to {
+    left: 130%;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip:hover::after {
+    animation: none;
+  }
+}
+
+.soft {
+  background: var(--color-background-light);
+}
+
+.inverse {
+  background: var(--color-on-primary-tint);
+  border-color: var(--color-on-primary-line);
+  color: var(--color-on-primary);
+}

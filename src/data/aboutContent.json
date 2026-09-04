@@ -1,33 +1,99 @@
 {
   "hero": {
     "title": "Über mich",
-    "subtitle": "Publishing-Experte, Web-Entwickler und IT-Architekt"
+    "subtitle": "Solution Architect, Publishing-Experte und Web-Entwickler"
   },
   "intro": {
     "greeting": "Hi, ich bin Noel",
-    "subtitle": "Publishing-Technologie-Experte aus der Schweiz",
-    "description": "Seit über 10 Jahren bewege ich mich in der Welt der Publishing-Systeme. Was als Polygraf-Lehre begann, wurde zur Leidenschaft für Automatisierung, Integration und moderne Web-Entwicklung. Heute verbinde ich Publishing-Expertise mit Software-Engineering – für Lösungen, die wirklich funktionieren.",
+    "subtitle": "Solution Architect & Publishing-Technologie-Experte aus der Schweiz",
+    "description": "Seit über 10 Jahren bewege ich mich in der Software-, Digital- und Print-Welt. Was als Polygraf-Lehre begann, wurde zur Leidenschaft für Automatisierung, Integration und moderne Software-Entwicklung. Heute arbeite ich als Solution Architect und Requirements Engineer an der Schnittstelle zwischen Fachbereich, IT und Entwicklung – und verbinde Publishing-Expertise mit Software-Engineering und KI-gestützter Entwicklung. Für Lösungen, die wirklich funktionieren.",
     "image": "../assets/noel-buergler.png"
   },
   "journey": {
     "title": "Mein Weg",
-    "subtitle": "Von der Polygraf-Lehre zum Publishing-Solutions-Architekten",
+    "subtitle": "Von der Polygraf-Lehre zum Solution Architect",
     "story": [
       {
-        "title": "Der Anfang: Print & Publishing",
-        "description": "Mit 15 Jahren startete ich meine Polygraf-Lehre bei AVD Goldach AG. Dort lernte ich das Handwerk – von Druckvorstufe bis Layout. Parallel entwickelte ich schon früh Interesse an Webentwicklung und WordPress."
+        "title": "Solution Architect & stellvertretender IT-Leiter",
+        "description": "Seit Oktober 2025 bin ich bei der Brüggli Admedia AG als Solution Architect und stellvertretender IT-Leiter tätig. Ich leite und entwickle die PostCard-Creator-Modernisierung für die Schweizerische Post aktiv mit – die Ablösung eines Legacy-Systems durch eine moderne Architektur, unterstützt durch KI-gestütztes Agentic Coding mit Claude Code. Daneben baue ich Enfocus-Switch-Workflows, die täglich Stunden manueller Arbeit sparen, führe neue Variable-Data-Publishing-Produkte mit XMPie ein und verantworte die IT-Infrastruktur mit Microsoft Intune, Jira Service Management und Odoo.",
+        "period": "Okt 2025 – heute",
+        "company": "Brüggli Admedia AG",
+        "location": "Romanshorn · Hybrid",
+        "tags": [
+          "Solution Architecture",
+          "Legacy-Modernisierung",
+          "Claude Code",
+          "Enfocus Switch",
+          "XMPie",
+          "Microsoft Intune",
+          "Odoo"
+        ],
+        "logo": "/images/companies/brueggli-admedia.png",
+        "url": "https://www.brueggli-admedia.ch/"
       },
       {
-        "title": "Publishing-Systeme: Application Engineer & Projektleiter",
-        "description": "Bei der Topix AG tauchte ich tief in Publishing-Systeme ein – nicht als Produktions-Person, sondern als Application Engineer, Manager und Projektleiter. Ich betreute Publishing-Workflows, Content-First Ansätze und komplexe System-Integrationen für namhafte Kunden wie Red Bull Media House, Swisstopo, Mattenbach Gruppe und viele weitere. Von Enfocus Switch über vjoon K4 bis InDesign Server – ich integrierte, customisierte und optimierte komplexe Publishing-Landschaften."
+        "title": "Solution Architect & Requirements Engineer",
+        "description": "Parallel verantworte ich Requirements und Solution Design für Fridai, eine schweizerische, datenschutzkonforme KI-Plattform für den Sozialbereich. Ich führe Anforderungsworkshops mit Fachpersonen durch, schreibe Spezifikationen und übersetze sie in Sprints mit klarem Scope. Im KI-Bereich evaluiere ich Transkriptionsmodelle, OCR-Lösungen und lokale Open-Source-Sprachmodelle – inklusive der Datenschutz-Abklärungen nach nDSG, damit KI dort ankommt, wo sie Menschen wirklich entlastet.",
+        "period": "Okt 2025 – heute",
+        "company": "Fridai · inkubiert bei Brüggli Admedia AG",
+        "location": "Romanshorn · Hybrid",
+        "tags": [
+          "Requirements Engineering",
+          "Solution Design",
+          "Claude Code",
+          "LLM-Evaluation",
+          "OCR",
+          "nDSG"
+        ],
+        "logo": "/images/companies/fridai.png",
+        "url": "https://fridai.swiss"
       },
       {
-        "title": "Web-Entwicklung: Die andere Seite",
-        "description": "Parallel dazu entwickelte sich meine Leidenschaft für moderne Web-Entwicklung. React, TypeScript, Node.js – die Technologien der digitalen Welt faszinierten mich. Ich begann, Brücken zwischen Print und Digital zu bauen: Headless CMS, die Inhalte sowohl für Web als auch für automatisierte Print-Produktionen liefern. Content-First Ansätze, bei denen aus strukturierten Daten in Sekunden fertige Publikationen entstehen."
+        "title": "Frontend Developer (selbstständig)",
+        "description": "Parallel dazu entwickelte sich meine Leidenschaft für moderne Web-Entwicklung. Seit 2021 setze ich selbstständig Websites und Web-Anwendungen um – mit React, Next.js, TypeScript und Node.js, oft content-first mit einem Headless CMS. Ich begann, Brücken zwischen Print und Digital zu bauen: strukturierte Inhalte, die sowohl das Web als auch automatisierte Print-Produktionen beliefern.",
+        "period": "2021 – heute",
+        "company": "Selbstständig · Bürgler Business Solutions",
+        "location": "Horn · Remote",
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Headless CMS",
+          "WordPress"
+        ],
+        "logo": "/images/bbs-logo.svg"
       },
       {
-        "title": "Heute: Solutions Architect & IT-Leader",
-        "description": "Seit Oktober 2025 bin ich bei Brüggli Admedia AG als Solutions Architect und Deputy IT Manager. Ich entwickle intelligente Kommunikationslösungen, betreue IT-Infrastruktur und leite Modernisierungs-Projekte – unter anderem für die Schweizer Post. Parallel studiere ich Computer Science und biete mein Know-How als selbstständiger Publishing-Technologie-Experte an. Das Beste aus beiden Welten: Publishing-Expertise trifft moderne Software-Entwicklung."
+        "title": "Application Engineer & Projektleiter",
+        "description": "Bei der Topix AG tauchte ich viereinhalb Jahre tief in Publishing-Systeme ein – nicht als Produktions-Person, sondern als Application Engineer, Manager und Projektleiter. Ich betreute Publishing-Workflows, Content-First Ansätze und komplexe System-Integrationen für namhafte Kunden wie Red Bull Media House, Swisstopo, Mattenbach Gruppe und viele weitere. Von Enfocus Switch über vjoon K4 bis InDesign Server – ich integrierte, customisierte und optimierte komplexe Publishing-Landschaften.",
+        "period": "Feb 2021 – Okt 2025",
+        "company": "Topix AG",
+        "location": "St. Gallen · Hybrid",
+        "tags": [
+          "vjoon K4",
+          "Enfocus Switch",
+          "InDesign Server",
+          "System-Integration",
+          "Projektleitung",
+          "Schulung"
+        ],
+        "logo": "/images/companies/topix.png",
+        "url": "https://www.topix.ch"
+      },
+      {
+        "title": "Polygraf (Print/Web)",
+        "description": "Mit 15 Jahren startete ich meine Polygraf-Lehre bei der AVD Goldach AG. Dort lernte ich das Handwerk – von Druckvorstufe bis Layout – und arbeitete früh mit vjoon K4 und Enfocus Switch. Die ersten JavaScript-Scripts für InDesign waren mein Einstieg in die Programmierung, parallel entstanden erste Web-Projekte mit WordPress.",
+        "period": "2015 – 2021",
+        "company": "AVD Goldach AG",
+        "location": "Goldach · Vor Ort",
+        "tags": [
+          "Druckvorstufe",
+          "vjoon K4",
+          "InDesign-Scripting",
+          "WordPress"
+        ],
+        "logo": "/images/companies/avd.png",
+        "url": "https://avd.ch"
       }
     ]
   },
@@ -45,9 +111,14 @@
         "description": "Am Ende zählt, dass die Lösung für alle funktioniert. Ich sehe mich als Übersetzer zwischen Technik und Menschen – Systeme sollen unterstützen, nicht komplizieren."
       },
       {
+        "icon": "Sparkles",
+        "title": "KI als Werkzeug, nicht als Hype",
+        "description": "Ich nutze KI dort, wo sie messbar hilft: Agentic Coding mit Claude Code im Alltag, sauber evaluierte Modelle in Projekten – und immer mit Blick auf Datenschutz und Nachvollziehbarkeit."
+      },
+      {
         "icon": "Rocket",
         "title": "Immer am Lernen",
-        "description": "Parallel zur Vollzeit-Arbeit studiere ich Informatik an der IU. Nicht weil ich muss, sondern weil mich Themen wie Softwarearchitektur, Kryptographie und Requirements Engineering faszinieren."
+        "description": "Parallel zur Vollzeit-Arbeit schliesse ich im Frühling 2027 mein Informatikstudium (B.Sc.) an der IU ab. Nicht weil ich muss, sondern weil mich Softwarearchitektur, Kryptographie, Requirements Engineering und Business Intelligence faszinieren."
       },
       {
         "icon": "Zap",
@@ -63,58 +134,149 @@
   },
   "expertise": {
     "title": "Womit ich arbeite",
-    "subtitle": "Technologien und Tools, die ich täglich nutze",
+    "subtitle": "Werkzeuge nach Tiefe sortiert. Ausgefüllte Punkte bedeuten tägliche Praxis.",
     "categories": [
       {
+        "icon": "Sparkles",
+        "title": "KI & Agentic Development",
+        "description": "KI dort, wo sie messbar hilft – mit sauberer Evaluation und Datenschutz.",
+        "tiers": {
+          "core": [
+            "Agentic Coding mit Claude Code",
+            "Prompt Engineering",
+            "KI-gestützte Entwicklung (Codex)"
+          ],
+          "solid": [
+            "Lokale LLMs (GPT-OSS, Qwen, Gemma)",
+            "Whisper / WER & BLEU",
+            "OCR / Document AI (Mistral)",
+            "Datenschutz-Abklärungen (nDSG)"
+          ],
+          "basic": [
+            "Embeddings & Reranking",
+            "RAG-Ansätze"
+          ]
+        }
+      },
+      {
+        "icon": "Compass",
+        "title": "Methoden & Architektur",
+        "description": "Von der Anforderung bis zum laufenden System.",
+        "tiers": {
+          "core": [
+            "Requirements Engineering",
+            "Solution Architecture",
+            "Spezifikation",
+            "Stakeholder-Management",
+            "Scrum"
+          ],
+          "solid": [
+            "System Design",
+            "Projektmanagement",
+            "Prozessautomatisierung",
+            "Legacy-Modernisierung"
+          ],
+          "basic": [
+            "ITIL",
+            "Kanban"
+          ]
+        }
+      },
+      {
+        "icon": "Printer",
         "title": "Publishing & Automation",
-        "skills": [
-          "Adobe InDesign Server & ExtendScript",
-          "Enfocus Switch & Scripting Module (Node.js Support)",
-          "vjoon K4 (Installation, Support & API-Integration)",
-          "EasyCatalog (Implementierung & Customizing)",
-          "XMPie Web-to-Print"
-        ]
+        "description": "Das Fundament: über zehn Jahre Publishing-Systeme.",
+        "tiers": {
+          "core": [
+            "Adobe InDesign Server",
+            "InDesign-Scripting (ExtendScript)",
+            "Enfocus Switch",
+            "vjoon K4"
+          ],
+          "solid": [
+            "XMPie",
+            "EasyCatalog",
+            "Switch Scripting (Node.js)",
+            "Druckvorstufe"
+          ],
+          "basic": [
+            "Heidelberg Prinect",
+            "Digital Asset Management"
+          ]
+        }
       },
       {
+        "icon": "Globe",
         "title": "Web-Entwicklung",
-        "skills": [
-          "React.js & Next.js",
-          "TypeScript & JavaScript",
-          "Node.js & Express",
-          "Gatsby.js & Vite",
-          "HTML/CSS/SCSS & Tailwind"
-        ]
+        "description": "Moderne Stacks, content-first.",
+        "tiers": {
+          "core": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "Node.js"
+          ],
+          "solid": [
+            "Gatsby",
+            "Tailwind CSS",
+            "Express",
+            "Prisma",
+            "Headless CMS"
+          ],
+          "basic": [
+            "Vue.js",
+            "Nuxt.js",
+            "PHP"
+          ]
+        }
       },
       {
-        "title": "Backend & Datenbanken",
-        "skills": [
-          "PostgreSQL & MySQL",
-          "Microsoft SQL Server",
-          "REST APIs & GraphQL",
-          "Docker & Microservices",
-          "XML/JSON Processing"
-        ]
+        "icon": "Database",
+        "title": "Backend, Daten & DevOps",
+        "description": "Daten fliessen lassen und sauber ausrollen.",
+        "tiers": {
+          "core": [
+            "PostgreSQL",
+            "REST APIs",
+            "Docker",
+            "Git"
+          ],
+          "solid": [
+            "Microsoft SQL Server",
+            "MySQL",
+            "GraphQL",
+            "CI/CD Pipelines",
+            "Apache Tomcat"
+          ],
+          "basic": [
+            "Coolify",
+            "Netlify",
+            "Webhooks",
+            "Message Queues"
+          ]
+        }
       },
       {
-        "title": "CMS & Plattformen",
-        "skills": [
-          "Headless CMS (Strapi, Contentful)",
-          "WordPress (Themes & Plugins)",
-          "Craft CMS & Drupal",
-          "Supabase & Netlify"
-        ]
-      },
-      {
-        "title": "IT-Infrastruktur & Tools",
-        "skills": [
-          "Azure AD & Microsoft Intune",
-          "Active Directory",
-          "Apache Tomcat & IIS",
-          "Atlassian Suite (Jira, Confluence, Bitbucket, JSM)",
-          "Odoo ERP & Open WebUI",
-          "Git & CI/CD Pipelines",
-          "Power BI"
-        ]
+        "icon": "Server",
+        "title": "CMS, Infrastruktur & Tools",
+        "description": "Der Alltag im IT-Betrieb.",
+        "tiers": {
+          "core": [
+            "WordPress",
+            "Contentful",
+            "Jira / Confluence / JSM"
+          ],
+          "solid": [
+            "Microsoft Intune",
+            "Azure AD / Active Directory",
+            "Odoo"
+          ],
+          "basic": [
+            "Strapi",
+            "Supabase",
+            "Open WebUI"
+          ]
+        }
       }
     ]
   },
@@ -123,25 +285,31 @@
     "items": [
       {
         "icon": "Dumbbell",
-        "text": "Fitness und Gesundheit sind mir wichtig – regelmässiges Training hilft mir, den Kopf frei zu bekommen"
+        "text": "Regelmässiges Training hält den Kopf frei – und die Disziplin überträgt sich auf die Arbeit.",
+        "title": "Fitness"
       },
       {
         "icon": "Gamepad2",
-        "text": "Gaming als Ausgleich – manchmal braucht man einfach eine andere Welt"
+        "text": "Manchmal braucht man einfach eine andere Welt. Gaming ist mein Ausgleich zum Bildschirmalltag.",
+        "title": "Gaming"
       },
       {
         "icon": "GraduationCap",
-        "text": "Studium neben der Arbeit – Computer Science an der IU, weil Lernen nie aufhört"
+        "text": "B.Sc. Computer Science an der IU, Abschluss Frühling 2027. Weil Lernen nie aufhört.",
+        "title": "Studium"
       },
       {
         "icon": "Mountain",
-        "text": "Wandern in den Schweizer Bergen – die Natur hilft beim Abschalten und gibt neue Energie"
+        "text": "Wandern in den Schweizer Bergen. Die Natur hilft beim Abschalten und gibt neue Energie.",
+        "title": "Berge"
       },
       {
         "icon": "Code",
-        "text": "Nebenprojekte – eigene Web-Projekte und Experimente mit neuen Technologien"
+        "text": "Eigene Web-Projekte und Experimente mit neuen Technologien und KI-Tools.",
+        "title": "Nebenprojekte"
       }
-    ]
+    ],
+    "subtitle": "Fünf Dinge, die mich neben der Arbeit ausmachen."
   },
   "cta": {
     "title": "Interesse geweckt?",

@@ -1,26 +1,17 @@
 import React from "react";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Globe,
-  Github,
-  Briefcase,
-  Zap,
-  Calendar,
-  Home,
-  CheckCircle,
-} from "lucide-react";
 import Layout from "../components/layout/Layout";
 import Seo from "../components/Seo";
 import PageHero from "../components/layout/PageHero";
 import Cta from "../components/layout/Cta";
+import Button from "../components/ui/Button";
 import SectionTitle from "../components/ui/SectionTitle";
 import CardGrid from "../components/ui/CardGrid";
 import ContactCard from "../components/ui/ContactCard";
-import ProcessStep from "../components/ui/ProcessStep";
+import FactTile from "../components/ui/FactTile";
+import ProcessFlow from "../components/ui/ProcessFlow";
 import SocialLink from "../components/ui/SocialLink";
+import { getIcon } from "../components/ui/icons";
+import site from "../data/site";
 import contactContent from "../data/contactContent.json";
 import * as styles from "./kontakt.module.css";
 
@@ -30,26 +21,6 @@ const KontaktPage = () => {
     { label: "Kontakt", path: "/kontakt" },
   ];
 
-  // Icon Mapper
-  const iconMap = {
-    Mail: Mail,
-    Phone: Phone,
-    MapPin: MapPin,
-    Linkedin: Linkedin,
-    Globe: Globe,
-    Github: Github,
-    Briefcase: Briefcase,
-    Zap: Zap,
-    Calendar: Calendar,
-    Home: Home,
-    CheckCircle: CheckCircle,
-  };
-
-  const getIcon = (iconName, size = 32) => {
-    const IconComponent = iconMap[iconName];
-    return IconComponent ? <IconComponent size={size} /> : null;
-  };
-
   return (
     <Layout>
       <PageHero
@@ -58,26 +29,59 @@ const KontaktPage = () => {
         subtitle={contactContent.hero.subtitle}
       />
 
-      {/* Intro Section */}
+      {/* Direkt */}
       <section className={styles.intro}>
         <div className="container">
-          <div className={styles.introContent}>
-            <h2 className={styles.introTitle}>{contactContent.intro.title}</h2>
-            <p className={styles.introDescription}>
-              {contactContent.intro.description}
-            </p>
+          <div className={styles.introGrid}>
+            <div className={styles.introText} data-reveal>
+              <span className={styles.eyebrow}>Direkt</span>
+              <h2 className={styles.introTitle}>{contactContent.intro.title}</h2>
+              <p className={styles.introDescription}>
+                {contactContent.intro.description}
+              </p>
+              <div className={styles.introActions}>
+                <Button href={`mailto:${site.email}`} variant="primary" icon>
+                  E-Mail schreiben
+                </Button>
+                <Button href={site.phoneHref} variant="secondary">
+                  {site.phone}
+                </Button>
+              </div>
+              {contactContent.intro.note && (
+                <p className={styles.introNote}>{contactContent.intro.note}</p>
+              )}
+            </div>
+
+            <aside className={styles.quickStart} data-reveal>
+              <span className={styles.quickLabel}>
+                {contactContent.quickStart.title}
+              </span>
+              <ol className={styles.quickList}>
+                {contactContent.quickStart.items.map((item) => (
+                  <li key={item.label}>
+                    <div>
+                      <b>{item.label}</b>
+                      <span>{item.text}</span>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </aside>
           </div>
         </div>
       </section>
 
-      {/* Contact Methods */}
+      {/* Kanäle */}
       <section className={styles.contactMethods}>
         <div className="container">
+          <SectionTitle eyebrow="Kanäle" align="left">
+            So erreichst du mich
+          </SectionTitle>
           <CardGrid columns={3}>
-            {contactContent.contactMethods.map((method, index) => (
+            {contactContent.contactMethods.map((method) => (
               <ContactCard
-                key={index}
-                icon={getIcon(method.icon)}
+                key={method.title}
+                icon={getIcon(method.icon, 24)}
                 title={method.title}
                 value={method.value}
                 href={method.href}
@@ -88,49 +92,50 @@ const KontaktPage = () => {
         </div>
       </section>
 
-      {/* Availability */}
+      {/* Verfügbarkeit */}
       <section className={styles.availability}>
         <div className="container">
-          <SectionTitle>{contactContent.availability.title}</SectionTitle>
-          <div className={styles.availabilityList}>
-            {contactContent.availability.items.map((item, index) => (
-              <div key={index} className={styles.availabilityItem}>
-                <div className={styles.availabilityIcon}>
-                  {getIcon(item.icon, 20)}
-                </div>
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className={styles.process}>
-        <div className="container">
-          <SectionTitle>{contactContent.process.title}</SectionTitle>
-          <div className={styles.processSteps}>
-            {contactContent.process.steps.map((step, index) => (
-              <ProcessStep
-                key={index}
-                number={step.number}
-                title={step.title}
-                description={step.description}
+          <SectionTitle eyebrow="Planung" align="left">
+            {contactContent.availability.title}
+          </SectionTitle>
+          <div className={styles.tiles}>
+            {contactContent.availability.items.map((item) => (
+              <FactTile
+                key={item.title}
+                icon={getIcon(item.icon, 24)}
+                title={item.title}
+                text={item.text}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Social Links */}
+      {/* Ablauf */}
+      <section className={styles.process}>
+        <div className="container">
+          <SectionTitle
+            eyebrow="Ablauf"
+            subtitle={contactContent.process.subtitle}
+            align="left"
+          >
+            {contactContent.process.title}
+          </SectionTitle>
+          <ProcessFlow steps={contactContent.process.steps} />
+        </div>
+      </section>
+
+      {/* Netzwerk */}
       <section className={styles.social}>
         <div className="container">
-          <SectionTitle>{contactContent.social.title}</SectionTitle>
+          <SectionTitle eyebrow="Netzwerk" align="left">
+            {contactContent.social.title}
+          </SectionTitle>
           <div className={styles.socialLinks}>
-            {contactContent.social.links.map((link, index) => (
+            {contactContent.social.links.map((link) => (
               <SocialLink
-                key={index}
-                icon={getIcon(link.icon, 24)}
+                key={link.label}
+                icon={getIcon(link.icon, 22)}
                 label={link.label}
                 href={link.href}
                 description={link.description}
@@ -140,7 +145,6 @@ const KontaktPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <Cta
         title={contactContent.cta.title}
         description={contactContent.cta.description}

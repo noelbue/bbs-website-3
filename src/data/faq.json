@@ -2,40 +2,64 @@
   "title": "Häufige Fragen",
   "items": [
     {
-      "question": "Wie schnell können Sie starten?",
+      "question": "Wie schnell kannst du starten?",
       "answer": "Ich plane Projekte voraus. Kleinere Sachen oft innerhalb von 1-2 Wochen, grössere Projekte sprechen wir ab. Keine Sorge – ich sage ehrlich, ob und wann ich Zeit habe."
     },
     {
-      "question": "Arbeiten Sie auch remote?",
+      "question": "Arbeitest du auch remote?",
       "answer": "Ja, klar! Viele Arbeiten lassen sich remote erledigen. Bei Installationen vor Ort komme ich gerne vorbei – Schweiz und benachbartes Ausland sind kein Problem."
     },
     {
-      "question": "Welche Branchen betreuen Sie?",
+      "question": "Welche Branchen betreust du?",
       "answer": "Hauptsächlich Verlage, Druckereien, Agenturen und Unternehmen mit Publishing-Bedarf. Aber auch andere Branchen – wenn's um Web-Entwicklung, APIs oder IT-Infrastruktur geht, sprechen wir gerne."
     },
     {
-      "question": "Bieten Sie Notfall-Support?",
+      "question": "Bietest du Notfall-Support?",
       "answer": "Bei kritischen Problemen nach Absprache, aber ich bin nicht 24/7 verfügbar. Für laufende Systeme plane ich lieber präventiv – verhindert die meisten Notfälle von vornherein."
     },
     {
-      "question": "Wie rechnen Sie ab?",
+      "question": "Wie rechnest du ab?",
       "answer": "Stundenweise nach transparenten Tarifen. Vor Projektstart gibt's eine Einschätzung, damit du weisst, was auf dich zukommt. Detaillierte Preise gerne auf Anfrage."
     },
     {
-      "question": "Sind Sie Lizenz-Partner für die Publishing-Tools?",
+      "question": "Bist du Lizenz-Partner für die Publishing-Tools?",
       "answer": "Nein, ich bin kein offizieller Partner von Adobe, Enfocus, vjoon oder anderen Tool-Herstellern. Ich biete Know-How, Installation, Customizing und Integration – aber keine Lizenzen. Für Lizenzen wende dich bitte direkt an die Hersteller oder deren autorisierten Partner."
     },
     {
-      "question": "Können Sie bestehende Systeme übernehmen?",
+      "question": "Kannst du bestehende Systeme übernehmen?",
       "answer": "Ja! Ich arbeite oft mit bestehenden Setups – Analyse, Optimierung, Erweiterung oder Migration. Gerade bei Legacy-Systemen kann ich helfen, diese zu modernisieren oder in neue Architekturen zu überführen."
     },
     {
-      "question": "Welche Programmiersprachen beherrschen Sie?",
+      "question": "Welche Programmiersprachen beherrschst du?",
       "answer": "Hauptsächlich JavaScript/TypeScript (Node.js, React, Next.js), ExtendScript für InDesign, SQL für Datenbanken. Enfocus Switch Scripts mit Scripting Modul (node.js) ist eine meiner Spezialitäten."
     },
     {
-      "question": "Bieten Sie auch Schulungen an?",
+      "question": "Bietest du auch Schulungen an?",
       "answer": "Ja, gerne! Ob für dein Team zu Enfocus Switch, InDesign Server, Workflow-Optimierung oder Web-Entwicklung – ich erkläre die Systeme so, dass sie jeder versteht und selbst weiterarbeiten kann."
+    },
+    {
+      "question": "Was kostet ein Projekt ungefähr?",
+      "answer": "Das hängt vom Umfang ab – die typischen Grössen oben geben ein Gefühl. Vor dem Start bekommst du eine Einschätzung mit Bandbreite, abgerechnet wird transparent nach Stunden. Für eine erste Zahl reicht ein kurzes Gespräch."
+    },
+    {
+      "question": "Kannst du auch nur beraten, ohne umzusetzen?",
+      "answer": "Ja. Tool-Evaluation, Zweitmeinung zu einer Offerte oder ein Architektur-Review sind klar abgegrenzte Aufträge. Wenn du danach selbst oder mit deinem Team umsetzt, ist das völlig in Ordnung."
+    },
+    {
+      "question": "Wie gehst du mit Datenschutz bei KI-Projekten um?",
+      "answer": "Datenschutz ist Teil der Evaluation, nicht ein Nachgedanke: Wo liegen die Daten, wer sind die Subprozessoren, wird mit unseren Daten trainiert? Wo nötig setze ich lokale Modelle ein. Solche Abklärungen nach nDSG habe ich für eine KI-Plattform im Sozialbereich bereits durchgeführt."
+    },
+    {
+      "question": "Arbeitest du mit unserer Agentur oder IT zusammen?",
+      "answer": "Gerne. Oft bin ich das Bindeglied zwischen Fachabteilung, Agentur und IT: Ich spreche beide Sprachen, dokumentiere sauber und übergebe so, dass dein Team weiterarbeiten kann."
+    },
+    {
+      "question": "Was passiert nach dem Go-Live?",
+      "answer": "Du entscheidest: Übergabe mit Dokumentation und Schulung, oder laufende Wartung mit planbaren Stunden pro Monat. Für Publishing-Systeme empfehle ich präventive Wartung – Updates, Monitoring, kleine Anpassungen – bevor etwas brennt."
+    },
+    {
+      "question": "Wie funktioniert KI-gestützte Entwicklung bei dir konkret?",
+      "answer": "Ich arbeite mit Agentic Coding (Claude Code): Die KI schreibt und prüft Code unter meiner Anleitung, ich bleibe für Architektur, Reviews und Tests verantwortlich. Das macht Modernisierungen schneller und günstiger, ohne dass Qualität oder Nachvollziehbarkeit leiden."
     }
   ]
 }

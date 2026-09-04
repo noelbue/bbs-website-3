@@ -1,0 +1,236 @@
+.flow {
+  position: relative;
+  display: grid;
+  gap: var(--gap-md);
+}
+
+.rail {
+  position: absolute;
+  top: 20px;
+  left: calc(12.5% + 20px);
+  right: calc(12.5% + 20px);
+  height: 2px;
+  background: var(--color-line);
+  border-radius: 1px;
+}
+
+.railFill {
+  display: block;
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 1px;
+  transition: width 0.5s ease;
+}
+
+.steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--gap-sm);
+}
+
+.step {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-display);
+  color: var(--color-text-gray);
+  text-align: center;
+}
+
+.marker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--color-line);
+  background: var(--color-white);
+  color: var(--color-text-gray);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.step:not(.stepActive):hover .marker {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.stepActive:hover .marker {
+  transform: translateY(-2px);
+}
+
+.stepDone .marker {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.stepActive .marker {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0 0 0 6px var(--color-primary-soft);
+}
+
+.stepTitle {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.stepActive .stepTitle {
+  color: var(--color-primary);
+}
+
+.stepMeta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text-gray);
+}
+
+.step:focus-visible {
+  outline: none;
+}
+
+.step:focus-visible .marker {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: var(--gap-md);
+  align-items: start;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-card);
+  animation: panelIn 0.35s ease both;
+}
+
+.panelNumber {
+  font-family: var(--font-mono);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-primary-soft);
+  -webkit-text-stroke: 1px var(--color-primary);
+}
+
+.panelBody {
+  min-width: 0;
+}
+
+.panelTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+  color: var(--color-text);
+}
+
+.panelText {
+  margin: 0 0 0.9rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text-gray);
+  max-width: 62ch;
+}
+
+.panelMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--color-text);
+}
+
+.panelMeta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.panelMeta svg {
+  color: var(--color-accent);
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .rail {
+    display: none;
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--gap-sm);
+  }
+
+  .step {
+    grid-template-columns: 40px minmax(0, 1fr);
+    justify-items: start;
+    text-align: left;
+    align-items: center;
+    column-gap: 0.6rem;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    border: 1px solid var(--color-line);
+  }
+
+  .stepActive {
+    border-color: var(--color-primary);
+  }
+
+  .stepMeta {
+    grid-column: 2;
+    margin-top: -0.4rem;
+  }
+
+  .stepActive .marker {
+    box-shadow: none;
+  }
+
+  .panel {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: var(--spacing-sm);
+  }
+
+  .panelNumber {
+    font-size: 1.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel {
+    animation: none;
+  }
+}

@@ -1,69 +1,50 @@
 .serviceSection {
-  padding: var(--spacing-2xl) 0;
-  border-bottom: 1px solid var(--color-grey);
-  scroll-margin-top: 220px;
+  padding: var(--spacing-xl) 0;
+  border-bottom: 1px solid var(--color-line);
+  scroll-margin-top: 150px;
 }
 
-.serviceSection:last-child {
+.serviceSection:last-of-type {
   border-bottom: none;
 }
 
-/* Header */
-.header {
-  text-align: center;
-  margin-bottom: var(--spacing-lg);
+.offerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap-md);
 }
 
-.category {
-  color: var(--color-primary);
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  margin-bottom: var(--spacing-sm);
-  text-transform: uppercase;
+.techRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: var(--gap-lg);
+  align-items: start;
+  margin-top: var(--spacing-md);
 }
 
-.title {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 900;
-  color: var(--color-text);
-  margin-bottom: var(--spacing-md);
-  line-height: 1.2;
+.techRow.single {
+  grid-template-columns: minmax(0, 1fr);
 }
 
-.subtitle {
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
-  color: var(--color-text-gray);
-  line-height: 1.7;
-  max-width: 800px;
-  margin: 0 auto;
+@media (max-width: 1024px) {
+  .offerGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-/* Offerings Section */
-.offeringsTitle {
-  text-align: center;
-  font-size: clamp(1.5rem, 3vw, 1.875rem);
-  font-weight: 900;
-  color: var(--color-text);
-  margin-bottom: var(--spacing-md);
-}
-
-/* Tech Info Section */
-.techInfo {
-  margin-top: 20px;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
   .serviceSection {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-lg) 0;
+    scroll-margin-top: 130px;
   }
 
-  .offerings {
-    margin-bottom: var(--spacing-lg);
+  .offerGrid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-sm);
   }
 
-  .techInfo {
-    margin-top: var(--spacing-lg);
+  .techRow {
+    grid-template-columns: 1fr;
+    gap: var(--gap-md);
   }
 }

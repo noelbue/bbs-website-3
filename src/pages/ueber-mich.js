@@ -1,16 +1,4 @@
 import React from "react";
-import {
-  Lightbulb,
-  Users,
-  Rocket,
-  Zap,
-  Target,
-  Dumbbell,
-  Gamepad2,
-  GraduationCap,
-  Mountain,
-  Code,
-} from "lucide-react";
 import Layout from "../components/layout/Layout";
 import Seo from "../components/Seo";
 import PageHero from "../components/layout/PageHero";
@@ -18,9 +6,11 @@ import Cta from "../components/layout/Cta";
 import SectionTitle from "../components/ui/SectionTitle";
 import CardGrid from "../components/ui/CardGrid";
 import AboutIntro from "../components/ui/AboutIntro";
-import StoryCard from "../components/ui/StoryCard";
 import PassionCard from "../components/ui/PassionCard";
-import SkillsGrid from "../components/ui/SkillsGrid";
+import SkillsTabs from "../components/ui/SkillsTabs";
+import TimelineItem from "../components/ui/TimelineItem";
+import FactTile from "../components/ui/FactTile";
+import { getIcon } from "../components/ui/icons";
 import aboutContent from "../data/aboutContent.json";
 import noelPortrait from "../assets/noel-buergler.png";
 import * as styles from "./ueber-mich.module.css";
@@ -31,25 +21,6 @@ const UeberMichPage = () => {
     { label: "Über mich", path: "/ueber-mich" },
   ];
 
-  // Icon Mapper
-  const iconMap = {
-    Lightbulb: Lightbulb,
-    Users: Users,
-    Rocket: Rocket,
-    Zap: Zap,
-    Target: Target,
-    Dumbbell: Dumbbell,
-    Gamepad2: Gamepad2,
-    GraduationCap: GraduationCap,
-    Mountain: Mountain,
-    Code: Code,
-  };
-
-  const getIcon = (iconName, size = 32) => {
-    const IconComponent = iconMap[iconName];
-    return IconComponent ? <IconComponent size={size} /> : null;
-  };
-
   return (
     <Layout>
       <PageHero
@@ -58,7 +29,7 @@ const UeberMichPage = () => {
         subtitle={aboutContent.hero.subtitle}
       />
 
-      {/* Intro Section */}
+      {/* Intro */}
       <section className={styles.intro}>
         <div className="container">
           <AboutIntro
@@ -70,36 +41,46 @@ const UeberMichPage = () => {
         </div>
       </section>
 
-      {/* Journey Section */}
-      <section className={styles.journey}>
+      {/* Mein Weg */}
+      <section className={styles.journey} id="journey">
         <div className="container">
-          <SectionTitle>{aboutContent.journey.title}</SectionTitle>
-          <p className={styles.subtitle}>{aboutContent.journey.subtitle}</p>
-          <div className={styles.timeline}>
-            {aboutContent.journey.story.map((item, index) => (
-              <div key={index} className={styles.timelineItem}>
-                <div className={styles.timelineDot}></div>
-                <div className={styles.timelineContent}>
-                  <StoryCard
-                    title={item.title}
-                    description={item.description}
-                  />
-                </div>
-              </div>
+          <SectionTitle
+            eyebrow="Stationen"
+            subtitle={aboutContent.journey.subtitle}
+            align="left"
+          >
+            {aboutContent.journey.title}
+          </SectionTitle>
+          <ol className={styles.timeline}>
+            {aboutContent.journey.story.map((item) => (
+              <TimelineItem
+                key={item.title}
+                period={item.period}
+                location={item.location}
+                company={item.company}
+                logo={item.logo}
+                url={item.url}
+                title={item.title}
+                description={item.description}
+                tags={item.tags}
+                current={/heute/i.test(item.period || "")}
+              />
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
-      {/* Passion Section */}
+      {/* Was mich antreibt */}
       <section className={styles.passion}>
         <div className="container">
-          <SectionTitle>{aboutContent.passion.title}</SectionTitle>
+          <SectionTitle eyebrow="Haltung" align="left">
+            {aboutContent.passion.title}
+          </SectionTitle>
           <CardGrid columns={3}>
-            {aboutContent.passion.items.map((item, index) => (
+            {aboutContent.passion.items.map((item) => (
               <PassionCard
-                key={index}
-                icon={getIcon(item.icon)}
+                key={item.title}
+                icon={getIcon(item.icon, 24)}
                 title={item.title}
                 description={item.description}
               />
@@ -108,33 +89,43 @@ const UeberMichPage = () => {
         </div>
       </section>
 
-      {/* Expertise Section */}
-      <section className={styles.expertise}>
+      {/* Womit ich arbeite */}
+      <section className={styles.expertise} id="expertise">
         <div className="container">
-          <SectionTitle>{aboutContent.expertise.title}</SectionTitle>
-          <p className={styles.subtitle}>{aboutContent.expertise.subtitle}</p>
-          <SkillsGrid categories={aboutContent.expertise.categories} />
+          <SectionTitle
+            eyebrow="Werkbank"
+            subtitle={aboutContent.expertise.subtitle}
+            align="left"
+          >
+            {aboutContent.expertise.title}
+          </SectionTitle>
+          <SkillsTabs categories={aboutContent.expertise.categories} />
         </div>
       </section>
 
-      {/* Personal Section */}
+      {/* Ausgleich */}
       <section className={styles.personal}>
         <div className="container">
-          <SectionTitle>{aboutContent.personal.title}</SectionTitle>
-          <div className={styles.personalList}>
-            {aboutContent.personal.items.map((item, index) => (
-              <div key={index} className={styles.personalItem}>
-                <div className={styles.personalIcon}>
-                  {getIcon(item.icon, 20)}
-                </div>
-                <p>{item.text}</p>
-              </div>
+          <SectionTitle
+            eyebrow="Ausgleich"
+            subtitle={aboutContent.personal.subtitle}
+            align="left"
+          >
+            {aboutContent.personal.title}
+          </SectionTitle>
+          <div className={styles.personalGrid}>
+            {aboutContent.personal.items.map((item) => (
+              <FactTile
+                key={item.title}
+                icon={getIcon(item.icon, 24)}
+                title={item.title}
+                text={item.text}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
       <Cta
         title={aboutContent.cta.title}
         description={aboutContent.cta.description}
@@ -150,7 +141,7 @@ export default UeberMichPage;
 export const Head = () => (
   <Seo
     title="Über mich – Bürgler Business Solutions"
-    description="Publishing-Experte, Web-Entwickler und IT-Architekt aus Leidenschaft. Über 10 Jahre Erfahrung in Publishing-Systemen und moderner Web-Entwicklung."
+    description="Solution Architect, Publishing-Experte und Web-Entwickler aus der Schweiz. Über 10 Jahre Erfahrung in Publishing-Systemen, moderner Web-Entwicklung und KI-gestützter Software-Entwicklung."
     pathname="/ueber-mich"
   />
 );

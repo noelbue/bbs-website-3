@@ -1,7 +1,9 @@
 import React from "react";
-import CardGrid from "../ui/CardGrid";
+import SectionTitle from "../ui/SectionTitle";
 import OfferingCard from "../ui/OfferingCard";
 import TechInfoBox from "../ui/TechInfoBox";
+import ServiceCta from "./ServiceCta";
+import { getIcon } from "../ui/icons";
 import * as styles from "./ServiceSection.module.css";
 
 const ServiceSection = ({
@@ -9,45 +11,54 @@ const ServiceSection = ({
   category,
   title,
   subtitle,
-  offerings,
-  techInfo,
+  offerings = [],
+  techInfo = [],
+  cta,
 }) => {
+  // Chip-Zeile zuerst, Hinweis daneben
+  const sortedTechInfo = [...techInfo].sort(
+    (a, b) =>
+      (a.variant === "chips" ? 0 : 1) - (b.variant === "chips" ? 0 : 1)
+  );
+
   return (
     <section id={id} className={styles.serviceSection}>
       <div className="container">
-        {/* Header */}
-        <div className={styles.header}>
-          <p className={styles.category}>{category}</p>
-          <h2 className={styles.title}>{title}</h2>
-          <p className={styles.subtitle}>{subtitle}</p>
-        </div>
+        <SectionTitle eyebrow={category} subtitle={subtitle} align="left">
+          {title}
+        </SectionTitle>
 
-        {/* Was ich anbiete */}
-        {offerings && offerings.length > 0 && (
-          <div className={styles.offerings}>
-            <h3 className={styles.offeringsTitle}>Was ich anbiete</h3>
-            <CardGrid columns={3}>
-              {offerings.map((offering, index) => (
-                <OfferingCard
-                  key={index}
-                  title={offering.title}
-                  description={offering.description}
-                />
-              ))}
-            </CardGrid>
+        {offerings.length > 0 && (
+          <div className={styles.offerGrid}>
+            <h3 className="sr-only">Was ich anbiete</h3>
+            {offerings.map((offering) => (
+              <OfferingCard
+                key={offering.title}
+                icon={getIcon(offering.icon, 20)}
+                title={offering.title}
+                description={offering.description}
+                result={offering.result}
+              />
+            ))}
           </div>
         )}
 
-        {/* Technologien & Lösungen */}
-        {techInfo && (
-          <div className={styles.techInfo}>
-            <CardGrid columns={2}>
-              {techInfo.map((box, index) => (
-                <TechInfoBox key={index} title={box.title} items={box.items} />
-              ))}
-            </CardGrid>
+        {sortedTechInfo.length > 0 && (
+          <div
+            className={`${styles.techRow} ${sortedTechInfo.length === 1 ? styles.single : ""}`}
+          >
+            {sortedTechInfo.map((box) => (
+              <TechInfoBox
+                key={box.title}
+                title={box.title}
+                items={box.items}
+                variant={box.variant}
+              />
+            ))}
           </div>
         )}
+
+        {cta && <ServiceCta hook={cta.hook} subject={cta.subject} note={cta.note} />}
       </div>
     </section>
   );

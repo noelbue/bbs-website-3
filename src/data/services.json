@@ -8,49 +8,69 @@
       "offerings": [
         {
           "title": "Content-First Workflows",
-          "description": "Inhalte aus CMS direkt in Print-Workflows. Headless CMS liefert strukturierte Daten (ICML, XML, JSON), Publishing-System produziert automatisch – von Web zu Print in Sekunden."
+          "description": "Inhalte aus CMS direkt in Print-Workflows. Headless CMS liefert strukturierte Daten (ICML, XML, JSON), Publishing-System produziert automatisch – von Web zu Print in Sekunden.",
+          "icon": "Workflow",
+          "result": "Web zu Print in Sekunden"
         },
         {
           "title": "InDesign Server Workflows",
-          "description": "Mit Adobe InDesign Server automatisiere ich die Document-Generation. Template-basierte Produktionen für Kataloge, Broschüren, mehrseitige Dokumente – inklusive ExtendScript-Entwicklung für spezielle Anforderungen. Das System übernimmt die Arbeit, du sparst Zeit."
+          "description": "Mit Adobe InDesign Server automatisiere ich die Document-Generation. Template-basierte Produktionen für Kataloge, Broschüren, mehrseitige Dokumente – inklusive ExtendScript-Entwicklung für spezielle Anforderungen. Das System übernimmt die Arbeit, du sparst Zeit.",
+          "icon": "FileText",
+          "result": "Dokumente ohne Handarbeit"
         },
         {
           "title": "Enfocus Switch Automation",
-          "description": "Komplexe Publishing-Workflows mit Enfocus Switch. Custom Scripts mit dem Scripting Module (unterstützt Node.js und deren Packages) für moderne JavaScript-Integration und nahtlose System-Integrationen – alles läuft automatisch."
+          "description": "Komplexe Publishing-Workflows mit Enfocus Switch. Custom Scripts mit dem Scripting Module (unterstützt Node.js und deren Packages) für moderne JavaScript-Integration und nahtlose System-Integrationen – alles läuft automatisch.",
+          "icon": "Zap",
+          "result": "Stunden weniger Handarbeit pro Tag"
         },
         {
           "title": "vjoon K4 Integration & Customizing",
-          "description": "Integration von vjoon K4 in Publishing-Workflows. Installation, Support und API-Integration mit anderen Systemen wie InDesign Server und Enfocus Switch – für nahtlose Redaktionssysteme."
+          "description": "Integration von vjoon K4 in Publishing-Workflows. Installation, Support und API-Integration mit anderen Systemen wie InDesign Server und Enfocus Switch – für nahtlose Redaktionssysteme.",
+          "icon": "BookOpen",
+          "result": "Nahtloses Redaktionssystem"
         },
         {
           "title": "EasyCatalog Automatisierung",
-          "description": "Katalog-Produktion mit EasyCatalog. Automatische Produktdaten-Integration in InDesign-Templates – von Datenbank zu fertigem Katalog in Minuten statt Tagen."
+          "description": "Katalog-Produktion mit EasyCatalog. Automatische Produktdaten-Integration in InDesign-Templates – von Datenbank zu fertigem Katalog in Minuten statt Tagen.",
+          "icon": "Database",
+          "result": "Katalog in Minuten statt Tagen"
         },
         {
           "title": "Digital Asset Management",
-          "description": "DAM-Systeme wie Sharedien oder Frontify für effizientes Asset Management – deine Medien immer griffbereit, überall verfügbar."
+          "description": "DAM-Systeme wie Sharedien oder Frontify für effizientes Asset Management – deine Medien immer griffbereit, überall verfügbar.",
+          "icon": "Image",
+          "result": "Medien überall griffbereit"
         }
       ],
       "techInfo": [
         {
-          "title": "Technologien & Tools",
+          "title": "Stack",
           "items": [
-            "Adobe InDesign Server & ExtendScript",
-            "Enfocus Switch mit Custom Scripting (Scripting Module unterstützt Node.js)",
-            "vjoon K4 (Installation, Support & API-Integration)",
-            "EasyCatalog (Implementierung & Customizing)",
-            "XMPie uStore für Web-to-Print"
-          ]
+            "Adobe InDesign Server",
+            "ExtendScript",
+            "Enfocus Switch",
+            "Switch Scripting (Node.js)",
+            "vjoon K4",
+            "EasyCatalog",
+            "XMPie uStore"
+          ],
+          "variant": "chips"
         },
         {
-          "title": "Wichtiger Hinweis",
+          "title": "Unabhängig",
           "items": [
-            "Ich bin kein offizieller Lizenz-Partner dieser Tools",
-            "Ich biete Know-How, Installation, Customizing und Integration",
-            "Langjährige Praxis-Erfahrung mit diesen Systemen"
-          ]
+            "Kein Lizenz-Partner dieser Tools",
+            "Know-how aus jahrelanger Praxis: Installation, Customizing, Integration"
+          ],
+          "variant": "note"
         }
-      ]
+      ],
+      "cta": {
+        "hook": "Wie viele Stunden pro Woche kostet dich manuelle Produktion? Lass uns rechnen.",
+        "subject": "Erstgespräch: Publishing-Automatisierung",
+        "note": "Kostenloses Erstgespräch · Antwort innert 24 h"
+      }
     },
     {
       "id": "content-management",
@@ -60,26 +80,40 @@
       "offerings": [
         {
           "title": "Headless CMS & Content-First",
-          "description": "Moderne Content-First Architekturen mit Strapi oder Contentful. Inhalte einmal pflegen, überall nutzen – Website, App, Print, alles aus einer Quelle."
+          "description": "Moderne Content-First Architekturen mit Strapi oder Contentful. Inhalte einmal pflegen, überall nutzen – Website, App, Print, alles aus einer Quelle.",
+          "icon": "Layers",
+          "result": "Einmal pflegen, überall ausspielen"
         },
         {
           "title": "Custom Web-Entwicklung",
-          "description": "Next.js für performante Anwendungen, React für spezielle Anforderungen. Ich entwickle massgeschneiderte Web-Lösungen, die genau zu deinen Bedürfnissen passen – modern, schnell, wartbar."
+          "description": "Next.js für performante Anwendungen, React für spezielle Anforderungen. Ich entwickle massgeschneiderte Web-Lösungen, die genau zu deinen Bedürfnissen passen – modern, schnell, wartbar.",
+          "icon": "Code",
+          "result": "Schnell, wartbar, massgeschneidert"
         },
         {
           "title": "WordPress Development",
-          "description": "Individuelle WordPress Themes und Plugins, Performance-Optimierung, Wartung und Updates. WordPress, das wirklich funktioniert – zuverlässig und schnell."
+          "description": "Individuelle WordPress Themes und Plugins, Performance-Optimierung, Wartung und Updates. WordPress, das wirklich funktioniert – zuverlässig und schnell.",
+          "icon": "Globe",
+          "result": "WordPress, das zuverlässig läuft"
         }
       ],
       "techInfo": [
         {
-          "title": "Technologien",
+          "title": "Stack",
           "items": [
-            "Headless CMS: Strapi, Contentful",
-            "Traditional CMS: WordPress, Drupal, Craft CMS",
-            "Frameworks: Next.js, React, Gatsby",
-            "Backend: Node.js, Express, REST APIs"
-          ]
+            "Contentful",
+            "Strapi",
+            "WordPress",
+            "Drupal",
+            "Craft CMS",
+            "Next.js",
+            "React",
+            "Gatsby",
+            "Node.js",
+            "Express",
+            "REST APIs"
+          ],
+          "variant": "chips"
         },
         {
           "title": "Wann welche Lösung?",
@@ -88,9 +122,15 @@
             "WordPress → Klassische Websites, Blogs, einfache Shops",
             "Drupal → Enterprise, komplexe Strukturen, hohe Sicherheitsanforderungen",
             "Custom → Spezielle Anforderungen, die Standard-CMS nicht abdecken"
-          ]
+          ],
+          "variant": "note"
         }
-      ]
+      ],
+      "cta": {
+        "hook": "Eine Quelle für Web, App und Print – schauen wir, ob das für dich passt.",
+        "subject": "Erstgespräch: Content Management & Web",
+        "note": "Kostenloses Erstgespräch · Antwort innert 24 h"
+      }
     },
     {
       "id": "system-integration",
@@ -100,15 +140,21 @@
       "offerings": [
         {
           "title": "API-Entwicklung & System-Integration",
-          "description": "REST APIs implementieren, Systeme miteinander verbinden. vjoon K4 mit InDesign Server, Headless CMS mit Print-Workflows – ich sorge dafür, dass deine Tools nahtlos zusammenarbeiten."
+          "description": "REST APIs implementieren, Systeme miteinander verbinden. vjoon K4 mit InDesign Server, Headless CMS mit Print-Workflows – ich sorge dafür, dass deine Tools nahtlos zusammenarbeiten.",
+          "icon": "Plug",
+          "result": "Systeme, die miteinander reden"
         },
         {
           "title": "XML/JSON Datenverarbeitung",
-          "description": "Automatische Transformation von XML und JSON Daten. Systeme für automatischen Daten-Import – weniger manuelle Arbeit, mehr Effizienz."
+          "description": "Automatische Transformation von XML und JSON Daten. Systeme für automatischen Daten-Import – weniger manuelle Arbeit, mehr Effizienz.",
+          "icon": "Braces",
+          "result": "Daten-Import ohne Handarbeit"
         },
         {
           "title": "Database Management & Setup",
-          "description": "MySQL, PostgreSQL, Microsoft SQL Server – Setup, Integration in bestehende Infrastrukturen, und Optimierung für bessere Performance."
+          "description": "MySQL, PostgreSQL, Microsoft SQL Server – Setup, Integration in bestehende Infrastrukturen, und Optimierung für bessere Performance.",
+          "icon": "Database",
+          "result": "Stabile, schnelle Datenbasis"
         }
       ],
       "techInfo": [
@@ -119,18 +165,28 @@
             "vjoon K4 ← → Enfocus Switch",
             "EasyCatalog ← Produktdatenbank",
             "Web-Formulare → Print-Templates → Automatische Produktion"
-          ]
+          ],
+          "variant": "note"
         },
         {
-          "title": "Technologien",
+          "title": "Stack",
           "items": [
-            "REST APIs, GraphQL",
-            "XML/JSON Processing",
-            "Database: MySQL, PostgreSQL, MSSQL",
-            "Message Queues für robuste Workflows"
-          ]
+            "REST APIs",
+            "GraphQL",
+            "XML / JSON",
+            "MySQL",
+            "PostgreSQL",
+            "MSSQL",
+            "Message Queues"
+          ],
+          "variant": "chips"
         }
-      ]
+      ],
+      "cta": {
+        "hook": "Welche Systeme sollen miteinander reden? Skizzier mir den Ist-Zustand.",
+        "subject": "Erstgespräch: System-Integration",
+        "note": "Kostenloses Erstgespräch · Antwort innert 24 h"
+      }
     },
     {
       "id": "ai-publishing",
@@ -140,28 +196,43 @@
       "offerings": [
         {
           "title": "Automatische Metadaten-Generierung",
-          "description": "KI-basierte Systeme für intelligente Verschlagwortung und automatische Kategorisierung. Grosse Datenmengen organisieren sich praktisch von selbst."
+          "description": "KI-basierte Systeme für intelligente Verschlagwortung und automatische Kategorisierung. Grosse Datenmengen organisieren sich praktisch von selbst.",
+          "icon": "Tags",
+          "result": "Assets, die sich selbst ordnen"
         },
         {
           "title": "Content-Automatisierung via APIs",
-          "description": "Automatische Übersetzungen, Content-Generierung für Templates. APIs für wiederkehrende Aufgaben – mehr Zeit für die wichtigen Dinge."
+          "description": "Automatische Übersetzungen, Content-Generierung für Templates. APIs für wiederkehrende Aufgaben – mehr Zeit für die wichtigen Dinge.",
+          "icon": "Languages",
+          "result": "Wiederkehrendes läuft automatisch"
         },
         {
           "title": "Interne KI-Lösungen & Training",
-          "description": "KI-Systeme trainiert mit deinen eigenen Dokumenten – etwa mit Open WebUI für interne KI-Plattformen. Offline-Lösungen für sensible Daten, Ressourcen-Unterstützung ohne Datenweitergabe."
+          "description": "KI-Systeme trainiert mit deinen eigenen Dokumenten – etwa mit Open WebUI für interne KI-Plattformen. Offline-Lösungen für sensible Daten, Ressourcen-Unterstützung ohne Datenweitergabe.",
+          "icon": "ShieldCheck",
+          "result": "KI ohne Datenabfluss"
         }
       ],
       "techInfo": [
         {
-          "title": "Technologien",
+          "title": "Stack",
           "items": [
-            "APIs: OpenAI, DeepL, Google Translate",
-            "Open WebUI: Interne KI-Plattformen",
-            "Tools: Custom Scripts, Automatisierungs-Workflows",
-            "Ansatz: Pragmatische Lösungen, die wirklich helfen"
-          ]
+            "Claude Code",
+            "OpenAI API",
+            "Mistral OCR",
+            "Whisper",
+            "DeepL",
+            "Open WebUI",
+            "Lokale LLMs"
+          ],
+          "variant": "chips"
         }
-      ]
+      ],
+      "cta": {
+        "hook": "Ein konkreter Anwendungsfall genügt für eine ehrliche Einschätzung, ob KI hier hilft.",
+        "subject": "Erstgespräch: KI im Publishing",
+        "note": "Kostenloses Erstgespräch · Antwort innert 24 h"
+      }
     },
     {
       "id": "consulting",
@@ -171,26 +242,37 @@
       "offerings": [
         {
           "title": "Publishing-Strategieberatung & Tool-Evaluierung",
-          "description": "Welches Tool passt wirklich zu dir? Ich evaluiere Tools, analysiere deine Workflows und gebe ehrliche Empfehlungen – keine Verkaufsmaschen, nur Lösungen die funktionieren."
+          "description": "Welches Tool passt wirklich zu dir? Ich evaluiere Tools, analysiere deine Workflows und gebe ehrliche Empfehlungen – keine Verkaufsmaschen, nur Lösungen die funktionieren.",
+          "icon": "Compass",
+          "result": "Ehrliche Empfehlung statt Verkauf"
         },
         {
           "title": "Agile Projektleitung & Stakeholder-Management",
-          "description": "Koordination zwischen verschiedenen Stakeholdern, agile Projektumsetzung mit Jira, Dokumentation in Confluence. Transparente Kommunikation während des gesamten Projekts – du weisst immer, wo wir stehen."
+          "description": "Koordination zwischen verschiedenen Stakeholdern, agile Projektumsetzung mit Jira, Dokumentation in Confluence. Transparente Kommunikation während des gesamten Projekts – du weisst immer, wo wir stehen.",
+          "icon": "Users",
+          "result": "Du weisst immer, wo wir stehen"
         },
         {
           "title": "Technische Implementierung & Quality Assurance",
-          "description": "Ich packe selbst mit an. Umfassende Tests, Qualitätssicherung. Die Lösung geht erst live, wenn sie wirklich bereit ist."
+          "description": "Ich packe selbst mit an. Umfassende Tests, Qualitätssicherung. Die Lösung geht erst live, wenn sie wirklich bereit ist.",
+          "icon": "BadgeCheck",
+          "result": "Live erst, wenn es wirklich bereit ist"
         }
       ],
       "techInfo": [
         {
-          "title": "Tools & Methoden",
+          "title": "Stack",
           "items": [
-            "Atlassian Suite: Jira, Confluence, Jira Service Management, Bitbucket",
-            "Agile Methoden: Scrum, Kanban",
-            "Dokumentation: Technische Specs, User Stories, Workflows",
-            "Testing: Unit Tests, Integration Tests, UAT"
-          ]
+            "Jira",
+            "Confluence",
+            "Jira Service Management",
+            "Bitbucket",
+            "Scrum",
+            "Kanban",
+            "User Stories",
+            "UAT"
+          ],
+          "variant": "chips"
         },
         {
           "title": "Projekt-Phasen",
@@ -199,66 +281,115 @@
             "Planning: Roadmap, Sprint-Planning, Ressourcen-Planung",
             "Execution: Entwicklung, Reviews, Testing",
             "Go-Live: Deployment, Training, Support"
-          ]
+          ],
+          "variant": "note"
         }
-      ]
+      ],
+      "cta": {
+        "hook": "Zweitmeinung zu einem Tool oder Projekt? Ein Gespräch, kein Verkaufspitch.",
+        "subject": "Erstgespräch: Beratung",
+        "note": "Kostenloses Erstgespräch · Antwort innert 24 h"
+      }
     }
   ],
   "workingStyle": {
     "title": "Arbeitsweise",
-    "subtitle": "Wie ich arbeite",
+    "subtitle": "Wie die Zusammenarbeit mit mir funktioniert.",
     "items": [
       {
         "icon": "Clock",
         "title": "Flexibel",
-        "description": "Remote und vor Ort möglich"
+        "description": "Remote als Standard, vor Ort wenn es Sinn macht – Schweiz und Nachbarländer."
       },
       {
         "icon": "Target",
         "title": "Fokussiert",
-        "description": "Spezialisierung auf Publishing-Technologie"
+        "description": "Spezialisiert auf Publishing-Technologie statt auf alles ein bisschen."
       },
       {
         "icon": "MessageCircle",
         "title": "Ehrlich",
-        "description": "Klare Aussagen zu dem, was machbar ist"
+        "description": "Klare Aussagen zu dem, was machbar ist – auch wenn die Antwort «nein» heisst."
       },
       {
         "icon": "Users",
-        "title": "Verfügbar",
-        "description": "Als Nebenerwerb mit planbaren Kapazitäten"
+        "title": "Planbar",
+        "description": "Nebenerwerb mit festen Kapazitäten: du weisst vorab, wann ich Zeit habe."
       }
     ]
   },
   "projectSizes": {
     "title": "Typische Projektgrössen",
+    "subtitle": "Drei Grössen, eine Arbeitsweise: Einschätzung vorab, Abrechnung nach Aufwand.",
     "items": [
       {
+        "size": "S",
         "title": "Kleine Projekte",
-        "description": "1-2 Wochen (WordPress-Setup, einfache Automatisierung)"
+        "duration": "1–2 Wochen",
+        "description": "Klar umrissene Aufgabe, schnelles Ergebnis, oft der Einstieg in die Zusammenarbeit.",
+        "examples": [
+          "WordPress-Setup",
+          "Switch-Flow",
+          "InDesign-Script",
+          "Website-Check"
+        ]
       },
       {
+        "size": "M",
         "title": "Mittlere Projekte",
-        "description": "1-2 Monate (CMS-Implementation, Tool-Integration)"
+        "duration": "1–2 Monate",
+        "description": "Ein System einführen oder zwei Systeme miteinander verbinden.",
+        "examples": [
+          "CMS-Implementation",
+          "Tool-Integration",
+          "API-Anbindung",
+          "Katalog-Automation"
+        ]
       },
       {
+        "size": "L",
         "title": "Grössere Projekte",
-        "description": "3-6 Monate (komplexe Workflows, Multi-System Integration)"
+        "duration": "3–6 Monate",
+        "description": "Mehrere Systeme, mehrere Stakeholder, ein gemeinsames Ziel.",
+        "examples": [
+          "Publishing-Workflow",
+          "Multi-System-Integration",
+          "Legacy-Modernisierung"
+        ]
       }
     ]
   },
   "support": {
+    "title": "Support & Wartung",
+    "subtitle": "Damit es nach dem Go-Live weiterläuft – planbar statt im Notfallmodus.",
     "items": [
       {
         "icon": "Wrench",
         "title": "Laufender Support",
-        "description": "Wartung bestehender Systeme, Updates, Anpassungen – damit alles reibungslos läuft."
+        "description": "Wartung bestehender Systeme mit planbaren Stunden pro Monat.",
+        "points": [
+          "Updates und Patches für Switch, K4 und InDesign Server",
+          "Monitoring und kleine Anpassungen",
+          "Priorisierte Reaktion bei Störungen",
+          "Monatlicher Kurzbericht, was gemacht wurde"
+        ]
       },
       {
         "icon": "HelpCircle",
         "title": "Technische Beratung",
-        "description": "Fragen zu bestehenden Setups? Zweitmeinung gewünscht? Ich helfe gerne weiter."
+        "description": "Fragen zu bestehenden Setups, Zweitmeinung, Architektur-Review.",
+        "points": [
+          "Review von Offerten und Konzepten",
+          "Tool-Evaluation mit klarer Empfehlung",
+          "Sparring für dein Team",
+          "Dokumentation, die bleibt"
+        ]
       }
-    ]
+    ],
+    "cta": {
+      "hook": "Läuft dein Publishing-System, aber niemand kümmert sich darum? Lass uns das ändern, bevor es brennt.",
+      "subject": "Erstgespräch: Support & Wartung",
+      "note": "Planbare Stunden · Kein Notfallmodus"
+    }
   }
 }

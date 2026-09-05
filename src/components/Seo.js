@@ -11,6 +11,7 @@ const pageLabels = {
   "/services": "Services",
   "/ueber-mich": "Über mich",
   "/kontakt": "Kontakt",
+  "/website-check": "Website-Check",
   "/impressum": "Impressum",
   "/datenschutz": "Datenschutz",
 };

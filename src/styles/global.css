@@ -192,6 +192,8 @@
 }
 
 html {
+  /* clip statt hidden: verhindert horizontales Aufziehen auf iOS, ohne Sticky zu brechen */
+  overflow-x: clip;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

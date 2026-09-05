@@ -8,6 +8,7 @@ import * as styles from "./Navigation.module.css";
 const menuItems = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
+  { to: "/website-check", label: "Website-Check" },
   { to: "/ueber-mich", label: "Über mich" },
   { to: "/kontakt", label: "Kontakt" },
 ];

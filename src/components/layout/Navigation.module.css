@@ -168,7 +168,11 @@
     gap: 0;
     padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
     transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+    /* Geschlossen unsichtbar, sonst zählt iOS Safari das Menü zur Seitenbreite */
+    visibility: hidden;
+    transition:
+      transform 0.3s ease-in-out,
+      visibility 0s linear 0.3s;
     box-shadow: var(--shadow-card);
     max-height: calc(100vh - 60px);
     overflow-y: auto;
@@ -176,6 +180,8 @@
 
   .menu.mobileOpen {
     transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.3s ease-in-out;
   }
 
   .menu li {

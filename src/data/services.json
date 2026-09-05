@@ -8,37 +8,37 @@
       "offerings": [
         {
           "title": "Content-First Workflows",
-          "description": "Inhalte aus CMS direkt in Print-Workflows. Headless CMS liefert strukturierte Daten (ICML, XML, JSON), Publishing-System produziert automatisch – von Web zu Print in Sekunden.",
+          "description": "Inhalte aus CMS direkt in Print-Workflows. Headless CMS liefert strukturierte Daten (ICML, XML, JSON), Publishing-System produziert automatisch: von Web zu Print in Sekunden.",
           "icon": "Workflow",
           "result": "Web zu Print in Sekunden"
         },
         {
           "title": "InDesign Server Workflows",
-          "description": "Mit Adobe InDesign Server automatisiere ich die Document-Generation. Template-basierte Produktionen für Kataloge, Broschüren, mehrseitige Dokumente – inklusive ExtendScript-Entwicklung für spezielle Anforderungen. Das System übernimmt die Arbeit, du sparst Zeit.",
+          "description": "Mit Adobe InDesign Server automatisiere ich die Document-Generation. Template-basierte Produktionen für Kataloge, Broschüren, mehrseitige Dokumente, inklusive ExtendScript-Entwicklung für spezielle Anforderungen. Das System übernimmt die Arbeit, du sparst Zeit.",
           "icon": "FileText",
           "result": "Dokumente ohne Handarbeit"
         },
         {
           "title": "Enfocus Switch Automation",
-          "description": "Komplexe Publishing-Workflows mit Enfocus Switch. Custom Scripts mit dem Scripting Module (unterstützt Node.js und deren Packages) für moderne JavaScript-Integration und nahtlose System-Integrationen – alles läuft automatisch.",
+          "description": "Komplexe Publishing-Workflows mit Enfocus Switch. Custom Scripts mit dem Scripting Module (unterstützt Node.js und deren Packages) für moderne JavaScript-Integration und nahtlose System-Integrationen. Alles läuft automatisch.",
           "icon": "Zap",
           "result": "Stunden weniger Handarbeit pro Tag"
         },
         {
           "title": "vjoon K4 Integration & Customizing",
-          "description": "Integration von vjoon K4 in Publishing-Workflows. Installation, Support und API-Integration mit anderen Systemen wie InDesign Server und Enfocus Switch – für nahtlose Redaktionssysteme.",
+          "description": "Integration von vjoon K4 in Publishing-Workflows. Installation, Support und API-Integration mit anderen Systemen wie InDesign Server und Enfocus Switch, für nahtlose Redaktionssysteme.",
           "icon": "BookOpen",
           "result": "Nahtloses Redaktionssystem"
         },
         {
           "title": "EasyCatalog Automatisierung",
-          "description": "Katalog-Produktion mit EasyCatalog. Automatische Produktdaten-Integration in InDesign-Templates – von Datenbank zu fertigem Katalog in Minuten statt Tagen.",
+          "description": "Katalog-Produktion mit EasyCatalog. Automatische Produktdaten-Integration in InDesign-Templates: von der Datenbank zum fertigen Katalog in Minuten statt Tagen.",
           "icon": "Database",
           "result": "Katalog in Minuten statt Tagen"
         },
         {
           "title": "Digital Asset Management",
-          "description": "DAM-Systeme wie Sharedien oder Frontify für effizientes Asset Management – deine Medien immer griffbereit, überall verfügbar.",
+          "description": "DAM-Systeme wie Sharedien oder Frontify für effizientes Asset Management: deine Medien immer griffbereit, überall verfügbar.",
           "icon": "Image",
           "result": "Medien überall griffbereit"
         }
@@ -80,19 +80,19 @@
       "offerings": [
         {
           "title": "Headless CMS & Content-First",
-          "description": "Moderne Content-First Architekturen mit Strapi oder Contentful. Inhalte einmal pflegen, überall nutzen – Website, App, Print, alles aus einer Quelle.",
+          "description": "Moderne Content-First Architekturen mit Strapi oder Contentful. Inhalte einmal pflegen, überall nutzen: Website, App, Print, alles aus einer Quelle.",
           "icon": "Layers",
           "result": "Einmal pflegen, überall ausspielen"
         },
         {
           "title": "Custom Web-Entwicklung",
-          "description": "Next.js für performante Anwendungen, React für spezielle Anforderungen. Ich entwickle massgeschneiderte Web-Lösungen, die genau zu deinen Bedürfnissen passen – modern, schnell, wartbar.",
+          "description": "Next.js für performante Anwendungen, React für spezielle Anforderungen. Ich entwickle massgeschneiderte Web-Lösungen, die genau zu deinen Bedürfnissen passen: modern, schnell, wartbar.",
           "icon": "Code",
           "result": "Schnell, wartbar, massgeschneidert"
         },
         {
           "title": "WordPress Development",
-          "description": "Individuelle WordPress Themes und Plugins, Performance-Optimierung, Wartung und Updates. WordPress, das wirklich funktioniert – zuverlässig und schnell.",
+          "description": "Individuelle WordPress Themes und Plugins, Performance-Optimierung, Wartung und Updates. WordPress, das wirklich funktioniert: zuverlässig und schnell.",
           "icon": "Globe",
           "result": "WordPress, das zuverlässig läuft"
         }
@@ -127,7 +127,7 @@
         }
       ],
       "cta": {
-        "hook": "Eine Quelle für Web, App und Print – schauen wir, ob das für dich passt.",
+        "hook": "Eine Quelle für Web, App und Print. Schauen wir, ob das für dich passt.",
         "subject": "Erstgespräch: Content Management & Web",
         "note": "Kostenloses Erstgespräch · Antwort innert 24 h"
       }
@@ -140,19 +140,19 @@
       "offerings": [
         {
           "title": "API-Entwicklung & System-Integration",
-          "description": "REST APIs implementieren, Systeme miteinander verbinden. vjoon K4 mit InDesign Server, Headless CMS mit Print-Workflows – ich sorge dafür, dass deine Tools nahtlos zusammenarbeiten.",
+          "description": "REST APIs implementieren, Systeme miteinander verbinden. vjoon K4 mit InDesign Server, Headless CMS mit Print-Workflows: Ich sorge dafür, dass deine Tools nahtlos zusammenarbeiten.",
           "icon": "Plug",
           "result": "Systeme, die miteinander reden"
         },
         {
           "title": "XML/JSON Datenverarbeitung",
-          "description": "Automatische Transformation von XML und JSON Daten. Systeme für automatischen Daten-Import – weniger manuelle Arbeit, mehr Effizienz.",
+          "description": "Automatische Transformation von XML und JSON Daten. Systeme für automatischen Daten-Import: weniger manuelle Arbeit, mehr Effizienz.",
           "icon": "Braces",
           "result": "Daten-Import ohne Handarbeit"
         },
         {
           "title": "Database Management & Setup",
-          "description": "MySQL, PostgreSQL, Microsoft SQL Server – Setup, Integration in bestehende Infrastrukturen, und Optimierung für bessere Performance.",
+          "description": "MySQL, PostgreSQL, Microsoft SQL Server: Setup, Integration in bestehende Infrastrukturen, und Optimierung für bessere Performance.",
           "icon": "Database",
           "result": "Stabile, schnelle Datenbasis"
         }
@@ -202,13 +202,13 @@
         },
         {
           "title": "Content-Automatisierung via APIs",
-          "description": "Automatische Übersetzungen, Content-Generierung für Templates. APIs für wiederkehrende Aufgaben – mehr Zeit für die wichtigen Dinge.",
+          "description": "Automatische Übersetzungen, Content-Generierung für Templates. APIs für wiederkehrende Aufgaben, damit mehr Zeit für die wichtigen Dinge bleibt.",
           "icon": "Languages",
           "result": "Wiederkehrendes läuft automatisch"
         },
         {
           "title": "Interne KI-Lösungen & Training",
-          "description": "KI-Systeme trainiert mit deinen eigenen Dokumenten – etwa mit Open WebUI für interne KI-Plattformen. Offline-Lösungen für sensible Daten, Ressourcen-Unterstützung ohne Datenweitergabe.",
+          "description": "KI-Systeme trainiert mit deinen eigenen Dokumenten, etwa mit Open WebUI für interne KI-Plattformen. Offline-Lösungen für sensible Daten, Ressourcen-Unterstützung ohne Datenweitergabe.",
           "icon": "ShieldCheck",
           "result": "KI ohne Datenabfluss"
         }
@@ -242,13 +242,13 @@
       "offerings": [
         {
           "title": "Publishing-Strategieberatung & Tool-Evaluierung",
-          "description": "Welches Tool passt wirklich zu dir? Ich evaluiere Tools, analysiere deine Workflows und gebe ehrliche Empfehlungen – keine Verkaufsmaschen, nur Lösungen die funktionieren.",
+          "description": "Welches Tool passt wirklich zu dir? Ich evaluiere Tools, analysiere deine Workflows und gebe ehrliche Empfehlungen. Keine Verkaufsmaschen, nur Lösungen, die funktionieren.",
           "icon": "Compass",
           "result": "Ehrliche Empfehlung statt Verkauf"
         },
         {
           "title": "Agile Projektleitung & Stakeholder-Management",
-          "description": "Koordination zwischen verschiedenen Stakeholdern, agile Projektumsetzung mit Jira, Dokumentation in Confluence. Transparente Kommunikation während des gesamten Projekts – du weisst immer, wo wir stehen.",
+          "description": "Koordination zwischen verschiedenen Stakeholdern, agile Projektumsetzung mit Jira, Dokumentation in Confluence. Transparente Kommunikation während des gesamten Projekts: Du weisst immer, wo wir stehen.",
           "icon": "Users",
           "result": "Du weisst immer, wo wir stehen"
         },
@@ -299,7 +299,7 @@
       {
         "icon": "Clock",
         "title": "Flexibel",
-        "description": "Remote als Standard, vor Ort wenn es Sinn macht – Schweiz und Nachbarländer."
+        "description": "Remote als Standard, vor Ort wenn es Sinn macht, in der Schweiz und den Nachbarländern."
       },
       {
         "icon": "Target",
@@ -309,7 +309,7 @@
       {
         "icon": "MessageCircle",
         "title": "Ehrlich",
-        "description": "Klare Aussagen zu dem, was machbar ist – auch wenn die Antwort «nein» heisst."
+        "description": "Klare Aussagen zu dem, was machbar ist, auch wenn die Antwort «nein» heisst."
       },
       {
         "icon": "Users",
@@ -361,7 +361,7 @@
   },
   "support": {
     "title": "Support & Wartung",
-    "subtitle": "Damit es nach dem Go-Live weiterläuft – planbar statt im Notfallmodus.",
+    "subtitle": "Damit es nach dem Go-Live weiterläuft: planbar statt im Notfallmodus.",
     "items": [
       {
         "icon": "Wrench",

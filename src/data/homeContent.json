@@ -14,8 +14,6 @@
   },
   "trust": {
     "label": "Vertraut von",
-    "noteStrong": "10+ Jahre",
-    "noteText": "Publishing-Systeme",
     "items": [
       {
         "name": "Red Bull Media House",
@@ -66,7 +64,7 @@
         "icon": "Zap",
         "kicker": "Kernkompetenz",
         "title": "Publishing-Automatisierung",
-        "description": "InDesign Server, Enfocus Switch, vjoon K4 und EasyCatalog: Workflows, die aus strukturierten Daten fertige Publikationen machen – ohne Handarbeit, ohne Fehler.",
+        "description": "InDesign Server, Enfocus Switch, vjoon K4 und EasyCatalog: Workflows, die aus strukturierten Daten fertige Publikationen machen. Ohne Handarbeit, ohne Fehler.",
         "tags": [
           "InDesign Server",
           "Enfocus Switch",
@@ -77,9 +75,9 @@
       },
       {
         "icon": "Layers",
-        "kicker": "Content & Web",
+        "kicker": "Eine Quelle, alle Kanäle",
         "title": "Content Management & Web-Entwicklung",
-        "description": "Headless CMS, Next.js und WordPress. Inhalte einmal pflegen, überall ausspielen – auf der Website, in der App und im Print.",
+        "description": "Headless CMS, Next.js und WordPress. Inhalte einmal pflegen, überall ausspielen: auf der Website, in der App und im Print.",
         "tags": [
           "Next.js",
           "Contentful",
@@ -89,7 +87,7 @@
       },
       {
         "icon": "Plug",
-        "kicker": "Integration",
+        "kicker": "Systeme verbinden",
         "title": "System-Integration & APIs",
         "description": "REST, GraphQL, XML und JSON. Ich sorge dafür, dass Ihre Systeme miteinander reden.",
         "tags": [
@@ -100,7 +98,7 @@
       },
       {
         "icon": "Sparkles",
-        "kicker": "KI",
+        "kicker": "Intelligent automatisieren",
         "title": "KI-Publishing-Lösungen",
         "description": "Metadaten, OCR, Transkription. Evaluiert, datenschutzkonform und produktiv im Einsatz.",
         "tags": [
@@ -112,7 +110,7 @@
       },
       {
         "icon": "Compass",
-        "kicker": "Beratung",
+        "kicker": "Know-how & Organisation",
         "title": "Beratung & Projektleitung",
         "description": "Tool-Evaluation, Anforderungen, agile Umsetzung. Ich packe selbst mit an.",
         "tags": [
@@ -130,13 +128,13 @@
       {
         "icon": "Award",
         "title": "10+ Jahre Publishing-Erfahrung",
-        "description": "Von der Polygraf-Lehre bis zu Red Bull Media House – ich kenne die Branche von innen und aussen. Kein generisches Consulting, sondern echtes Praxis-Know-how.",
+        "description": "Von der Polygraf-Lehre bis zu Red Bull Media House: Ich kenne die Branche von innen und aussen. Kein generisches Consulting, sondern echtes Praxis-Know-how.",
         "href": "/ueber-mich"
       },
       {
         "icon": "Code",
         "title": "Entwickler & Architekt in einem",
-        "description": "Ich rede nicht nur über Lösungen, ich baue sie selbst. Von React-Apps bis zu komplexen Microservices – Code ist meine Muttersprache.",
+        "description": "Konzept und Umsetzung aus einer Hand. Was ich empfehle, kann ich auch bauen: keine Übergaben, keine Schnittstellenverluste zwischen Berater und Entwickler.",
         "href": "/ueber-mich"
       },
       {
@@ -146,5 +144,40 @@
         "href": "/ueber-mich"
       }
     ]
+  },
+  "caseStudy": {
+    "enabled": false,
+    "eyebrow": "Success Story",
+    "client": "Schweizerische Post",
+    "via": "im Auftrag der Brüggli Admedia AG",
+    "title": "So habe ich der Schweizerischen Post geholfen, den PostCard Creator vom Legacy-System zu lösen.",
+    "blocks": [
+      {
+        "label": "Ausgangslage",
+        "text": "Der PostCard Creator lief auf einem Legacy-Serversystem, das schwer wartbar war. Die Prozesskette von der Bestellung bis zur Abrechnung hing an manuellen Schritten."
+      },
+      {
+        "label": "Vorgehen",
+        "text": "Als Solution Architect habe ich die Ablösung durch eine moderne Architektur geleitet und aktiv mitentwickelt: KI-gestütztes Agentic Coding mit Claude Code, Scrum, Code Reviews und Pull Requests."
+      },
+      {
+        "label": "Ergebnis",
+        "text": "Eine durchgängige, automatisierte Prozesskette: Datenübernahme, Datenprüfung und Statusabgleich mit der Post über Druck, Versand und Rückmeldung bis zur Aufbereitung der Abrechnungsgrundlagen."
+      }
+    ],
+    "tags": [
+      "Legacy-Modernisierung",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "Claude Code",
+      "Scrum"
+    ],
+    "cta": {
+      "text": "Ähnliches Projekt besprechen",
+      "href": "/kontakt"
+    },
+    "note": "Details und Zahlen gerne im Gespräch."
   }
 }

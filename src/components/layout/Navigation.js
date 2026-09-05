@@ -15,6 +15,8 @@ const menuItems = [
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // Animation erst nach der ersten Bedienung, sonst rutscht das Menü beim Resize sichtbar weg
+  const [menuAnimated, setMenuAnimated] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,7 @@ const Navigation = () => {
   }, []);
 
   const toggleMobileMenu = () => {
+    setMenuAnimated(true);
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
@@ -68,7 +71,7 @@ const Navigation = () => {
 
         <ul
           id="main-menu"
-          className={`${styles.menu} ${mobileMenuOpen ? styles.mobileOpen : ""}`}
+          className={`${styles.menu} ${mobileMenuOpen ? styles.mobileOpen : ""} ${menuAnimated ? styles.animated : ""}`}
         >
           {menuItems.map((item) => (
             <li key={item.to}>

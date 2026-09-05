@@ -40,24 +40,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-netlify",
       options: {
-        // Eigene Header statt Plugin-Defaults; Caching-Header für Bundles setzt das Plugin
+        // Security-Header stehen in netlify.toml; das Plugin liefert nur die
+        // Caching-Header für content-gehashte Bundles.
         mergeSecurityHeaders: false,
-        headers: {
-          "/*": [
-            "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload",
-            "Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests",
-            "X-Frame-Options: DENY",
-            "X-Content-Type-Options: nosniff",
-            "X-XSS-Protection: 1; mode=block",
-            "Referrer-Policy: strict-origin-when-cross-origin",
-            "Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()",
-          ],
-          "/images/*": ["Cache-Control: public, max-age=604800"],
-          "/llms.txt": [
-            "Content-Type: text/plain; charset=utf-8",
-            "Cache-Control: public, max-age=3600",
-          ],
-        },
       },
     },
     {

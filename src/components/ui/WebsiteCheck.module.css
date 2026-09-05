@@ -189,29 +189,21 @@
   overflow-wrap: anywhere;
 }
 
-.overall {
-  display: grid;
-  justify-items: center;
-  padding: 0.75rem 1.25rem;
-  border-radius: var(--radius-md);
-  background: var(--color-background-light);
-  min-width: 120px;
-}
-
-.overallValue {
+.overallPill {
   font-family: var(--font-mono);
-  font-size: 2.4rem;
-  font-weight: 600;
-  line-height: 1;
-}
-
-.overallLabel {
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-gray);
-  margin-top: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-line);
+  white-space: nowrap;
+}
+
+.overallPill strong {
+  color: var(--color-text);
+  font-size: 1rem;
 }
 
 .good {
@@ -226,90 +218,68 @@
   color: var(--color-text);
 }
 
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--gap-sm);
-}
-
-.tile {
-  display: grid;
-  gap: 0.3rem;
-  padding: 1rem;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-line);
-  align-content: start;
-}
-
-.tileLabel {
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-text-gray);
-}
-
-.tileValue {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.1;
-}
-
-.tileNote {
-  font-size: 0.78rem;
-  color: var(--color-text-gray);
-}
-
-.tileChecks {
-  display: grid;
-  gap: 0.25rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.tileChecks span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.ok {
-  color: var(--color-accent);
-}
-
-.fail {
-  color: var(--color-text-gray);
-}
-
-.recs {
-  display: grid;
-  gap: 0.75rem;
-}
-
-.recList {
+.grades {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 0.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap-sm);
 }
 
-.rec {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: var(--gap-md);
-  padding: 0.9rem 1rem;
+.grade {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "icon label"
+    "value value"
+    "note note";
+  column-gap: 0.6rem;
+  row-gap: 0.35rem;
+  align-items: center;
+  padding: 1rem 1.1rem 1.1rem;
   border-radius: var(--radius-md);
+  border: 1px solid var(--color-line);
   background: var(--color-background-light);
-  font-size: 0.93rem;
 }
 
-.rec p {
-  margin: 0.2rem 0 0;
+.gradeIcon {
+  grid-area: icon;
+  display: inline-flex;
   color: var(--color-text-gray);
+}
+
+.gradeLabel {
+  grid-area: label;
   font-size: 0.9rem;
-  line-height: 1.5;
+  font-weight: 700;
+}
+
+.gradeValue {
+  grid-area: value;
+  font-family: var(--font-mono);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 0.4rem;
+}
+
+.gradeNote {
+  grid-area: note;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--color-text-gray);
+}
+
+.after {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-gray);
+}
+
+.after a {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 .actions {
@@ -400,9 +370,8 @@
   border: 0;
   background: none;
   color: var(--color-text-gray);
-  font-size: 0.85rem;
+  font-size: inherit;
   text-decoration: underline;
-  justify-self: start;
   padding: 0;
 }
 
@@ -412,9 +381,9 @@
   }
 }
 
-@media (max-width: 900px) {
-  .tiles {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (max-width: 360px) {
+  .grades {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -423,14 +392,8 @@
     padding: var(--spacing-sm);
   }
 
-  .grid,
-  .tiles {
+  .grid {
     grid-template-columns: 1fr;
-  }
-
-  .rec {
-    flex-direction: column;
-    gap: 0.5rem;
   }
 
   .submitRow,

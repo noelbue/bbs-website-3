@@ -1,6 +1,6 @@
 # Bürgler Business Solutions
 
-> Publishing-Technologie-Experte aus der Schweiz. Noel Bürgler automatisiert und integriert Print- und Digital-Publishing-Workflows (Adobe InDesign Server, Enfocus Switch, vjoon K4, EasyCatalog, XMPie), entwickelt Web-Anwendungen (React, Next.js, TypeScript, Node.js, Headless CMS) und begleitet Projekte als Solution Architect und Requirements Engineer – zunehmend mit KI-gestützter Entwicklung.
+> Publishing-Technologie-Experte aus der Schweiz. Noel Bürgler automatisiert und integriert Print- und Digital-Publishing-Workflows (Adobe InDesign Server, Enfocus Switch, vjoon K4, EasyCatalog, XMPie), entwickelt Web-Anwendungen (React, Next.js, TypeScript, Node.js, Headless CMS) und begleitet Projekte als Solution Architect und Requirements Engineer, zunehmend mit KI-gestützter Entwicklung.
 
 Sprache der Website: Deutsch (Schweiz). Standort: Horn TG, Schweiz. Einsatzgebiet: Schweiz, Deutschland, Österreich, Liechtenstein; remote oder vor Ort. Inhaber: Noel Bürgler, Polygraf EFZ, B.Sc. Computer Science (Abschluss 2027), über 10 Jahre Erfahrung mit Publishing-Systemen, u. a. für Red Bull Media House, Schweizerische Post, Swisstopo und Mattenbach Gruppe.
 

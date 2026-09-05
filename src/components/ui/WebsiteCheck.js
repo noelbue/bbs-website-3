@@ -18,15 +18,83 @@ const STEPS = {
 
 const EFFORT = { klein: "Kleiner Aufwand", mittel: "Mittlerer Aufwand", gross: "Grösserer Aufwand" };
 
-const readError = async (res) => {
+const CONTACT = `Schreib mir direkt an ${site.email}, ich schaue deine Website manuell an.`;
+
+const UNAVAILABLE = `Der Check ist gerade nicht verfügbar. Bitte versuch es in ein paar Minuten nochmals. ${CONTACT}`;
+
+const minutesFrom = (retryAfter, fallback = 60) => {
+  const seconds = Number(retryAfter);
+  return Math.max(1, Math.round((Number.isFinite(seconds) && seconds > 0 ? seconds : fallback) / 60));
+};
+
+const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+
+/**
+ * Übersetzt eine Fehlerantwort des Proxys in eine verständliche Meldung.
+ * Liefert optional das betroffene Feld, damit die Meldung dort erscheint.
+ */
+const describeError = async (res) => {
   const data = await res.json().catch(() => null);
-  const retry = res.headers.get("Retry-After");
-  const base = data?.error?.message || "Der Check konnte nicht gestartet werden.";
-  if (res.status === 429 && retry) {
-    const minutes = Math.max(1, Math.round(Number(retry) / 60));
-    return `${base} Bitte versuch es in etwa ${minutes} Minute${minutes === 1 ? "" : "n"} nochmals.`;
+  const code = data?.error?.code || "";
+  const details = data?.error?.details || [];
+
+  if (res.status === 429) {
+    const minutes = minutesFrom(res.headers.get("Retry-After"));
+    return {
+      message: `Das Limit von drei Checks pro Stunde ist erreicht. Bitte versuch es in etwa ${plural(minutes, "Minute", "Minuten")} nochmals.`,
+    };
   }
-  return base;
+  if (code === "URL_BLOCKED") {
+    return { field: "url", message: `Diese Adresse können wir nicht automatisch analysieren. ${CONTACT}` };
+  }
+  if (code === "URL_UNRESOLVABLE") {
+    return { field: "url", message: "Diese Domain ist nicht erreichbar. Prüfe die Schreibweise der Adresse." };
+  }
+  if (code === "LEAD_BLOCKED") {
+    return { message: `Für diese Adresse führen wir keinen automatischen Check durch. ${CONTACT}` };
+  }
+  if (code === "VALIDATION_ERROR") {
+    const urlIssue = details.find((d) => d.field === "url");
+    const emailIssue = details.find((d) => d.field === "email");
+    if (urlIssue || /url|hostname|adresse|port|http/i.test(data?.error?.message || "")) {
+      return {
+        field: "url",
+        message: "Bitte gib eine gültige Website-Adresse ein, zum Beispiel www.deine-website.ch.",
+      };
+    }
+    if (emailIssue) return { field: "email", message: "Bitte gib eine gültige E-Mail-Adresse ein." };
+    const other = details[0];
+    return { message: other ? `${other.message}.` : "Die Eingaben sind unvollständig oder ungültig. Bitte prüfe das Formular." };
+  }
+  if (res.status === 404) {
+    return { message: "Dieser Check wurde nicht gefunden. Bitte starte ihn nochmals." };
+  }
+  // 401/403/500/503, Proxy ohne Token (CONFIG), API abgeschaltet
+  return { message: UNAVAILABLE };
+};
+
+const NETWORK_ERROR = {
+  message: "Keine Verbindung. Prüfe deine Internetverbindung und versuch es nochmals.",
+};
+
+/** Formatfehler abfangen, bevor die Anfrage rausgeht. */
+const validate = (form) => {
+  const errors = {};
+  const url = form.url.trim();
+  const host = url.replace(/^https?:\/\//i, "").split(/[/?#]/)[0];
+  if (!url) errors.url = "Bitte gib die Adresse deiner Website ein.";
+  else if (/^https?:\/\//i.test(url) === false && /:\/\//.test(url)) {
+    errors.url = "Wir prüfen nur http- und https-Adressen.";
+  } else if (!/^[a-z0-9\u00e0-\u00ff-]+(\.[a-z0-9\u00e0-\u00ff-]+)+$/i.test(host) || /^\d+(\.\d+){3}$/.test(host)) {
+    errors.url = "Bitte gib eine gültige Website-Adresse ein, zum Beispiel www.deine-website.ch.";
+  }
+  const email = form.email.trim();
+  if (!email) errors.email = "Bitte gib eine E-Mail-Adresse für den Report ein.";
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+    errors.email = "Bitte gib eine gültige E-Mail-Adresse ein, zum Beispiel du@firma.ch.";
+  }
+  if (!form.consent) errors.consent = "Bitte stimme der Analyse zu, damit wir starten können.";
+  return errors;
 };
 
 const scoreTone = (value) => (value >= 70 ? styles.good : value >= 40 ? styles.mid : styles.low);
@@ -36,6 +104,7 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
   const [phase, setPhase] = useState("idle"); // idle | submitting | running | done | failed
   const [form, setForm] = useState({ url: "", email: "", name: "", company: "", consent: false, website: "" });
   const [errorMsg, setErrorMsg] = useState("");
+  const [fieldErrors, setFieldErrors] = useState({});
   const [check, setCheck] = useState(null);
   const [progress, setProgress] = useState({ step: "queued", percent: 5 });
   const [mailState, setMailState] = useState("idle"); // idle | sending | sent | already | error
@@ -47,12 +116,20 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
   const update = (field) => (event) => {
     const value = event.target.type === "checkbox" ? event.target.checked : event.target.value;
     setForm((prev) => ({ ...prev, [field]: value }));
+    setFieldErrors((prev) => (prev[field] ? { ...prev, [field]: undefined } : prev));
   };
 
   const poll = async (id) => {
     try {
       const res = await fetch(`${ENDPOINT}?id=${encodeURIComponent(id)}`, { cache: "no-store" });
-      if (!res.ok) throw new Error(await readError(res));
+      if (!res.ok) {
+        const info = await describeError(res);
+        throw new Error(
+          res.status === 404
+            ? info.message
+            : "Die Verbindung zum Check ist abgebrochen. Starte ihn einfach nochmals: derselbe Check wird innerhalb von 24 Stunden wiederverwendet."
+        );
+      }
       const data = await res.json();
       if (data.status === "done") {
         setCheck(data);
@@ -74,7 +151,7 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
       }
       timer.current = window.setTimeout(() => poll(id), elapsed < 30_000 ? 3000 : 5000);
     } catch (err) {
-      setErrorMsg(err.message);
+      setErrorMsg(err instanceof TypeError ? NETWORK_ERROR.message : err.message);
       setPhase("failed");
     }
   };
@@ -82,20 +159,32 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
   const submit = async (event) => {
     event.preventDefault();
     setErrorMsg("");
-    if (!form.consent) {
-      setErrorMsg("Bitte stimme der Analyse zu, damit wir starten können.");
+    const errors = validate(form);
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      const first = ["url", "email", "consent"].find((key) => errors[key]);
+      event.currentTarget.querySelector(`[name="${first}"]`)?.focus();
       return;
     }
+    setFieldErrors({});
     setPhase("submitting");
     try {
-      const res = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, campaign }),
-      });
-      if (!res.ok) throw new Error(await readError(res));
+      let res;
+      try {
+        res = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...form, campaign }),
+        });
+      } catch {
+        throw Object.assign(new Error(NETWORK_ERROR.message), { info: NETWORK_ERROR });
+      }
+      if (!res.ok) {
+        const info = await describeError(res);
+        throw Object.assign(new Error(info.message), { info });
+      }
       const data = await res.json();
-      if (!data.id) throw new Error("Der Check konnte nicht gestartet werden.");
+      if (!data.id) throw new Error(UNAVAILABLE);
       setCheck(data);
       setMailState("idle");
       if (data.status === "done") {
@@ -112,7 +201,12 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
       setPhase("running");
       timer.current = window.setTimeout(() => poll(data.id), 3000);
     } catch (err) {
-      setErrorMsg(err.message);
+      if (err.info?.field) {
+        setFieldErrors({ [err.info.field]: err.info.message });
+        window.setTimeout(() => document.querySelector(`[name="${err.info.field}"]`)?.focus(), 0);
+      } else {
+        setErrorMsg(err.message);
+      }
       setPhase("idle");
     }
   };
@@ -124,7 +218,7 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
       const res = await fetch(`${ENDPOINT}?id=${encodeURIComponent(check.id)}&action=send-report`, {
         method: "POST",
       });
-      if (!res.ok) throw new Error(await readError(res));
+      if (!res.ok) throw new Error((await describeError(res)).message);
       const data = await res.json();
       setMailState(data.alreadySent ? "already" : "sent");
     } catch (err) {
@@ -278,7 +372,7 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
     <form className={styles.panel} onSubmit={submit} noValidate>
       {phase === "failed" && (
         <div className={styles.error} role="alert">
-          <strong>Das hat nicht geklappt.</strong> {errorMsg}
+          <strong>Die Analyse konnte nicht abgeschlossen werden.</strong> {errorMsg}
         </div>
       )}
       {phase === "idle" && errorMsg && (
@@ -289,11 +383,44 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
       <div className={styles.grid}>
         <label className={`${styles.field} ${styles.wide}`}>
           <span>Website-Adresse</span>
-          <input type="url" inputMode="url" placeholder="www.deine-website.ch" value={form.url} onChange={update("url")} required autoComplete="url" />
+          <input
+            type="text"
+            name="url"
+            inputMode="url"
+            placeholder="www.deine-website.ch"
+            value={form.url}
+            onChange={update("url")}
+            required
+            autoComplete="url"
+            autoCapitalize="none"
+            spellCheck="false"
+            aria-invalid={fieldErrors.url ? "true" : undefined}
+            aria-describedby={fieldErrors.url ? "wc-url-error" : undefined}
+          />
+          {fieldErrors.url && (
+            <span className={styles.fieldError} id="wc-url-error" role="alert">
+              {fieldErrors.url}
+            </span>
+          )}
         </label>
         <label className={styles.field}>
           <span>E-Mail für den Report</span>
-          <input type="email" placeholder="du@firma.ch" value={form.email} onChange={update("email")} required autoComplete="email" />
+          <input
+            type="email"
+            name="email"
+            placeholder="du@firma.ch"
+            value={form.email}
+            onChange={update("email")}
+            required
+            autoComplete="email"
+            aria-invalid={fieldErrors.email ? "true" : undefined}
+            aria-describedby={fieldErrors.email ? "wc-email-error" : undefined}
+          />
+          {fieldErrors.email && (
+            <span className={styles.fieldError} id="wc-email-error" role="alert">
+              {fieldErrors.email}
+            </span>
+          )}
         </label>
         <label className={styles.field}>
           <span>Name <em>optional</em></span>
@@ -304,13 +431,26 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
           <input type="text" tabIndex={-1} autoComplete="off" value={form.website} onChange={update("website")} />
         </label>
       </div>
-      <label className={styles.consent}>
-        <input type="checkbox" checked={form.consent} onChange={update("consent")} required />
+      <label className={`${styles.consent} ${fieldErrors.consent ? styles.consentError : ""}`}>
+        <input
+          type="checkbox"
+          name="consent"
+          checked={form.consent}
+          onChange={update("consent")}
+          required
+          aria-invalid={fieldErrors.consent ? "true" : undefined}
+          aria-describedby={fieldErrors.consent ? "wc-consent-error" : undefined}
+        />
         <span>
           Ich bin einverstanden, dass die angegebene Website technisch analysiert wird und Bürgler Business Solutions
           mich per E-Mail zu den Ergebnissen kontaktieren darf. Die Analyse führt ProspectHub (Schweiz) in unserem
           Auftrag durch, für die Ladezeitmessung wird die Adresse an die Google PageSpeed API übermittelt. Details in
           der <a href="/datenschutz#website-check">Datenschutzerklärung</a>.
+          {fieldErrors.consent && (
+            <span className={styles.fieldError} id="wc-consent-error" role="alert">
+              {fieldErrors.consent}
+            </span>
+          )}
         </span>
       </label>
       <div className={styles.submitRow}>

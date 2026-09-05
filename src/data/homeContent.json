@@ -179,5 +179,44 @@
       "href": "/kontakt"
     },
     "note": "Details und Zahlen gerne im Gespräch."
+  },
+  "checkTeaser": {
+    "eyebrow": "Kostenloser Website-Check",
+    "title": "Wie gut ist deine Website wirklich?",
+    "text": "Ladezeit, Sicherheit, Impressum und Datenschutz, KI-Lesbarkeit: vier Bereiche in zwei Minuten geprüft. Du siehst die wichtigsten Werte sofort und bekommst den vollständigen Report als Link.",
+    "cta": {
+      "text": "Website jetzt prüfen",
+      "href": "/website-check"
+    },
+    "note": "Ohne Anmeldung · Report 90 Tage abrufbar",
+    "preview": {
+      "score": 47,
+      "areas": [
+        {
+          "icon": "Gauge",
+          "label": "Ladezeit mobil",
+          "value": "5.4 s",
+          "ok": false
+        },
+        {
+          "icon": "ShieldCheck",
+          "label": "Sicherheit",
+          "value": "2 / 4",
+          "ok": false
+        },
+        {
+          "icon": "Scale",
+          "label": "Impressum & Datenschutz",
+          "value": "1 / 2",
+          "ok": false
+        },
+        {
+          "icon": "Sparkles",
+          "label": "KI-Bereitschaft",
+          "value": "Note C",
+          "ok": true
+        }
+      ]
+    }
   }
 }

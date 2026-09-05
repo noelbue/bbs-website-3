@@ -11,6 +11,7 @@ import WorkflowDiagram, { SCENARIOS } from "../components/ui/WorkflowDiagram";
 import TypedHeadline from "../components/ui/TypedHeadline";
 import TrustStrip from "../components/ui/TrustStrip";
 import CaseStudy from "../components/ui/CaseStudy";
+import CheckTeaser from "../components/ui/CheckTeaser";
 import { getIcon } from "../components/ui/icons";
 import homeContent from "../data/homeContent.json";
 import noelPortrait from "../assets/noel-buergler.png";
@@ -55,11 +56,14 @@ const HomeHero = ({ hero, trust }) => {
 };
 
 const IndexPage = () => {
-  const { hero, trust, services, whyUs, caseStudy } = homeContent;
+  const { hero, trust, services, whyUs, caseStudy, checkTeaser } = homeContent;
 
   return (
     <Layout>
       <HomeHero hero={hero} trust={trust} />
+
+      {/* Website-Check */}
+      <CheckTeaser data={checkTeaser} />
 
       {/* Services */}
       <section className={styles.services}>

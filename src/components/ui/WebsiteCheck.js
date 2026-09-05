@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ArrowRight, Check, X, Mail, Loader2 } from "lucide-react";
+import { ArrowRight, Mail, Loader2, Gauge, ShieldCheck, Scale, Sparkles } from "lucide-react";
 import Button from "./Button";
-import Chip from "./Chip";
 import site from "../../data/site";
 import * as styles from "./WebsiteCheck.module.css";
 
@@ -15,8 +14,6 @@ const STEPS = {
   done: "Fertig.",
   failed: "Die Analyse ist fehlgeschlagen.",
 };
-
-const EFFORT = { klein: "Kleiner Aufwand", mittel: "Mittlerer Aufwand", gross: "Grösserer Aufwand" };
 
 const CONTACT = `Schreib mir direkt an ${site.email}, ich schaue deine Website manuell an.`;
 
@@ -97,7 +94,62 @@ const validate = (form) => {
   return errors;
 };
 
-const scoreTone = (value) => (value >= 70 ? styles.good : value >= 40 ? styles.mid : styles.low);
+const scoreToGrade = (score) => {
+  if (score >= 90) return "A";
+  if (score >= 80) return "B";
+  if (score >= 65) return "C";
+  if (score >= 50) return "D";
+  return "F";
+};
+
+const COUNT_GRADES = ["F", "D", "C", "B", "A"];
+
+const gradeTone = (grade) =>
+  grade === "A" || grade === "B" ? styles.good : grade === "F" ? styles.low : styles.mid;
+
+const formatSeconds = (ms) => `${(ms / 1000).toFixed(1).replace(".", ",")} s`;
+
+/** Vier Noten aus dem API-Ergebnis. Die KI-Note liefert ProspectHub direkt. */
+const buildGrades = (result) => {
+  const scores = result.scores || {};
+  const perf = scores.performance || {};
+  const security = scores.security || {};
+  const legal = scores.legal || {};
+  const securityOk = ["https", "hsts", "csp", "xframe"].filter((key) => security[key]).length;
+  const legalOk = ["impressum", "datenschutz"].filter((key) => legal[key]).length;
+  const legalNote =
+    legalOk === 2
+      ? "Impressum und Datenschutz vorhanden"
+      : legalOk === 1
+        ? `${legal.impressum ? "Datenschutzerklärung" : "Impressum"} fehlt`
+        : "Impressum und Datenschutz fehlen";
+  return [
+    {
+      icon: <Gauge size={20} aria-hidden="true" />,
+      label: "Ladezeit",
+      grade: typeof perf.mobile === "number" ? scoreToGrade(perf.mobile) : "–",
+      note: perf.mobileLcpMs ? `${formatSeconds(perf.mobileLcpMs)} bis zum Hauptinhalt, mobil` : "Keine Messung möglich",
+    },
+    {
+      icon: <ShieldCheck size={20} aria-hidden="true" />,
+      label: "Sicherheit",
+      grade: COUNT_GRADES[securityOk],
+      note: `${securityOk} von 4 Schutzmassnahmen aktiv`,
+    },
+    {
+      icon: <Scale size={20} aria-hidden="true" />,
+      label: "Rechtliches",
+      grade: legalOk === 2 ? "A" : legalOk === 1 ? "D" : "F",
+      note: legalNote,
+    },
+    {
+      icon: <Sparkles size={20} aria-hidden="true" />,
+      label: "KI-Bereitschaft",
+      grade: scores.aiReadiness?.grade || "–",
+      note: typeof scores.aiReadiness?.score === "number" ? `${scores.aiReadiness.score} von 100 Punkten` : "Keine Bewertung",
+    },
+  ];
+};
 
 /** Formular, Fortschritt und Ergebnis-Teaser für den ProspectHub Website-Check. */
 const WebsiteCheck = ({ campaign = "website-check" }) => {
@@ -257,11 +309,7 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
   }
 
   if (phase === "done" && check?.result) {
-    const { scores, recommendations = [], cms } = check.result;
-    const security = scores.security || {};
-    const securityOk = ["https", "hsts", "csp", "xframe"].filter((k) => security[k]).length;
-    const legal = scores.legal || {};
-    const lcp = scores.performance?.mobileLcpMs;
+    const grades = buildGrades(check.result);
     const reportActive = check.report?.status === "active" && check.report.url;
     const mailto = `mailto:${site.email}?subject=${encodeURIComponent(`Website-Check: ${check.result.url}`)}`;
 
@@ -272,77 +320,36 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
             <span className={styles.eyebrow}>Ergebnis für</span>
             <h3 className={styles.resultUrl}>{check.result.url}</h3>
           </div>
-          <div className={`${styles.overall} ${scoreTone(scores.overall)}`}>
-            <span className={styles.overallValue}>{scores.overall}</span>
-            <span className={styles.overallLabel}>Gesamt / 100</span>
-          </div>
+          <span className={styles.overallPill}>
+            Gesamt <strong>{check.result.scores?.overall ?? "–"}</strong> / 100
+          </span>
         </div>
 
-        <div className={styles.tiles}>
-          <div className={styles.tile}>
-            <span className={styles.tileLabel}>Ladezeit mobil</span>
-            <span className={`${styles.tileValue} ${scoreTone(scores.performance?.mobile ?? 0)}`}>
-              {lcp ? `${(lcp / 1000).toFixed(1)} s` : "–"}
-            </span>
-            <span className={styles.tileNote}>bis der Hauptinhalt sichtbar ist</span>
-          </div>
-          <div className={styles.tile}>
-            <span className={styles.tileLabel}>KI-Bereitschaft</span>
-            <span className={`${styles.tileValue} ${scoreTone(scores.aiReadiness?.score ?? 0)}`}>
-              Note {scores.aiReadiness?.grade}
-            </span>
-            <span className={styles.tileNote}>{scores.aiReadiness?.score} von 100 Punkten</span>
-          </div>
-          <div className={styles.tile}>
-            <span className={styles.tileLabel}>Sicherheit</span>
-            <span className={`${styles.tileValue} ${scoreTone((securityOk / 4) * 100)}`}>{securityOk} / 4</span>
-            <span className={styles.tileNote}>HTTPS, HSTS, CSP, Clickjacking-Schutz</span>
-          </div>
-          <div className={styles.tile}>
-            <span className={styles.tileLabel}>Rechtliches</span>
-            <span className={styles.tileChecks}>
-              <span className={legal.impressum ? styles.ok : styles.fail}>
-                {legal.impressum ? <Check size={14} /> : <X size={14} />} Impressum
-              </span>
-              <span className={legal.datenschutz ? styles.ok : styles.fail}>
-                {legal.datenschutz ? <Check size={14} /> : <X size={14} />} Datenschutz
-              </span>
-            </span>
-            {cms?.name && (
-              <span className={styles.tileNote}>
-                {cms.name}
-                {cms.outdated ? ", veraltete Version" : ""}
-              </span>
-            )}
-          </div>
-        </div>
-
-        {recommendations.length > 0 && (
-          <div className={styles.recs}>
-            <span className={styles.eyebrow}>Die drei wichtigsten Hebel</span>
-            <ol className={styles.recList}>
-              {recommendations.slice(0, 3).map((rec) => (
-                <li key={rec.title} className={styles.rec}>
-                  <div>
-                    <strong>{rec.title}</strong>
-                    <p>{rec.detail}</p>
-                  </div>
-                  {rec.effort && <Chip tone="soft">{EFFORT[rec.effort] || rec.effort}</Chip>}
-                </li>
-              ))}
-            </ol>
-          </div>
-        )}
+        <ul className={styles.grades}>
+          {grades.map((item) => (
+            <li key={item.label} className={styles.grade}>
+              <span className={styles.gradeIcon}>{item.icon}</span>
+              <span className={styles.gradeLabel}>{item.label}</span>
+              <span className={`${styles.gradeValue} ${gradeTone(item.grade)}`}>{item.grade}</span>
+              <span className={styles.gradeNote}>{item.note}</span>
+            </li>
+          ))}
+        </ul>
 
         <div className={styles.actions}>
           {reportActive ? (
             <a href={check.report.url} target="_blank" rel="noopener noreferrer" className={styles.primaryLink}>
-              Vollständige Auswertung öffnen <ArrowRight size={16} aria-hidden="true" />
+              Vollständigen Report öffnen <ArrowRight size={16} aria-hidden="true" />
             </a>
           ) : (
-            <span className={styles.hint}>Der vollständige Report wird gerade erstellt.</span>
+            <span className={styles.hint}>Der vollständige Report wird gerade erstellt, du erhältst ihn per E-Mail.</span>
           )}
-          <button type="button" className={styles.secondaryBtn} onClick={sendReport} disabled={mailState === "sending" || mailState === "sent"}>
+          <button
+            type="button"
+            className={styles.secondaryBtn}
+            onClick={sendReport}
+            disabled={mailState === "sending" || mailState === "sent"}
+          >
             <Mail size={16} aria-hidden="true" />
             {mailState === "sent" && "Report ist unterwegs"}
             {mailState === "already" && "Report wurde bereits gesendet"}
@@ -352,18 +359,13 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
           </button>
         </div>
 
-        <div className={styles.cta}>
-          <div>
-            <strong>Was bedeuten die Zahlen für dich?</strong>
-            <p>Ich schaue mir den Report an und sage dir ehrlich, was sich lohnt und was nicht. Kostenlos, 30 Minuten.</p>
-          </div>
-          <Button href={mailto} variant="primary" icon>
-            Ergebnisse besprechen
-          </Button>
-        </div>
-        <button type="button" className={styles.linkBtn} onClick={reset}>
-          Andere Website prüfen
-        </button>
+        <p className={styles.after}>
+          Was bedeuten die Noten für dich? <a href={mailto}>Ergebnisse besprechen</a>, kostenlos und ehrlich.
+          <span aria-hidden="true"> · </span>
+          <button type="button" className={styles.linkBtn} onClick={reset}>
+            Andere Website prüfen
+          </button>
+        </p>
       </div>
     );
   }

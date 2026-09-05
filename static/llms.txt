@@ -9,6 +9,7 @@ Sprache der Website: Deutsch (Schweiz). Standort: Horn TG, Schweiz. Einsatzgebie
 - [Startseite](https://b-business-solutions.ch/): Überblick über Services, Arbeitsweise und Person.
 - [Services](https://b-business-solutions.ch/services): Publishing-Automatisierung, Content Management & Web-Entwicklung, System-Integration & APIs, KI-Publishing-Lösungen, Beratung & Projektleitung; Arbeitsweise, typische Projektgrössen, Support und FAQ.
 - [Über mich](https://b-business-solutions.ch/ueber-mich): Beruflicher Weg, Haltung, Werkzeuge nach Tiefe sortiert.
+- [Website-Check](https://b-business-solutions.ch/website-check): Kostenlose Analyse einer Website in zwei Minuten: Ladezeit, Sicherheit, Impressum und Datenschutz, KI-Bereitschaft; Report als Link, 90 Tage abrufbar.
 - [Kontakt](https://b-business-solutions.ch/kontakt): Kontaktmöglichkeiten, Verfügbarkeit, Ablauf einer Zusammenarbeit.
 
 ## Services

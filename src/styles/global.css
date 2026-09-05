@@ -68,6 +68,7 @@
   --color-on-primary-line: rgba(255, 255, 255, 0.45);
   --color-accent: #0b7f62;
   --color-accent-soft: #e2f6ef;
+  --color-accent-on-ink: #4fe3b8; /* Mint auf dunklen Ink-Flächen, in beiden Themes gleich */
   --color-ink-surface: #272570;
   --color-page: #ffffff;
   --color-background-light: #f6f5fd;

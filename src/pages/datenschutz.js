@@ -107,6 +107,32 @@ const DatenschutzPage = () => {
               </p>
             </section>
 
+            <section className={styles.section} id="website-check">
+              <h2>Website-Check</h2>
+              <p>
+                Auf der Seite «Website-Check» können Sie eine Website-Adresse
+                und Ihre E-Mail-Adresse eingeben, um eine technische Analyse zu
+                erhalten (Ladezeit, Sicherheit, Impressum und
+                Datenschutzerklärung, KI-Lesbarkeit). Die Analyse führt
+                ProspectHub (Schweiz) in unserem Auftrag durch. Für die
+                Messung der Ladezeit wird die Website-Adresse an die Google
+                PageSpeed Insights API übermittelt.
+              </p>
+              <p>
+                Gespeichert werden die eingegebene Website-Adresse, Ihre
+                E-Mail-Adresse, optional Name und Firma, der Zeitpunkt und
+                Wortlaut Ihrer Einwilligung sowie das Analyseergebnis. Wir
+                verwenden diese Daten, um Ihnen den Report bereitzustellen und
+                Sie zu den Ergebnissen zu kontaktieren. Der Report-Link ist 90
+                Tage gültig. Die Daten werden in der Schweiz beziehungsweise
+                der EU gespeichert und auf Anfrage an{" "}
+                <a href="mailto:nb@b-business-solutions.ch">
+                  nb@b-business-solutions.ch
+                </a>{" "}
+                gelöscht.
+              </p>
+            </section>
+
             <section className={styles.section}>
               <h2>Cookies</h2>
               <p>

@@ -27,6 +27,10 @@
   padding-bottom: var(--spacing-lg);
 }
 
+.text {
+  min-width: 0;
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.72rem;

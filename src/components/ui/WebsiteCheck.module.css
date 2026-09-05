@@ -49,6 +49,28 @@
   box-shadow: 0 0 0 3px var(--color-primary-soft);
 }
 
+.field input[aria-invalid="true"] {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+
+.fieldError {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.45;
+}
+
+.consentError {
+  color: var(--color-text);
+}
+
+.consentError .fieldError {
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
 .wide {
   grid-column: 1 / -1;
 }

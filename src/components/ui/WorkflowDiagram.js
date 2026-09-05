@@ -13,9 +13,15 @@ export const SCENARIOS = [
     title: "Content-First Publishing",
     headline: "Publishing, das |von selbst| läuft.",
     caption: "BEST OF BREED · JEDES SYSTEM MACHT, WAS ES AM BESTEN KANN",
+    // `to` verbindet einen Knoten nur mit bestimmten Knoten der nächsten Ebene
+    // (Index), sonst mit allen. InDesign Server liefert nur Print.
     layers: [
-      [{ tag: "QUELLE", name: "DAM-System" }, { tag: "QUELLE", name: "Headless CMS" }],
-      [{ tag: "MIDDLEWARE", name: "InDesign Server", hot: true }],
+      [{ tag: "QUELLE", name: "Headless CMS" }, { tag: "QUELLE", name: "DAM-System" }],
+      [{ tag: "MIDDLEWARE", name: "Content-Hub", hot: true }],
+      [
+        { tag: "PRINT", name: "InDesign Server", to: [0] },
+        { tag: "DIGITAL", name: "GraphQL / REST", to: [1] },
+      ],
       [{ tag: "OUTPUT", name: "Print-PDF" }, { tag: "OUTPUT", name: "Web & App" }],
     ],
   },
@@ -56,7 +62,7 @@ export const SCENARIOS = [
     caption: "DATENSCHUTZKONFORM · NACH NDSG GEPRÜFT",
     layers: [
       [{ tag: "QUELLE", name: "Dokumente" }, { tag: "QUELLE", name: "Aufnahmen" }],
-      [{ tag: "KI", name: "OCR & Whisper", hot: true }],
+      [{ tag: "KI", name: "OCR, Whisper & LLM", hot: true }],
       [
         { tag: "OUTPUT", name: "Metadaten" },
         { tag: "OUTPUT", name: "Volltext" },
@@ -117,7 +123,8 @@ const layout = (layers) => {
   const lastLayer = nodes.length - 1;
   for (let li = 0; li < lastLayer; li += 1) {
     nodes[li].forEach((from) => {
-      nodes[li + 1].forEach((to) => {
+      nodes[li + 1].forEach((to, ti) => {
+        if (from.to && !from.to.includes(ti)) return;
         const x1 = from.x + from.w;
         const y1 = from.y + NODE_H / 2;
         const x2 = to.x;

@@ -5,7 +5,7 @@
   },
   "intro": {
     "title": "Bereit für dein Projekt?",
-    "description": "Ob Publishing-Automatisierung, Web-Entwicklung oder IT-Beratung – ich freue mich, von deinem Projekt zu hören. Schreib mir einfach eine E-Mail oder ruf mich an, und wir schauen gemeinsam, wie ich dir helfen kann.",
+    "description": "Ob Publishing-Automatisierung, Web-Entwicklung oder IT-Beratung: Ich freue mich, von deinem Projekt zu hören. Schreib mir einfach eine E-Mail oder ruf mich an, und wir schauen gemeinsam, wie ich dir helfen kann.",
     "note": "Antwort innert 24 h · Kostenloses Erstgespräch · Kein Verkaufspitch"
   },
   "contactMethods": [
@@ -36,7 +36,7 @@
     "items": [
       {
         "icon": "Briefcase",
-        "text": "Ich arbeite nebenbei und plane Projekte im Voraus – Termine brauchen etwas Vorlauf.",
+        "text": "Ich arbeite nebenbei und plane Projekte im Voraus. Termine brauchen etwas Vorlauf.",
         "title": "Nebenerwerb"
       },
       {
@@ -56,7 +56,7 @@
       },
       {
         "icon": "CheckCircle",
-        "text": "Ich sage ehrlich, ob und wann ich Zeit habe – keine falschen Versprechungen.",
+        "text": "Ich sage ehrlich, ob und wann ich Zeit habe. Keine falschen Versprechungen.",
         "title": "Ehrliche Antwort"
       }
     ]
@@ -139,7 +139,7 @@
       },
       {
         "label": "Ziel",
-        "text": "Was soll am Ende anders sein – weniger Handarbeit, neue Kanäle, weniger Fehler?"
+        "text": "Was soll am Ende anders sein: weniger Handarbeit, neue Kanäle, weniger Fehler?"
       },
       {
         "label": "Rahmen",

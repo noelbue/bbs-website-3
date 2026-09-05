@@ -6,7 +6,7 @@
   "intro": {
     "greeting": "Hi, ich bin Noel",
     "subtitle": "Solution Architect & Publishing-Technologie-Experte aus der Schweiz",
-    "description": "Seit über 10 Jahren bewege ich mich in der Software-, Digital- und Print-Welt. Was als Polygraf-Lehre begann, wurde zur Leidenschaft für Automatisierung, Integration und moderne Software-Entwicklung. Heute arbeite ich als Solution Architect und Requirements Engineer an der Schnittstelle zwischen Fachbereich, IT und Entwicklung – und verbinde Publishing-Expertise mit Software-Engineering und KI-gestützter Entwicklung. Für Lösungen, die wirklich funktionieren.",
+    "description": "Seit über 10 Jahren bewege ich mich in der Software-, Digital- und Print-Welt. Was als Polygraf-Lehre begann, wurde zur Leidenschaft für Automatisierung, Integration und moderne Software-Entwicklung. Heute arbeite ich als Solution Architect und Requirements Engineer an der Schnittstelle zwischen Fachbereich, IT und Entwicklung und verbinde Publishing-Expertise mit Software-Engineering und KI-gestützter Entwicklung. Für Lösungen, die wirklich funktionieren.",
     "image": "../assets/noel-buergler.png"
   },
   "journey": {
@@ -15,7 +15,7 @@
     "story": [
       {
         "title": "Solution Architect & stellvertretender IT-Leiter",
-        "description": "Seit Oktober 2025 bin ich bei der Brüggli Admedia AG als Solution Architect und stellvertretender IT-Leiter tätig. Ich leite und entwickle die PostCard-Creator-Modernisierung für die Schweizerische Post aktiv mit – die Ablösung eines Legacy-Systems durch eine moderne Architektur, unterstützt durch KI-gestütztes Agentic Coding mit Claude Code. Daneben baue ich Enfocus-Switch-Workflows, die täglich Stunden manueller Arbeit sparen, führe neue Variable-Data-Publishing-Produkte mit XMPie ein und verantworte die IT-Infrastruktur mit Microsoft Intune, Jira Service Management und Odoo.",
+        "description": "Seit Oktober 2025 bin ich bei der Brüggli Admedia AG als Solution Architect und stellvertretender IT-Leiter tätig. Ich leite und entwickle die PostCard-Creator-Modernisierung für die Schweizerische Post aktiv mit: die Ablösung eines Legacy-Systems durch eine moderne Architektur, unterstützt durch KI-gestütztes Agentic Coding mit Claude Code. Daneben baue ich Enfocus-Switch-Workflows, die täglich Stunden manueller Arbeit sparen, führe neue Variable-Data-Publishing-Produkte mit XMPie ein und verantworte die IT-Infrastruktur mit Microsoft Intune, Jira Service Management und Odoo.",
         "period": "Okt 2025 – heute",
         "company": "Brüggli Admedia AG",
         "location": "Romanshorn · Hybrid",
@@ -33,7 +33,7 @@
       },
       {
         "title": "Solution Architect & Requirements Engineer",
-        "description": "Parallel verantworte ich Requirements und Solution Design für Fridai, eine schweizerische, datenschutzkonforme KI-Plattform für den Sozialbereich. Ich führe Anforderungsworkshops mit Fachpersonen durch, schreibe Spezifikationen und übersetze sie in Sprints mit klarem Scope. Im KI-Bereich evaluiere ich Transkriptionsmodelle, OCR-Lösungen und lokale Open-Source-Sprachmodelle – inklusive der Datenschutz-Abklärungen nach nDSG, damit KI dort ankommt, wo sie Menschen wirklich entlastet.",
+        "description": "Parallel verantworte ich Requirements und Solution Design für Fridai, eine schweizerische, datenschutzkonforme KI-Plattform für den Sozialbereich. Ich führe Anforderungsworkshops mit Fachpersonen durch, schreibe Spezifikationen und übersetze sie in Sprints mit klarem Scope. Im KI-Bereich evaluiere ich Transkriptionsmodelle, OCR-Lösungen und lokale Open-Source-Sprachmodelle, inklusive der Datenschutz-Abklärungen nach nDSG, damit KI dort ankommt, wo sie Menschen wirklich entlastet.",
         "period": "Okt 2025 – heute",
         "company": "Fridai · inkubiert bei Brüggli Admedia AG",
         "location": "Romanshorn · Hybrid",
@@ -50,7 +50,7 @@
       },
       {
         "title": "Frontend Developer (selbstständig)",
-        "description": "Parallel dazu entwickelte sich meine Leidenschaft für moderne Web-Entwicklung. Seit 2021 setze ich selbstständig Websites und Web-Anwendungen um – mit React, Next.js, TypeScript und Node.js, oft content-first mit einem Headless CMS. Ich begann, Brücken zwischen Print und Digital zu bauen: strukturierte Inhalte, die sowohl das Web als auch automatisierte Print-Produktionen beliefern.",
+        "description": "Parallel dazu entwickelte sich meine Leidenschaft für moderne Web-Entwicklung. Seit 2021 setze ich selbstständig Websites und Web-Anwendungen um, mit React, Next.js, TypeScript und Node.js, oft content-first mit einem Headless CMS. Ich begann, Brücken zwischen Print und Digital zu bauen: strukturierte Inhalte, die sowohl das Web als auch automatisierte Print-Produktionen beliefern.",
         "period": "2021 – heute",
         "company": "Selbstständig · Bürgler Business Solutions",
         "location": "Horn · Remote",
@@ -65,7 +65,7 @@
       },
       {
         "title": "Application Engineer & Projektleiter",
-        "description": "Bei der Topix AG tauchte ich viereinhalb Jahre tief in Publishing-Systeme ein – nicht als Produktions-Person, sondern als Application Engineer, Manager und Projektleiter. Ich betreute Publishing-Workflows, Content-First Ansätze und komplexe System-Integrationen für namhafte Kunden wie Red Bull Media House, Swisstopo, Mattenbach Gruppe und viele weitere. Von Enfocus Switch über vjoon K4 bis InDesign Server – ich integrierte, customisierte und optimierte komplexe Publishing-Landschaften.",
+        "description": "Bei der Topix AG tauchte ich viereinhalb Jahre tief in Publishing-Systeme ein, nicht als Produktions-Person, sondern als Application Engineer, Manager und Projektleiter. Ich betreute Publishing-Workflows, Content-First Ansätze und komplexe System-Integrationen für namhafte Kunden wie Red Bull Media House, Swisstopo, Mattenbach Gruppe und viele weitere. Von Enfocus Switch über vjoon K4 bis InDesign Server: Ich integrierte, customisierte und optimierte komplexe Publishing-Landschaften.",
         "period": "Feb 2021 – Okt 2025",
         "company": "Topix AG",
         "location": "St. Gallen · Hybrid",
@@ -82,7 +82,7 @@
       },
       {
         "title": "Polygraf (Print/Web)",
-        "description": "Mit 15 Jahren startete ich meine Polygraf-Lehre bei der AVD Goldach AG. Dort lernte ich das Handwerk – von Druckvorstufe bis Layout – und arbeitete früh mit vjoon K4 und Enfocus Switch. Die ersten JavaScript-Scripts für InDesign waren mein Einstieg in die Programmierung, parallel entstanden erste Web-Projekte mit WordPress.",
+        "description": "Mit 15 Jahren startete ich meine Polygraf-Lehre bei der AVD Goldach AG. Dort lernte ich das Handwerk von Druckvorstufe bis Layout und arbeitete früh mit vjoon K4 und Enfocus Switch. Die ersten JavaScript-Scripts für InDesign waren mein Einstieg in die Programmierung, parallel entstanden erste Web-Projekte mit WordPress.",
         "period": "2015 – 2021",
         "company": "AVD Goldach AG",
         "location": "Goldach · Vor Ort",
@@ -108,12 +108,12 @@
       {
         "icon": "Users",
         "title": "Technik für Menschen",
-        "description": "Am Ende zählt, dass die Lösung für alle funktioniert. Ich sehe mich als Übersetzer zwischen Technik und Menschen – Systeme sollen unterstützen, nicht komplizieren."
+        "description": "Am Ende zählt, dass die Lösung für alle funktioniert. Ich sehe mich als Übersetzer zwischen Technik und Menschen. Systeme sollen unterstützen, nicht komplizieren."
       },
       {
         "icon": "Sparkles",
         "title": "KI als Werkzeug, nicht als Hype",
-        "description": "Ich nutze KI dort, wo sie messbar hilft: Agentic Coding mit Claude Code im Alltag, sauber evaluierte Modelle in Projekten – und immer mit Blick auf Datenschutz und Nachvollziehbarkeit."
+        "description": "Ich nutze KI dort, wo sie messbar hilft: Agentic Coding mit Claude Code im Alltag, sauber evaluierte Modelle in Projekten, immer mit Blick auf Datenschutz und Nachvollziehbarkeit."
       },
       {
         "icon": "Rocket",
@@ -128,7 +128,7 @@
       {
         "icon": "Target",
         "title": "Qualität vor Schnelligkeit",
-        "description": "Lieber einmal richtig als dreimal schnell. Gut durchdachte Architekturen zahlen sich langfristig aus – auch wenn sie anfangs mehr Zeit brauchen."
+        "description": "Lieber einmal richtig als dreimal schnell. Gut durchdachte Architekturen zahlen sich langfristig aus, auch wenn sie anfangs mehr Zeit brauchen."
       }
     ]
   },
@@ -139,7 +139,7 @@
       {
         "icon": "Sparkles",
         "title": "KI & Agentic Development",
-        "description": "KI dort, wo sie messbar hilft – mit sauberer Evaluation und Datenschutz.",
+        "description": "KI dort, wo sie messbar hilft, mit sauberer Evaluation und Datenschutz.",
         "tiers": {
           "core": [
             "Agentic Coding mit Claude Code",
@@ -285,7 +285,7 @@
     "items": [
       {
         "icon": "Dumbbell",
-        "text": "Regelmässiges Training hält den Kopf frei – und die Disziplin überträgt sich auf die Arbeit.",
+        "text": "Regelmässiges Training hält den Kopf frei, und die Disziplin überträgt sich auf die Arbeit.",
         "title": "Fitness"
       },
       {

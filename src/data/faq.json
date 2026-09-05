@@ -3,19 +3,19 @@
   "items": [
     {
       "question": "Wie schnell kannst du starten?",
-      "answer": "Ich plane Projekte voraus. Kleinere Sachen oft innerhalb von 1-2 Wochen, grössere Projekte sprechen wir ab. Keine Sorge – ich sage ehrlich, ob und wann ich Zeit habe."
+      "answer": "Ich plane Projekte voraus. Kleinere Sachen oft innerhalb von 1-2 Wochen, grössere Projekte sprechen wir ab. Keine Sorge, ich sage ehrlich, ob und wann ich Zeit habe."
     },
     {
       "question": "Arbeitest du auch remote?",
-      "answer": "Ja, klar! Viele Arbeiten lassen sich remote erledigen. Bei Installationen vor Ort komme ich gerne vorbei – Schweiz und benachbartes Ausland sind kein Problem."
+      "answer": "Ja, klar! Viele Arbeiten lassen sich remote erledigen. Bei Installationen vor Ort komme ich gerne vorbei, Schweiz und benachbartes Ausland sind kein Problem."
     },
     {
       "question": "Welche Branchen betreust du?",
-      "answer": "Hauptsächlich Verlage, Druckereien, Agenturen und Unternehmen mit Publishing-Bedarf. Aber auch andere Branchen – wenn's um Web-Entwicklung, APIs oder IT-Infrastruktur geht, sprechen wir gerne."
+      "answer": "Hauptsächlich Verlage, Druckereien, Agenturen und Unternehmen mit Publishing-Bedarf. Aber auch andere Branchen: Wenn's um Web-Entwicklung, APIs oder IT-Infrastruktur geht, sprechen wir gerne."
     },
     {
       "question": "Bietest du Notfall-Support?",
-      "answer": "Bei kritischen Problemen nach Absprache, aber ich bin nicht 24/7 verfügbar. Für laufende Systeme plane ich lieber präventiv – verhindert die meisten Notfälle von vornherein."
+      "answer": "Bei kritischen Problemen nach Absprache, aber ich bin nicht 24/7 verfügbar. Für laufende Systeme plane ich lieber präventiv, das verhindert die meisten Notfälle von vornherein."
     },
     {
       "question": "Wie rechnest du ab?",
@@ -23,11 +23,11 @@
     },
     {
       "question": "Bist du Lizenz-Partner für die Publishing-Tools?",
-      "answer": "Nein, ich bin kein offizieller Partner von Adobe, Enfocus, vjoon oder anderen Tool-Herstellern. Ich biete Know-How, Installation, Customizing und Integration – aber keine Lizenzen. Für Lizenzen wende dich bitte direkt an die Hersteller oder deren autorisierten Partner."
+      "answer": "Nein, ich bin kein offizieller Partner von Adobe, Enfocus, vjoon oder anderen Tool-Herstellern. Ich biete Know-How, Installation, Customizing und Integration, aber keine Lizenzen. Für Lizenzen wende dich bitte direkt an die Hersteller oder deren autorisierten Partner."
     },
     {
       "question": "Kannst du bestehende Systeme übernehmen?",
-      "answer": "Ja! Ich arbeite oft mit bestehenden Setups – Analyse, Optimierung, Erweiterung oder Migration. Gerade bei Legacy-Systemen kann ich helfen, diese zu modernisieren oder in neue Architekturen zu überführen."
+      "answer": "Ja! Ich arbeite oft mit bestehenden Setups: Analyse, Optimierung, Erweiterung oder Migration. Gerade bei Legacy-Systemen kann ich helfen, diese zu modernisieren oder in neue Architekturen zu überführen."
     },
     {
       "question": "Welche Programmiersprachen beherrschst du?",
@@ -35,11 +35,11 @@
     },
     {
       "question": "Bietest du auch Schulungen an?",
-      "answer": "Ja, gerne! Ob für dein Team zu Enfocus Switch, InDesign Server, Workflow-Optimierung oder Web-Entwicklung – ich erkläre die Systeme so, dass sie jeder versteht und selbst weiterarbeiten kann."
+      "answer": "Ja, gerne! Ob für dein Team zu Enfocus Switch, InDesign Server, Workflow-Optimierung oder Web-Entwicklung: Ich erkläre die Systeme so, dass sie jeder versteht und selbst weiterarbeiten kann."
     },
     {
       "question": "Was kostet ein Projekt ungefähr?",
-      "answer": "Das hängt vom Umfang ab – die typischen Grössen oben geben ein Gefühl. Vor dem Start bekommst du eine Einschätzung mit Bandbreite, abgerechnet wird transparent nach Stunden. Für eine erste Zahl reicht ein kurzes Gespräch."
+      "answer": "Das hängt vom Umfang ab, die typischen Grössen oben geben ein Gefühl. Vor dem Start bekommst du eine Einschätzung mit Bandbreite, abgerechnet wird transparent nach Stunden. Für eine erste Zahl reicht ein kurzes Gespräch."
     },
     {
       "question": "Kannst du auch nur beraten, ohne umzusetzen?",
@@ -55,7 +55,7 @@
     },
     {
       "question": "Was passiert nach dem Go-Live?",
-      "answer": "Du entscheidest: Übergabe mit Dokumentation und Schulung, oder laufende Wartung mit planbaren Stunden pro Monat. Für Publishing-Systeme empfehle ich präventive Wartung – Updates, Monitoring, kleine Anpassungen – bevor etwas brennt."
+      "answer": "Du entscheidest: Übergabe mit Dokumentation und Schulung, oder laufende Wartung mit planbaren Stunden pro Monat. Für Publishing-Systeme empfehle ich präventive Wartung mit Updates, Monitoring und kleinen Anpassungen, bevor etwas brennt."
     },
     {
       "question": "Wie funktioniert KI-gestützte Entwicklung bei dir konkret?",

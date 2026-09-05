@@ -10,6 +10,7 @@ import CardGrid from "../components/ui/CardGrid";
 import WorkflowDiagram, { SCENARIOS } from "../components/ui/WorkflowDiagram";
 import TypedHeadline from "../components/ui/TypedHeadline";
 import TrustStrip from "../components/ui/TrustStrip";
+import CaseStudy from "../components/ui/CaseStudy";
 import { getIcon } from "../components/ui/icons";
 import homeContent from "../data/homeContent.json";
 import noelPortrait from "../assets/noel-buergler.png";
@@ -47,22 +48,14 @@ const HomeHero = ({ hero, trust }) => {
         <div className={styles.heroVisual}>
           <WorkflowDiagram onChange={handleScenario} />
         </div>
-        <TrustStrip
-          label={trust.label}
-          items={trust.items}
-          note={
-            <>
-              <b>{trust.noteStrong}</b> {trust.noteText}
-            </>
-          }
-        />
+        <TrustStrip label={trust.label} items={trust.items} />
       </div>
     </section>
   );
 };
 
 const IndexPage = () => {
-  const { hero, trust, services, whyUs } = homeContent;
+  const { hero, trust, services, whyUs, caseStudy } = homeContent;
 
   return (
     <Layout>
@@ -100,6 +93,9 @@ const IndexPage = () => {
         </div>
       </section>
 
+      {/* Success Story (nur mit Freigabe, siehe homeContent.caseStudy.enabled) */}
+      <CaseStudy data={caseStudy} />
+
       {/* Warum ich */}
       <section className={styles.whyUs}>
         <div className="container">
@@ -122,7 +118,7 @@ const IndexPage = () => {
       <section className={styles.about}>
         <div className="container">
           <SectionTitle eyebrow="Über mich">
-            Noel Bürgler – Ihr Publishing-Experte
+            Noel Bürgler, Ihr Publishing-Experte
           </SectionTitle>
           <div className={styles.aboutContent} data-reveal>
             <div className={styles.aboutImage}>
@@ -148,7 +144,7 @@ const IndexPage = () => {
             </div>
             <div className={styles.aboutText}>
               <p>
-                Über 10 Jahre in der Publishing-Branche – von der{" "}
+                Über 10 Jahre in der Publishing-Branche, von der{" "}
                 <a
                   href="https://www.topix.ch/"
                   target="_blank"
@@ -169,7 +165,7 @@ const IndexPage = () => {
                 , wo ich heute als Solution Architect die
                 Systemmodernisierung für die Schweizerische Post mitentwickle.
                 Mein Fokus: Automatisierung und Integration von
-                Publishing-Workflows – zunehmend mit KI-gestützter Entwicklung.
+                Publishing-Workflows, zunehmend mit KI-gestützter Entwicklung.
               </p>
               <p>Meine Mission: Komplexe Technologie einfach nutzbar machen.</p>
               <div className={styles.aboutButton}>

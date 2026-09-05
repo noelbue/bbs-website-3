@@ -338,7 +338,8 @@
 
 @media (max-width: 968px) {
   .heroInner {
-    grid-template-columns: 1fr;
+    /* minmax(0, 1fr): sonst zieht WebKit die Spalte auf die 100vw des Laufbands auf */
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--spacing-md);
     padding-top: var(--spacing-md);
   }

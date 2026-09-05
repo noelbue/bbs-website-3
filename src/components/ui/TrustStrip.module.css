@@ -1,5 +1,7 @@
 .strip {
   --bleed: var(--bg-offset-desktop);
+  min-width: 0;
+  max-width: 100%;
   display: grid;
   gap: 1rem;
   padding-top: var(--spacing-md);
@@ -36,8 +38,11 @@
 
 /* Laufband über die volle Breite der Hero-Fläche */
 .marquee {
+  /* Über die Containerbreite hinaus bis zur Hero-Fläche; contain verhindert,
+     dass die Breite die Grid-Spalte des Elternelements aufzieht */
   width: calc(100vw - 2 * var(--bleed));
   margin-left: calc(50% - 50vw + var(--bleed));
+  contain: inline-size;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(
     90deg,

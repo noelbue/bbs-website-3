@@ -156,7 +156,6 @@ const SEO = ({
 
   return (
     <>
-      <html lang={siteMetadata.lang} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="author" content={siteMetadata.author} />

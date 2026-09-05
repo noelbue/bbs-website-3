@@ -18,7 +18,7 @@
   "author": "Noel Bürgler",
   "license": "MIT",
   "dependencies": {
-    "gatsby": "^5.16.0",
+    "gatsby": "^5.16.1",
     "gatsby-plugin-manifest": "^5.16.0",
     "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-plugin-robots-txt": "^1.8.0",

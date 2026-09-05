@@ -8,6 +8,10 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Serverless-Funktionen (Proxy für den ProspectHub Website-Check)
+[functions]
+  directory = "netlify/functions"
+
 [[headers]]
   for = "/*"
   [headers.values]

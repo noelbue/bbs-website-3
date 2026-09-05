@@ -1,0 +1,220 @@
+.section {
+  padding: var(--spacing-xl) 0 0;
+  background: var(--color-white);
+}
+
+.band {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: var(--spacing-lg);
+  align-items: center;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  background: var(--color-ink-surface);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.band::before {
+  content: "";
+  position: absolute;
+  inset: auto -10% -60% auto;
+  width: 55%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-accent-on-ink) 0%, transparent 70%);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.text {
+  min-width: 0;
+  position: relative;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-on-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.title {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin: 0.7rem 0 0.9rem;
+  color: #ffffff;
+  text-wrap: balance;
+}
+
+.lead {
+  margin: 0 0 1.5rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 52ch;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  flex-wrap: wrap;
+}
+
+.note {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Beispiel-Ergebnis */
+.preview {
+  position: relative;
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.preview:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent-on-ink);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.previewHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.previewLabel {
+  align-self: center;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.previewScore {
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.previewScore strong {
+  font-size: 1.6rem;
+  color: var(--color-accent-on-ink);
+  font-weight: 600;
+}
+
+.areas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.area {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+.areaIcon {
+  display: inline-flex;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.areaLabel {
+  font-weight: 600;
+}
+
+.areaValue {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.ok {
+  color: var(--color-accent-on-ink);
+}
+
+.warn {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.previewFoot {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-on-ink);
+}
+
+@media (max-width: 900px) {
+  .band {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+  }
+
+  .band::before {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-top: var(--spacing-lg);
+  }
+
+  .action {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .action > a {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preview {
+    transition: none;
+  }
+}

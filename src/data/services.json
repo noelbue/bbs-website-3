@@ -260,25 +260,6 @@
             "Lokale LLMs"
           ],
           "variant": "chips"
-        },
-        {
-          "title": "Schulungsformate",
-          "items": [
-            "Impuls (2 h): Autonomie-Spektrum, wie Agents arbeiten, Live-Demo",
-            "Workshop (½ Tag): Setup und Konfiguration, Patterns, Übung am eigenen Repository",
-            "Deep Dive (1 Tag): Skills, Agents und Hooks, ein fertiger Workflow pro Team",
-            "Follow-up nach 4–6 Wochen: Was läuft, was hakt, was kommt als Nächstes"
-          ],
-          "variant": "note"
-        },
-        {
-          "title": "Aus der Praxis, nicht aus dem Kurs",
-          "items": [
-            "Workshop «Agentic Engineering»: selbst konzipiert und durchgeführt",
-            "Agentic Coding täglich im produktiven Einsatz, nicht nur in Demos",
-            "Klare Leitplanken statt Hype: Review-Pflicht, kleiner Scope, Tests, nDSG-Abklärung"
-          ],
-          "variant": "note"
         }
       ],
       "cta": {

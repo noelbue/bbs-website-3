@@ -35,7 +35,7 @@
     },
     {
       "question": "Bietest du auch Schulungen an?",
-      "answer": "Ja, gerne! Zu Enfocus Switch, InDesign Server, Workflow-Optimierung und Web-Entwicklung, und seit einiger Zeit vor allem zu KI: Hands-on-Workshops zu Coding-Agents wie Claude Code, vom zweistündigen Impuls bis zum ganztägigen Deep Dive. Geübt wird am eigenen Projekt, nicht an Beispielcode."
+      "answer": "Ja, gerne! Zu Enfocus Switch, InDesign Server, Workflow-Optimierung und Web-Entwicklung, und seit einiger Zeit vor allem zu KI: Hands-on-Workshops zu Coding-Agents wie Claude Code und Codex. Geübt wird am eigenen Projekt, nicht an Beispielcode. Umfang und Format stimmen wir auf dein Team ab."
     },
     {
       "question": "Was genau lernt mein Team in einem KI-Workshop?",
@@ -67,7 +67,7 @@
     },
     {
       "question": "Wie funktioniert KI-gestützte Entwicklung bei dir konkret?",
-      "answer": "Ich arbeite mit Agentic Coding (Claude Code): Die KI schreibt und prüft Code unter meiner Anleitung, ich bleibe für Architektur, Reviews und Tests verantwortlich. Das macht Modernisierungen schneller und günstiger, ohne dass Qualität oder Nachvollziehbarkeit leiden."
+      "answer": "Ich arbeite mit Agentic Coding, im Alltag mit Claude Code und Codex. Der Ablauf ist immer derselbe: eine klar umrissene Aufgabe pro Session, zuerst ein Plan, dann Umsetzung und Tests, am Schluss mein Review und der Pull Request. Kleiner Scope statt Grossauftrag, weil die Ergebnisse dann deutlich besser sind. Die Verantwortung bleibt bei mir: Architektur, Review und Freigabe macht keine KI, und es geht kein Code raus, den ich nicht verstanden habe. Das macht Modernisierungen schneller und günstiger, ohne dass Qualität oder Nachvollziehbarkeit leiden."
     }
   ]
 }

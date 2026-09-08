@@ -28,7 +28,7 @@ const ServicesPage = () => {
       <PageHero
         breadcrumbItems={breadcrumbItems}
         title="Services"
-        subtitle="Spezialisierte Lösungen für Publishing-Workflows, Web-Entwicklung und Content-Management"
+        subtitle="Spezialisierte Lösungen für Publishing-Workflows, Web-Entwicklung und Web-Apps, System-Integration sowie KI-Einsatz und KI-Schulungen"
       />
 
       <ServiceNav />
@@ -149,13 +149,13 @@ const SITE_URL = site.siteUrl;
 const servicesSchema = [
   ...servicesData.sections.map((section) => ({
     "@type": "Service",
-    "@id": `${SITE_URL}/services#${section.id}`,
+    "@id": `${SITE_URL}/services/#${section.id}`,
     name: section.category,
     serviceType: section.category,
     description: `${section.title}. ${section.subtitle}`,
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: ["CH", "DE", "AT", "LI"],
-    url: `${SITE_URL}/services#${section.id}`,
+    url: `${SITE_URL}/services/#${section.id}`,
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: section.category,
@@ -171,7 +171,7 @@ const servicesSchema = [
   })),
   {
     "@type": "FAQPage",
-    "@id": `${SITE_URL}/services#faq`,
+    "@id": `${SITE_URL}/services/#faq`,
     mainEntity: faqData.items.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -183,7 +183,7 @@ const servicesSchema = [
 export const Head = () => (
   <Seo
     title="Services – Bürgler Business Solutions"
-    description="Spezialisierte Lösungen für Publishing-Workflows und Content-Management. Von Automatisierung bis KI-Integration."
+    description="Publishing-Automatisierung, Websites und Web-Apps, System-Integration, KI-Workflows und KI-Schulungen. Alles aus einer Hand, alles selbst gebaut."
     pathname="/services"
     schema={servicesSchema}
   />

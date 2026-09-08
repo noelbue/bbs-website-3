@@ -1,4 +1,5 @@
 import React from "react";
+import SmartLink from "./SmartLink";
 import * as styles from "./WhyUsCard.module.css";
 
 const WhyUsCard = ({ icon, title, description, href }) => {
@@ -12,9 +13,9 @@ const WhyUsCard = ({ icon, title, description, href }) => {
 
   if (href) {
     return (
-      <a href={href} className={styles.whyUsCard}>
+      <SmartLink href={href} className={styles.whyUsCard}>
         <CardContent />
-      </a>
+      </SmartLink>
     );
   }
 

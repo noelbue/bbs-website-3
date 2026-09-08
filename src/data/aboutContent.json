@@ -144,7 +144,8 @@
           "core": [
             "Agentic Coding mit Claude Code",
             "Prompt Engineering",
-            "KI-gestützte Entwicklung (Codex)"
+            "KI-gestützte Entwicklung (Codex)",
+            "Workshops & Schulungen (Agentic Engineering)"
           ],
           "solid": [
             "Lokale LLMs (GPT-OSS, Qwen, Gemma)",
@@ -207,14 +208,15 @@
       },
       {
         "icon": "Globe",
-        "title": "Web-Entwicklung",
-        "description": "Moderne Stacks, content-first.",
+        "title": "Web-Entwicklung & Web-Apps",
+        "description": "Moderne Stacks, von der Website bis zur Full-Stack-Anwendung.",
         "tiers": {
           "core": [
             "React",
             "Next.js",
             "TypeScript",
-            "Node.js"
+            "Node.js",
+            "Full-Stack Web-Apps (SaaS)"
           ],
           "solid": [
             "Gatsby",

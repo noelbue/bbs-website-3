@@ -1,7 +1,7 @@
 {
   "hero": {
-    "eyebrow": "Publishing-Technologie · Schweiz",
-    "lead": "Ich automatisiere und integriere Print- und Digital-Publishing: von InDesign Server über Enfocus Switch bis zum Headless CMS. Als Solution Architect, der selbst entwickelt.",
+    "eyebrow": "Publishing, Web & KI · Schweiz",
+    "lead": "Ich automatisiere Print- und Digital-Publishing (InDesign Server, Enfocus Switch, Headless CMS), entwickle Websites und Web-Apps und schule Teams im produktiven Einsatz von KI. Als Solution Architect, der selbst entwickelt.",
     "primary": {
       "text": "Projekt besprechen",
       "href": "/kontakt"
@@ -57,8 +57,8 @@
   },
   "services": {
     "eyebrow": "Services",
-    "title": "Fünf Wege, Publishing schneller zu machen",
-    "subtitle": "Von der Automatisierung bis zur Beratung. Alles aus einer Hand, alles selbst gebaut.",
+    "title": "Fünf Wege, schneller ans Ziel zu kommen",
+    "subtitle": "Von der Publishing-Automatisierung über Web-Apps bis zur Schulung. Alles aus einer Hand, alles selbst gebaut.",
     "items": [
       {
         "icon": "Zap",
@@ -75,13 +75,13 @@
       },
       {
         "icon": "Layers",
-        "kicker": "Eine Quelle, alle Kanäle",
-        "title": "Content Management & Web-Entwicklung",
-        "description": "Headless CMS, Next.js und WordPress. Inhalte einmal pflegen, überall ausspielen: auf der Website, in der App und im Print.",
+        "kicker": "Website oder ganze Anwendung",
+        "title": "Web-Entwicklung & Web-Apps",
+        "description": "Von der Website bis zur Full-Stack-Anwendung mit Login, Datenbank und API. So gebaut wie ProspectHub, mein eigenes Produkt im produktiven Betrieb.",
         "tags": [
           "Next.js",
-          "Contentful",
-          "WordPress"
+          "TypeScript",
+          "PostgreSQL"
         ],
         "href": "/services#content-management"
       },
@@ -98,12 +98,12 @@
       },
       {
         "icon": "Sparkles",
-        "kicker": "Intelligent automatisieren",
-        "title": "KI-Publishing-Lösungen",
-        "description": "Metadaten, OCR, Transkription. Evaluiert, datenschutzkonform und produktiv im Einsatz.",
+        "kicker": "Einsetzen und weitergeben",
+        "title": "KI-Lösungen & Schulungen",
+        "description": "KI-Workflows im Publishing und im Tagesgeschäft, evaluiert und datenschutzkonform. Dazu Hands-on-Workshops, damit dein Team selbst weiterbaut.",
         "tags": [
           "Claude Code",
-          "OCR",
+          "Workshops",
           "nDSG"
         ],
         "href": "/services#ai-publishing"

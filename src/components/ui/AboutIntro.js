@@ -5,7 +5,7 @@ const AboutIntro = ({ greeting, subtitle, description, image }) => {
   return (
     <div className={styles.aboutIntro}>
       <div className={styles.imageContainer}>
-        <img src={image} alt={greeting} />
+        <img src={image} alt={greeting} width="432" height="540" />
       </div>
       <div className={styles.content}>
         <h2 className={styles.greeting}>{greeting}</h2>

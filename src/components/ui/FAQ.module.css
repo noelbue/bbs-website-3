@@ -61,9 +61,20 @@
   color: var(--color-on-primary);
 }
 
+.faqHeading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
 .faqAnswer {
   padding: 0 1.25rem 1.2rem;
   animation: slideDown 0.25s ease-out;
+}
+
+.faqAnswer[hidden] {
+  display: none;
 }
 
 .faqAnswer p {

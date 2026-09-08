@@ -20,10 +20,20 @@ const ThemeToggle = ({ className = "" }) => {
 
   useEffect(() => {
     setTheme(currentTheme());
+    // Solange keine explizite Wahl getroffen wurde, folgt das CSS der
+    // Systemeinstellung. Der Button muss diesem Wechsel folgen, sonst zeigt er
+    // nach einem Systemwechsel die falsche Beschriftung an.
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const onSystemChange = () => {
+      if (!document.documentElement.dataset.theme) setTheme(currentTheme());
+    };
+    media.addEventListener("change", onSystemChange);
+    return () => media.removeEventListener("change", onSystemChange);
   }, []);
 
   const toggle = () => {
-    const next = theme === "dark" ? "light" : "dark";
+    // Vom tatsächlich wirksamen Modus ausgehen, nicht vom zuletzt gerenderten.
+    const next = currentTheme() === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = next;
     try {
       window.localStorage.setItem(STORAGE_KEY, next);

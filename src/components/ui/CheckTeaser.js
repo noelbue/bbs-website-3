@@ -1,6 +1,7 @@
 import React from "react";
 import { Gauge, ShieldCheck, Scale, Sparkles, ArrowRight } from "lucide-react";
 import Button from "./Button";
+import SmartLink from "./SmartLink";
 import * as styles from "./CheckTeaser.module.css";
 
 const ICONS = { Gauge, ShieldCheck, Scale, Sparkles };
@@ -25,7 +26,7 @@ const CheckTeaser = ({ data }) => {
               <span className={styles.note}>{data.note}</span>
             </div>
           </div>
-          <a href={data.cta.href} className={styles.preview} aria-label={data.cta.text}>
+          <SmartLink href={data.cta.href} className={styles.preview} aria-label={data.cta.text}>
             <span className={styles.previewHead}>
               <span className={styles.previewLabel}>Beispiel-Ergebnis</span>
               <span className={styles.previewScore}>
@@ -51,7 +52,7 @@ const CheckTeaser = ({ data }) => {
             <span className={styles.previewFoot}>
               Report öffnen <ArrowRight size={14} aria-hidden="true" />
             </span>
-          </a>
+          </SmartLink>
         </div>
       </div>
     </section>

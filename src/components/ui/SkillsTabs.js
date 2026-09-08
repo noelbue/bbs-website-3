@@ -72,6 +72,7 @@ const SkillsTabs = ({ categories = [] }) => {
         role="tabpanel"
         id="skills-panel"
         aria-labelledby={`skills-tab-${active}`}
+        tabIndex={0}
       >
         <h3 className={styles.paneTitle}>{current.title}</h3>
         {current.description && (

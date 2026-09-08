@@ -6,9 +6,9 @@ const site = {
   title: "Bürgler Business Solutions",
   shortName: "B-Business",
   description:
-    "Publishing-Technologie Experte aus der Schweiz. Spezialisiert auf Publishing-Automatisierung, Web-Entwicklung, System-Integration und KI-gestützte Lösungen.",
+    "Publishing-Technologie Experte aus der Schweiz. Spezialisiert auf Publishing-Automatisierung, Web-Entwicklung und Web-Apps, System-Integration sowie KI-Lösungen und KI-Schulungen.",
   keywords:
-    "Publishing Automatisierung, InDesign Server, Enfocus Switch, Web-Entwicklung, React, TypeScript, IT-Beratung, Schweiz, Publishing-Workflows, Content Management",
+    "Publishing Automatisierung, InDesign Server, Enfocus Switch, Web-Entwicklung, Web-App Entwicklung, React, Next.js, TypeScript, KI-Schulung, Claude Code Workshop, IT-Beratung, Schweiz, Publishing-Workflows, Content Management",
   siteUrl: "https://b-business-solutions.ch",
   author: "Noel Bürgler",
   image: "/og-image.png",

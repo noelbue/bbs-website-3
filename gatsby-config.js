@@ -1,6 +1,13 @@
 const site = require("./src/data/site");
 
+// Wird ins Client-Bundle eingebettet, damit das Copyright-Jahr im statischen
+// HTML und nach der Hydration identisch ist.
+process.env.GATSBY_BUILD_YEAR = String(new Date().getFullYear());
+
 module.exports = {
+  // Explizit statt implizit: Seiten werden mit abschliessendem Slash
+  // ausgeliefert, Canonicals und Sitemap verwenden dieselbe Form.
+  trailingSlash: "always",
   siteMetadata: {
     title: site.title,
     description: site.description,

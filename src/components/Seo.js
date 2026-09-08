@@ -25,16 +25,24 @@ const knowsAbout = [
   "XMPie",
   "Headless CMS",
   "Web-Entwicklung",
+  "Web-Apps",
+  "SaaS-Entwicklung",
+  "Full-Stack-Entwicklung",
   "React",
   "Next.js",
   "TypeScript",
   "Node.js",
+  "PostgreSQL",
   "System-Integration",
   "REST APIs",
   "Solution Architecture",
   "Requirements Engineering",
   "KI-gestützte Entwicklung",
   "Agentic Coding",
+  "Agentic Engineering",
+  "Claude Code",
+  "KI-Schulungen",
+  "KI-Workshops",
 ];
 
 const buildGraph = ({ url, title, description, pathname, schema }) => {
@@ -81,7 +89,7 @@ const buildGraph = ({ url, title, description, pathname, schema }) => {
         email: siteMetadata.email,
         telephone: siteMetadata.phone,
         availableLanguage: ["de", "en"],
-        url: `${siteUrl}/kontakt`,
+        url: `${siteUrl}/kontakt/`,
       },
     },
     {
@@ -89,7 +97,7 @@ const buildGraph = ({ url, title, description, pathname, schema }) => {
       "@id": personId,
       name: siteMetadata.author,
       jobTitle: "Solution Architect & Publishing-Technologie-Experte",
-      url: `${siteUrl}/ueber-mich`,
+      url: `${siteUrl}/ueber-mich/`,
       worksFor: { "@id": orgId },
       knowsAbout,
       sameAs: siteMetadata.sameAs,
@@ -143,10 +151,15 @@ const SEO = ({
   noindex = false,
   children,
 }) => {
+  // Gatsby liefert die Seiten mit abschliessendem Slash aus (trailingSlash:
+  // "always"). Canonical, OG-URL und JSON-LD müssen dieselbe Form verwenden,
+  // sonst zeigen sie auf eine Weiterleitung.
+  const canonicalPath = pathname.endsWith("/") ? pathname : `${pathname}/`;
+
   const seo = {
     title: title || siteMetadata.title,
     description: description || siteMetadata.description,
-    url: `${siteMetadata.siteUrl}${pathname}`,
+    url: `${siteMetadata.siteUrl}${canonicalPath}`,
     image: `${siteMetadata.siteUrl}${image || siteMetadata.image}`,
   };
 

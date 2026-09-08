@@ -13,10 +13,13 @@ const ProcessFlow = ({ steps = [] }) => {
   const [active, setActive] = useState(0);
   const [userPicked, setUserPicked] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [focused, setFocused] = useState(false);
   const reduceMotion = useReducedMotion();
   const pageVisible = usePageVisible();
   const tabRefs = useRef([]);
-  const auto = !userPicked && !hovered && pageVisible;
+  // Tastaturfokus stoppt die Rotation wie Hover: sonst wandert der aktive Tab
+  // unter dem fokussierten Element weg.
+  const auto = !userPicked && !hovered && !focused && pageVisible;
 
   useEffect(() => {
     if (!auto || reduceMotion || steps.length < 2) return undefined;
@@ -54,6 +57,10 @@ const ProcessFlow = ({ steps = [] }) => {
       data-reveal
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onFocusCapture={() => setFocused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
+      }}
     >
       <div className={styles.rail} aria-hidden="true">
         <span className={styles.railFill} style={{ width: `${progress}%` }} />
@@ -96,6 +103,7 @@ const ProcessFlow = ({ steps = [] }) => {
         role="tabpanel"
         id="process-panel"
         aria-labelledby={`process-tab-${active}`}
+        tabIndex={0}
       >
         <span className={styles.panelNumber}>{step.number}</span>
         <div className={styles.panelBody}>

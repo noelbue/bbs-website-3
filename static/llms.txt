@@ -1,23 +1,23 @@
 # Bürgler Business Solutions
 
-> Publishing-Technologie-Experte aus der Schweiz. Noel Bürgler automatisiert und integriert Print- und Digital-Publishing-Workflows (Adobe InDesign Server, Enfocus Switch, vjoon K4, EasyCatalog, XMPie), entwickelt Web-Anwendungen (React, Next.js, TypeScript, Node.js, Headless CMS) und begleitet Projekte als Solution Architect und Requirements Engineer, zunehmend mit KI-gestützter Entwicklung.
+> Publishing-Technologie-Experte aus der Schweiz. Noel Bürgler automatisiert und integriert Print- und Digital-Publishing-Workflows (Adobe InDesign Server, Enfocus Switch, vjoon K4, EasyCatalog, XMPie), entwickelt Websites und Full-Stack-Web-Apps (React, Next.js, TypeScript, Node.js, PostgreSQL, Headless CMS), baut KI-Workflows und hält Hands-on-Schulungen zu Coding-Agents, und begleitet Projekte als Solution Architect und Requirements Engineer.
 
 Sprache der Website: Deutsch (Schweiz). Standort: Horn TG, Schweiz. Einsatzgebiet: Schweiz, Deutschland, Österreich, Liechtenstein; remote oder vor Ort. Inhaber: Noel Bürgler, Polygraf EFZ, B.Sc. Computer Science (Abschluss 2027), über 10 Jahre Erfahrung mit Publishing-Systemen, u. a. für Red Bull Media House, Schweizerische Post, Swisstopo und Mattenbach Gruppe.
 
 ## Seiten
 
 - [Startseite](https://b-business-solutions.ch/): Überblick über Services, Arbeitsweise und Person.
-- [Services](https://b-business-solutions.ch/services): Publishing-Automatisierung, Content Management & Web-Entwicklung, System-Integration & APIs, KI-Publishing-Lösungen, Beratung & Projektleitung; Arbeitsweise, typische Projektgrössen, Support und FAQ.
-- [Über mich](https://b-business-solutions.ch/ueber-mich): Beruflicher Weg, Haltung, Werkzeuge nach Tiefe sortiert.
-- [Website-Check](https://b-business-solutions.ch/website-check): Kostenlose Analyse einer Website in zwei Minuten: Ladezeit, Sicherheit, Impressum und Datenschutz, KI-Bereitschaft; Report als Link, 90 Tage abrufbar.
-- [Kontakt](https://b-business-solutions.ch/kontakt): Kontaktmöglichkeiten, Verfügbarkeit, Ablauf einer Zusammenarbeit.
+- [Services](https://b-business-solutions.ch/services/): Publishing-Automatisierung, Web-Entwicklung & Content Management, System-Integration & APIs, KI-Lösungen & Schulungen, Beratung & Projektleitung; Arbeitsweise, typische Projektgrössen, Support und FAQ.
+- [Über mich](https://b-business-solutions.ch/ueber-mich/): Beruflicher Weg, Haltung, Werkzeuge nach Tiefe sortiert.
+- [Website-Check](https://b-business-solutions.ch/website-check/): Kostenlose Analyse einer Website in zwei Minuten: Ladezeit, Sicherheit, Impressum und Datenschutz, KI-Bereitschaft; Report als Link, 90 Tage abrufbar.
+- [Kontakt](https://b-business-solutions.ch/kontakt/): Kontaktmöglichkeiten, Verfügbarkeit, Ablauf einer Zusammenarbeit.
 
 ## Services
 
 - Publishing-Automatisierung: Content-First-Workflows (Headless CMS → InDesign Server → PDF/Web), InDesign-Server-Workflows und ExtendScript, Enfocus Switch inkl. Scripting Module (Node.js), vjoon K4 Integration und Customizing, EasyCatalog, Digital Asset Management (Sharedien, Frontify). Kein Lizenz-Partner dieser Tools, sondern unabhängiges Know-how aus der Praxis.
-- Content Management & Web-Entwicklung: Headless CMS (Contentful, Strapi), Custom-Entwicklung mit Next.js und React, WordPress-Themes und -Plugins.
+- Web-Entwicklung & Content Management: Full-Stack-Web-Apps und SaaS (Next.js, TypeScript, Prisma, PostgreSQL, Docker, Authentifizierung, Rollen, Hintergrundjobs, APIs), Websites und Custom-Frontends mit Next.js, React und Gatsby, Headless CMS (Contentful, Strapi), WordPress-Themes und -Plugins. Eigene Referenz: ProspectHub, eine selbst entwickelte und betriebene SaaS-Plattform.
 - System-Integration & APIs: REST- und GraphQL-APIs, XML/JSON-Datenverarbeitung, Datenbanken (PostgreSQL, MySQL, Microsoft SQL Server).
-- KI-Publishing-Lösungen: automatische Metadaten, Content-Automatisierung via APIs, interne KI-Plattformen mit lokalen Modellen (Open WebUI), OCR und Transkription; Evaluation und Datenschutz (nDSG) inklusive.
+- KI-Lösungen & Schulungen: KI-Schulungen und Hands-on-Workshops zu Coding-Agents (Claude Code, Codex, MCP, Agentic Engineering) in den Formaten Impuls (2 h), Workshop (½ Tag) und Deep Dive (1 Tag), inhouse oder remote, auf Deutsch; KI-Workflows im Tagesgeschäft ausserhalb von Publishing (Support-Triage, Offerten, Protokolle, Datenextraktion aus PDFs und Mails); automatische Metadaten, Content-Automatisierung via APIs, interne KI-Plattformen mit lokalen Modellen (Open WebUI), OCR und Transkription; Evaluation und Datenschutz (nDSG) inklusive.
 - Beratung & Projektleitung: Tool-Evaluation, Requirements Engineering, agile Umsetzung mit Scrum und Jira, Qualitätssicherung.
 
 ## Kontakt
@@ -30,8 +30,8 @@ Sprache der Website: Deutsch (Schweiz). Standort: Horn TG, Schweiz. Einsatzgebie
 
 ## Rechtliches
 
-- [Impressum](https://b-business-solutions.ch/impressum)
-- [Datenschutz](https://b-business-solutions.ch/datenschutz): keine Cookies, kein Tracking.
+- [Impressum](https://b-business-solutions.ch/impressum/)
+- [Datenschutz](https://b-business-solutions.ch/datenschutz/): keine Cookies, kein Tracking.
 
 ## Optional
 

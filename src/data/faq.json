@@ -35,7 +35,15 @@
     },
     {
       "question": "Bietest du auch Schulungen an?",
-      "answer": "Ja, gerne! Ob für dein Team zu Enfocus Switch, InDesign Server, Workflow-Optimierung oder Web-Entwicklung: Ich erkläre die Systeme so, dass sie jeder versteht und selbst weiterarbeiten kann."
+      "answer": "Ja, gerne! Zu Enfocus Switch, InDesign Server, Workflow-Optimierung und Web-Entwicklung, und seit einiger Zeit vor allem zu KI: Hands-on-Workshops zu Coding-Agents wie Claude Code, vom zweistündigen Impuls bis zum ganztägigen Deep Dive. Geübt wird am eigenen Projekt, nicht an Beispielcode."
+    },
+    {
+      "question": "Was genau lernt mein Team in einem KI-Workshop?",
+      "answer": "Wie Coding-Agents unter der Haube funktionieren (Tool Use, Agent Loop, MCP), wie man sie sinnvoll konfiguriert und absichert, welche Patterns funktionieren und welche nicht, und wie ein eigener wiederverwendbarer Workflow entsteht. Dazu die unbequemen Teile: Review-Pflicht, Scope-Grenzen, Datenschutz nach nDSG und eine ehrliche Einordnung, wo KI nichts bringt."
+    },
+    {
+      "question": "Entwickelst du auch Web-Apps, nicht nur Websites?",
+      "answer": "Ja. Vom Login über Rollen und Berechtigungen bis zu Datenbank, Hintergrundjobs, API und Deployment. Mein eigenes Produkt ProspectHub ist genau das: eine Full-Stack-SaaS-Anwendung mit Next.js, TypeScript, PostgreSQL und Docker, die ich selbst entwickle und betreibe."
     },
     {
       "question": "Was kostet ein Projekt ungefähr?",

@@ -93,3 +93,7 @@ yarn-error.log
 *.swp
 *.swo
 *~
+
+# Nicht freigegebene Kundeninhalte (Entwürfe): weder ins Bundle noch ins
+# öffentliche Repository. Erst nach Freigabe nach src/data/ übernehmen.
+content/drafts/

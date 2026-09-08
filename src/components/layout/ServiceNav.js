@@ -13,9 +13,9 @@ import * as styles from "./ServiceNav.module.css";
 
 const navItems = [
   { id: "publishing-automation", icon: Zap, label: "Publishing-Automatisierung" },
-  { id: "content-management", icon: Layers, label: "Content & Web" },
+  { id: "content-management", icon: Layers, label: "Web & Web-Apps" },
   { id: "system-integration", icon: Plug, label: "System-Integration" },
-  { id: "ai-publishing", icon: Sparkles, label: "KI-Publishing" },
+  { id: "ai-publishing", icon: Sparkles, label: "KI & Schulungen" },
   { id: "consulting", icon: Compass, label: "Beratung" },
 ];
 

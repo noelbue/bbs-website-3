@@ -70,3 +70,13 @@
 .btn:hover .icon {
   transform: translateX(3px);
 }
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn:disabled:hover .icon {
+  transform: none;
+}

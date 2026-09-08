@@ -74,21 +74,27 @@
     },
     {
       "id": "content-management",
-      "category": "Content Management & Web-Entwicklung",
-      "title": "Moderne Content-Lösungen und Web-Entwicklung",
-      "subtitle": "Content-First Ansätze: Vom klassischen CMS bis zu modernen Headless-Architekturen",
+      "category": "Web-Entwicklung & Content Management",
+      "title": "Websites, Web-Apps und Content-Systeme",
+      "subtitle": "Von der Website über das Headless CMS bis zur eigenen Web-App: konzipiert, entwickelt, betrieben",
       "offerings": [
+        {
+          "title": "Full-Stack Web-Apps & SaaS",
+          "description": "Nicht nur Frontend, sondern die ganze Anwendung: Login und Rollen, Datenbank, Hintergrundjobs, APIs, Deployment. Mein eigenes Produkt ProspectHub läuft so im produktiven Betrieb, mit Next.js, TypeScript, PostgreSQL und Docker. Ich kenne also nicht nur die Entwicklung, sondern auch den Betrieb danach.",
+          "icon": "AppWindow",
+          "result": "Vom Login bis zum Deployment"
+        },
+        {
+          "title": "Websites & Custom Frontends",
+          "description": "Next.js, React oder Gatsby, je nachdem was passt. Schnelle, barrierearme und wartbare Websites, die auch dann noch gut sind, wenn ich nicht mehr daran arbeite. Inklusive Performance-Budget und sauberen Meta-Daten.",
+          "icon": "Code",
+          "result": "Schnell, wartbar, massgeschneidert"
+        },
         {
           "title": "Headless CMS & Content-First",
           "description": "Moderne Content-First Architekturen mit Strapi oder Contentful. Inhalte einmal pflegen, überall nutzen: Website, App, Print, alles aus einer Quelle.",
           "icon": "Layers",
           "result": "Einmal pflegen, überall ausspielen"
-        },
-        {
-          "title": "Custom Web-Entwicklung",
-          "description": "Next.js für performante Anwendungen, React für spezielle Anforderungen. Ich entwickle massgeschneiderte Web-Lösungen, die genau zu deinen Bedürfnissen passen: modern, schnell, wartbar.",
-          "icon": "Code",
-          "result": "Schnell, wartbar, massgeschneidert"
         },
         {
           "title": "WordPress Development",
@@ -101,16 +107,19 @@
         {
           "title": "Stack",
           "items": [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Node.js",
+            "Prisma",
+            "PostgreSQL",
+            "Docker",
+            "Gatsby",
             "Contentful",
             "Strapi",
             "WordPress",
             "Drupal",
             "Craft CMS",
-            "Next.js",
-            "React",
-            "Gatsby",
-            "Node.js",
-            "Express",
             "REST APIs"
           ],
           "variant": "chips"
@@ -118,17 +127,28 @@
         {
           "title": "Wann welche Lösung?",
           "items": [
+            "Web-App → Eigene Logik, Benutzerkonten, Daten, die nicht in ein CMS passen",
             "Headless CMS → Content-First, Multi-Channel, moderne Architekturen",
             "WordPress → Klassische Websites, Blogs, einfache Shops",
             "Drupal → Enterprise, komplexe Strukturen, hohe Sicherheitsanforderungen",
             "Custom → Spezielle Anforderungen, die Standard-CMS nicht abdecken"
           ],
           "variant": "note"
+        },
+        {
+          "title": "Referenz aus eigener Hand",
+          "items": [
+            "ProspectHub: SaaS-Plattform, die ich selbst entwickle und betreibe",
+            "Next.js, React, TypeScript, Prisma, PostgreSQL, Redis, Docker",
+            "Mehrbenutzer mit Organisationen und Rollen, Hintergrundjobs, öffentliche API",
+            "Automatisierte Tests (Vitest, Playwright) und Deployment-Pipeline"
+          ],
+          "variant": "note"
         }
       ],
       "cta": {
-        "hook": "Eine Quelle für Web, App und Print. Schauen wir, ob das für dich passt.",
-        "subject": "Erstgespräch: Content Management & Web",
+        "hook": "Website, Web-App oder beides? Skizzier mir grob, was entstehen soll.",
+        "subject": "Erstgespräch: Web-Entwicklung & Web-Apps",
         "note": "Kostenloses Erstgespräch · Antwort innert 24 h"
       }
     },
@@ -190,10 +210,22 @@
     },
     {
       "id": "ai-publishing",
-      "category": "KI-Publishing-Lösungen",
-      "title": "KI-gestützte Optimierung für Publishing",
-      "subtitle": "Intelligente Automatisierung für moderne Publishing-Prozesse",
+      "category": "KI-Lösungen & Schulungen",
+      "title": "KI dort einsetzen, wo sie wirklich etwas bringt",
+      "subtitle": "Von KI im Publishing über Workflows im Tagesgeschäft bis zur Schulung für dein Team",
       "offerings": [
+        {
+          "title": "KI-Schulungen & Workshops",
+          "description": "Hands-on-Workshops für Teams: Wie Coding-Agents unter der Haube funktionieren, wo sie helfen, wo sie scheitern, und wie ein eigener Workflow entsteht. Geübt wird am eigenen Projekt, nicht an Beispielcode. Inhouse oder remote, auf Deutsch.",
+          "icon": "GraduationCap",
+          "result": "Team, das eigene Workflows baut"
+        },
+        {
+          "title": "KI-Workflows im Tagesgeschäft",
+          "description": "Wiederkehrende Büroarbeit automatisieren, auch abseits von Publishing: Support-Anfragen vorsortieren, Offerten und Protokolle vorbereiten, Daten aus PDFs und Mails herausziehen, Recherchen bündeln. Zuerst rechnen wir durch, ob es sich lohnt, dann bauen wir es.",
+          "icon": "Workflow",
+          "result": "Weniger Copy-Paste im Alltag"
+        },
         {
           "title": "Automatische Metadaten-Generierung",
           "description": "KI-basierte Systeme für intelligente Verschlagwortung und automatische Kategorisierung. Grosse Datenmengen organisieren sich praktisch von selbst.",
@@ -218,6 +250,8 @@
           "title": "Stack",
           "items": [
             "Claude Code",
+            "Codex",
+            "MCP",
             "OpenAI API",
             "Mistral OCR",
             "Whisper",
@@ -226,11 +260,30 @@
             "Lokale LLMs"
           ],
           "variant": "chips"
+        },
+        {
+          "title": "Schulungsformate",
+          "items": [
+            "Impuls (2 h): Autonomie-Spektrum, wie Agents arbeiten, Live-Demo",
+            "Workshop (½ Tag): Setup und Konfiguration, Patterns, Übung am eigenen Repository",
+            "Deep Dive (1 Tag): Skills, Agents und Hooks, ein fertiger Workflow pro Team",
+            "Follow-up nach 4–6 Wochen: Was läuft, was hakt, was kommt als Nächstes"
+          ],
+          "variant": "note"
+        },
+        {
+          "title": "Aus der Praxis, nicht aus dem Kurs",
+          "items": [
+            "Workshop «Agentic Engineering»: selbst konzipiert und durchgeführt",
+            "Agentic Coding täglich im produktiven Einsatz, nicht nur in Demos",
+            "Klare Leitplanken statt Hype: Review-Pflicht, kleiner Scope, Tests, nDSG-Abklärung"
+          ],
+          "variant": "note"
         }
       ],
       "cta": {
-        "hook": "Ein konkreter Anwendungsfall genügt für eine ehrliche Einschätzung, ob KI hier hilft.",
-        "subject": "Erstgespräch: KI im Publishing",
+        "hook": "Ein konkreter Anwendungsfall oder ein Team, das weiterkommen will: beides ist ein guter Start.",
+        "subject": "Erstgespräch: KI-Lösungen & Schulungen",
         "note": "Kostenloses Erstgespräch · Antwort innert 24 h"
       }
     },
@@ -304,7 +357,7 @@
       {
         "icon": "Target",
         "title": "Fokussiert",
-        "description": "Spezialisiert auf Publishing-Technologie statt auf alles ein bisschen."
+        "description": "Spezialisiert auf Publishing, Web und Automatisierung statt auf alles ein bisschen."
       },
       {
         "icon": "MessageCircle",
@@ -331,6 +384,7 @@
           "WordPress-Setup",
           "Switch-Flow",
           "InDesign-Script",
+          "KI-Workshop",
           "Website-Check"
         ]
       },
@@ -341,6 +395,7 @@
         "description": "Ein System einführen oder zwei Systeme miteinander verbinden.",
         "examples": [
           "CMS-Implementation",
+          "Web-App MVP",
           "Tool-Integration",
           "API-Anbindung",
           "Katalog-Automation"

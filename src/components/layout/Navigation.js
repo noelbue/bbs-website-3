@@ -40,13 +40,14 @@ const Navigation = () => {
   return (
     <header className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <nav className={styles.container} aria-label="Hauptnavigation">
-        <Link to="/" className={styles.logo}>
+        <Link to="/" className={styles.logo} aria-label="Bürgler Business Solutions, zur Startseite">
           <img
             src="/images/bbs-logo.svg"
-            alt="Bürgler Business Solutions"
+            alt=""
             width="48"
             height="48"
             className={styles.logoLight}
+            aria-hidden="true"
           />
           <img
             src="/images/bbs-logo-dark.svg"

@@ -6,7 +6,7 @@
   publish = "public"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
 
 # Serverless-Funktionen (Proxy für den ProspectHub Website-Check)
 [functions]

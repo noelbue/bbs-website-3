@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import Chip from "./Chip";
+import SmartLink from "./SmartLink";
 import * as styles from "./ServiceCard.module.css";
 
 /**
@@ -33,9 +34,9 @@ const ServiceCard = ({
       {kicker && <span className={styles.kicker}>{kicker}</span>}
       <h3 className={styles.title}>
         {href ? (
-          <a href={href} className={styles.link}>
+          <SmartLink href={href} className={styles.link}>
             {title}
-          </a>
+          </SmartLink>
         ) : (
           title
         )}

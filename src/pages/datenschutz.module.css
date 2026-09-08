@@ -10,6 +10,8 @@
 }
 
 .section {
+  /* Sprungziel nicht unter den fixierten Header schieben */
+  scroll-margin-top: 96px;
   margin-bottom: var(--spacing-lg);
 }
 
@@ -85,5 +87,11 @@
   .section p,
   .section li {
     font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    scroll-margin-top: 76px;
   }
 }

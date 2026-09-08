@@ -58,9 +58,13 @@ const DatenschutzPage = () => {
             <section className={styles.section}>
               <h2>Erhebung und Verarbeitung personenbezogener Daten</h2>
               <p>
-                Diese Website erhebt derzeit keine personenbezogenen Daten
-                aktiv. Es gibt kein Kontaktformular und keine
-                Newsletter-Anmeldung auf dieser Website.
+                Beim blossen Betrachten dieser Website erheben wir keine
+                personenbezogenen Daten: Es gibt kein Kontaktformular, keine
+                Newsletter-Anmeldung, keine Cookies und kein Tracking. Daten
+                erheben wir nur dort, wo Sie sie selbst eingeben, nämlich beim{" "}
+                <a href="#website-check">Website-Check</a> (Website-Adresse,
+                E-Mail-Adresse, optional Name und Firma). Die Einzelheiten dazu
+                stehen weiter unten.
               </p>
               <p>
                 Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben
@@ -113,8 +117,9 @@ const DatenschutzPage = () => {
                 Auf der Seite «Website-Check» können Sie eine Website-Adresse
                 und Ihre E-Mail-Adresse eingeben, um eine technische Analyse zu
                 erhalten (Ladezeit, Sicherheit, Impressum und
-                Datenschutzerklärung, KI-Lesbarkeit). Die Analyse führt
-                ProspectHub (Schweiz) in unserem Auftrag durch. Für die
+                Datenschutzerklärung, KI-Lesbarkeit). Die Analyse führt unsere
+                eigene Plattform ProspectHub (Schweiz) durch, die ebenfalls von
+                Bürgler Business Solutions betrieben wird. Für die
                 Messung der Ladezeit wird die Website-Adresse an die Google
                 PageSpeed Insights API übermittelt.
               </p>
@@ -140,11 +145,12 @@ const DatenschutzPage = () => {
                 Cookies für Analyse- oder Werbezwecke.
               </p>
               <p>
-                Für die technische Funktion der Website (z.B.
-                Session-Management, Navigation) kann der Browser temporär Daten
-                im Session Storage speichern. Diese Daten werden automatisch
-                gelöscht, sobald Sie den Browser schliessen, und enthalten keine
-                personenbezogenen Informationen.
+                Wenn Sie den Hell-/Dunkel-Schalter verwenden, speichert Ihr
+                Browser diese Wahl lokal (Local Storage, Schlüssel
+                «bbs-theme»). Der Wert verlässt Ihr Gerät nicht, wird nicht an
+                uns übermittelt und enthält keine personenbezogenen
+                Informationen. Sie können ihn jederzeit über die Einstellungen
+                Ihres Browsers löschen.
               </p>
             </section>
 

@@ -1,24 +1,18 @@
 import "./src/styles/global.css";
 
-const scrollToTopInstant = () => {
-  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-};
-
 /**
- * Beim Wechsel auf eine andere Seite sofort nach oben springen (kein
- * Smooth-Scroll vom Seitenende). Anker-Links überlässt Gatsby dem Standard.
+ * Gatsby kümmert sich selbst um die Scroll-Position: Seitenanfang bei neuer
+ * Navigation, gemerkte Position bei Browser-Zurück. Wir schalten dafür nur
+ * kurz das globale Smooth-Scrolling ab, damit der Wechsel nicht vom
+ * Seitenende her animiert wird.
  */
-export const shouldUpdateScroll = ({ routerProps: { location }, prevRouterProps }) => {
-  if (location.hash) return true;
-  const prevPath = prevRouterProps ? prevRouterProps.location.pathname : null;
-  if (prevPath !== location.pathname) {
-    scrollToTopInstant();
-    return false;
-  }
+export const shouldUpdateScroll = ({ routerProps: { location } }) => {
+  if (location.hash) return true; // Anker-Sprünge dürfen weich scrollen
+  const html = document.documentElement;
+  const previous = html.style.scrollBehavior;
+  html.style.scrollBehavior = "auto";
+  window.requestAnimationFrame(() => {
+    html.style.scrollBehavior = previous;
+  });
   return true;
-};
-
-export const onRouteUpdate = ({ location, prevLocation }) => {
-  if (!prevLocation || location.hash) return;
-  if (prevLocation.pathname !== location.pathname) scrollToTopInstant();
 };

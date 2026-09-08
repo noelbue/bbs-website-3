@@ -74,15 +74,31 @@ const NETWORK_ERROR = {
   message: "Keine Verbindung. Prüfe deine Internetverbindung und versuch es nochmals.",
 };
 
+/**
+ * Prüft den Hostnamen über den URL-Parser statt über eine Zeichenliste: der
+ * Parser normalisiert internationale Domains nach Punycode, womit auch «ß»
+ * (straße.ch) korrekt akzeptiert wird.
+ */
+const hostnameIssue = (url) => {
+  let parsed;
+  try {
+    parsed = new URL(/^[a-z][a-z0-9+.-]*:\/\//i.test(url) ? url : `https://${url}`);
+  } catch {
+    return true;
+  }
+  const host = parsed.hostname;
+  if (/^\d+(\.\d+){3}$/.test(host)) return true;
+  return !/^[a-z0-9-]+(\.[a-z0-9-]+)+$/i.test(host);
+};
+
 /** Formatfehler abfangen, bevor die Anfrage rausgeht. */
 const validate = (form) => {
   const errors = {};
   const url = form.url.trim();
-  const host = url.replace(/^https?:\/\//i, "").split(/[/?#]/)[0];
   if (!url) errors.url = "Bitte gib die Adresse deiner Website ein.";
-  else if (/^https?:\/\//i.test(url) === false && /:\/\//.test(url)) {
+  else if (/^[a-z][a-z0-9+.-]*:\/\//i.test(url) && !/^https?:\/\//i.test(url)) {
     errors.url = "Wir prüfen nur http- und https-Adressen.";
-  } else if (!/^[a-z0-9\u00e0-\u00ff-]+(\.[a-z0-9\u00e0-\u00ff-]+)+$/i.test(host) || /^\d+(\.\d+){3}$/.test(host)) {
+  } else if (hostnameIssue(url)) {
     errors.url = "Bitte gib eine gültige Website-Adresse ein, zum Beispiel www.deine-website.ch.";
   }
   const email = form.email.trim();
@@ -110,15 +126,27 @@ const gradeTone = (grade) =>
 const formatSeconds = (ms) => `${(ms / 1000).toFixed(1).replace(".", ",")} s`;
 
 /** Vier Noten aus dem API-Ergebnis. Die KI-Note liefert ProspectHub direkt. */
+const SECURITY_KEYS = ["https", "hsts", "csp", "xframe"];
+const LEGAL_KEYS = ["impressum", "datenschutz"];
+
+/** Ein Teilbereich zählt nur als gemessen, wenn mindestens ein Wert gesetzt ist. */
+const wasMeasured = (section, keys) =>
+  Boolean(section) &&
+  typeof section === "object" &&
+  keys.some((key) => section[key] !== undefined && section[key] !== null);
+
 const buildGrades = (result) => {
   const scores = result.scores || {};
   const perf = scores.performance || {};
   const security = scores.security || {};
   const legal = scores.legal || {};
-  const securityOk = ["https", "hsts", "csp", "xframe"].filter((key) => security[key]).length;
-  const legalOk = ["impressum", "datenschutz"].filter((key) => legal[key]).length;
-  const legalNote =
-    legalOk === 2
+  const securityMeasured = wasMeasured(scores.security, SECURITY_KEYS);
+  const legalMeasured = wasMeasured(scores.legal, LEGAL_KEYS);
+  const securityOk = SECURITY_KEYS.filter((key) => security[key]).length;
+  const legalOk = LEGAL_KEYS.filter((key) => legal[key]).length;
+  const legalNote = !legalMeasured
+    ? "Keine Messung möglich"
+    : legalOk === 2
       ? "Impressum und Datenschutz vorhanden"
       : legalOk === 1
         ? `${legal.impressum ? "Datenschutzerklärung" : "Impressum"} fehlt`
@@ -133,13 +161,15 @@ const buildGrades = (result) => {
     {
       icon: <ShieldCheck size={20} aria-hidden="true" />,
       label: "Sicherheit",
-      grade: COUNT_GRADES[securityOk],
-      note: `${securityOk} von 4 Schutzmassnahmen aktiv`,
+      grade: securityMeasured ? COUNT_GRADES[securityOk] : "–",
+      note: securityMeasured
+        ? `${securityOk} von 4 Schutzmassnahmen aktiv`
+        : "Keine Messung möglich",
     },
     {
       icon: <Scale size={20} aria-hidden="true" />,
       label: "Rechtliches",
-      grade: legalOk === 2 ? "A" : legalOk === 1 ? "D" : "F",
+      grade: !legalMeasured ? "–" : legalOk === 2 ? "A" : legalOk === 1 ? "D" : "F",
       note: legalNote,
     },
     {
@@ -162,8 +192,30 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
   const [mailState, setMailState] = useState("idle"); // idle | sending | sent | already | error
   const timer = useRef(0);
   const startedAt = useRef(0);
+  // Jede Ausführung bekommt eine eigene ID: verspätete Antworten einer
+  // abgebrochenen oder ersetzten Ausführung dürfen keinen State mehr setzen.
+  const runId = useRef(0);
+  const abort = useRef(null);
+  const busy = useRef(false);
+  const mounted = useRef(true);
+  const urlField = useRef(null);
 
-  useEffect(() => () => window.clearTimeout(timer.current), []);
+  /** Laufende Anfrage und Timer beenden und die aktuelle Ausführung entwerten. */
+  const cancelRun = () => {
+    window.clearTimeout(timer.current);
+    abort.current?.abort();
+    abort.current = null;
+    runId.current += 1;
+    return runId.current;
+  };
+
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+      cancelRun();
+    };
+  }, []);
 
   const update = (field) => (event) => {
     const value = event.target.type === "checkbox" ? event.target.checked : event.target.value;
@@ -171,9 +223,15 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
     setFieldErrors((prev) => (prev[field] ? { ...prev, [field]: undefined } : prev));
   };
 
-  const poll = async (id) => {
+  const poll = async (id, run) => {
+    const stale = () => !mounted.current || runId.current !== run;
     try {
-      const res = await fetch(`${ENDPOINT}?id=${encodeURIComponent(id)}`, { cache: "no-store" });
+      abort.current = new AbortController();
+      const res = await fetch(`${ENDPOINT}?id=${encodeURIComponent(id)}`, {
+        cache: "no-store",
+        signal: abort.current.signal,
+      });
+      if (stale()) return;
       if (!res.ok) {
         const info = await describeError(res);
         throw new Error(
@@ -183,6 +241,7 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
         );
       }
       const data = await res.json();
+      if (stale()) return;
       if (data.status === "done") {
         setCheck(data);
         setPhase("done");
@@ -201,8 +260,9 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
         setPhase("failed");
         return;
       }
-      timer.current = window.setTimeout(() => poll(id), elapsed < 30_000 ? 3000 : 5000);
+      timer.current = window.setTimeout(() => poll(id, run), elapsed < 30_000 ? 3000 : 5000);
     } catch (err) {
+      if (stale() || err?.name === "AbortError") return;
       setErrorMsg(err instanceof TypeError ? NETWORK_ERROR.message : err.message);
       setPhase("failed");
     }
@@ -210,6 +270,9 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
 
   const submit = async (event) => {
     event.preventDefault();
+    // Sperre synchron setzen: ein zweiter Klick vor dem ersten Re-Render darf
+    // keinen zweiten Check und keinen zweiten Polling-Timer erzeugen.
+    if (busy.current) return;
     setErrorMsg("");
     const errors = validate(form);
     if (Object.keys(errors).length > 0) {
@@ -218,24 +281,32 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
       event.currentTarget.querySelector(`[name="${first}"]`)?.focus();
       return;
     }
+    busy.current = true;
+    const run = cancelRun();
+    const stale = () => !mounted.current || runId.current !== run;
     setFieldErrors({});
     setPhase("submitting");
     try {
       let res;
       try {
+        abort.current = new AbortController();
         res = await fetch(ENDPOINT, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ ...form, campaign }),
+          signal: abort.current.signal,
         });
-      } catch {
+      } catch (err) {
+        if (stale() || err?.name === "AbortError") return;
         throw Object.assign(new Error(NETWORK_ERROR.message), { info: NETWORK_ERROR });
       }
+      if (stale()) return;
       if (!res.ok) {
         const info = await describeError(res);
         throw Object.assign(new Error(info.message), { info });
       }
       const data = await res.json();
+      if (stale()) return;
       if (!data.id) throw new Error(UNAVAILABLE);
       setCheck(data);
       setMailState("idle");
@@ -251,8 +322,9 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
       startedAt.current = Date.now();
       setProgress(data.progress || { step: "queued", percent: 5 });
       setPhase("running");
-      timer.current = window.setTimeout(() => poll(data.id), 3000);
+      timer.current = window.setTimeout(() => poll(data.id, run), 3000);
     } catch (err) {
+      if (stale() || err?.name === "AbortError") return;
       if (err.info?.field) {
         setFieldErrors({ [err.info.field]: err.info.message });
         window.setTimeout(() => document.querySelector(`[name="${err.info.field}"]`)?.focus(), 0);
@@ -260,6 +332,8 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
         setErrorMsg(err.message);
       }
       setPhase("idle");
+    } finally {
+      busy.current = false;
     }
   };
 
@@ -279,10 +353,14 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
   };
 
   const reset = () => {
-    window.clearTimeout(timer.current);
+    cancelRun();
+    busy.current = false;
     setCheck(null);
     setErrorMsg("");
     setPhase("idle");
+    // Nach dem Zurücksetzen verschwindet der geklickte Button: Fokus auf das
+    // erste Eingabefeld setzen, damit die Tastaturbedienung nicht abbricht.
+    window.setTimeout(() => urlField.current?.focus(), 0);
   };
 
   if (phase === "running") {
@@ -388,6 +466,7 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
           <input
             type="text"
             name="url"
+            ref={urlField}
             inputMode="url"
             placeholder="www.deine-website.ch"
             value={form.url}
@@ -445,8 +524,8 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
         />
         <span>
           Ich bin einverstanden, dass die angegebene Website technisch analysiert wird und Bürgler Business Solutions
-          mich per E-Mail zu den Ergebnissen kontaktieren darf. Die Analyse führt ProspectHub (Schweiz) in unserem
-          Auftrag durch, für die Ladezeitmessung wird die Adresse an die Google PageSpeed API übermittelt. Details in
+          mich per E-Mail zu den Ergebnissen kontaktieren darf. Die Analyse führt die eigene Plattform ProspectHub
+          (Schweiz) durch, für die Ladezeitmessung wird die Adresse an die Google PageSpeed API übermittelt. Details in
           der <a href="/datenschutz#website-check">Datenschutzerklärung</a>.
           {fieldErrors.consent && (
             <span className={styles.fieldError} id="wc-consent-error" role="alert">
@@ -456,7 +535,13 @@ const WebsiteCheck = ({ campaign = "website-check" }) => {
         </span>
       </label>
       <div className={styles.submitRow}>
-        <Button type="submit" variant="primary" icon className={styles.submit}>
+        <Button
+          type="submit"
+          variant="primary"
+          icon
+          className={styles.submit}
+          disabled={phase === "submitting"}
+        >
           {phase === "submitting" ? "Wird gestartet …" : "Website jetzt prüfen"}
         </Button>
         <span className={styles.hint}>Kostenlos, dauert ein bis zwei Minuten, Report 90 Tage abrufbar.</span>

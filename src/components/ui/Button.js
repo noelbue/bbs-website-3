@@ -12,6 +12,8 @@ const Button = ({
   onClick,
   type = "button",
   className = "",
+  disabled = false,
+  ...rest
 }) => {
   const classes = [
     styles.btn,
@@ -50,7 +52,7 @@ const Button = ({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} className={classes} disabled={disabled} {...rest}>
       {content}
     </button>
   );

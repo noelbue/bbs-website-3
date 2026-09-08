@@ -97,7 +97,9 @@ const IndexPage = () => {
         </div>
       </section>
 
-      {/* Success Story (nur mit Freigabe, siehe homeContent.caseStudy.enabled) */}
+      {/* Success Story: erst mit Kundenfreigabe. Der Entwurf liegt bewusst
+          ausserhalb von src/ (content/drafts/), damit nicht freigegebene
+          Kundendetails nicht im ausgelieferten JavaScript landen. */}
       <CaseStudy data={caseStudy} />
 
       {/* Warum ich */}

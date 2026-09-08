@@ -144,10 +144,10 @@
           "core": [
             "Agentic Coding mit Claude Code",
             "Prompt Engineering",
-            "KI-gestützte Entwicklung (Codex)",
-            "Workshops & Schulungen (Agentic Engineering)"
+            "KI-gestützte Entwicklung (Codex)"
           ],
           "solid": [
+            "Workshops & Schulungen (Agentic Engineering)",
             "Lokale LLMs (GPT-OSS, Qwen, Gemma)",
             "Whisper / WER & BLEU",
             "OCR / Document AI (Mistral)",

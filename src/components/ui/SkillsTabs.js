@@ -72,6 +72,9 @@ const SkillsTabs = ({ categories = [] }) => {
         role="tabpanel"
         id="skills-panel"
         aria-labelledby={`skills-tab-${active}`}
+        // Das WAI-Tabs-Pattern verlangt tabindex=0 auf einem Tabpanel ohne
+        // fokussierbare Kinder, sonst führt Tab aus dem Widget heraus.
+        // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={0}
       >
         <h3 className={styles.paneTitle}>{current.title}</h3>

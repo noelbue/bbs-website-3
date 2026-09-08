@@ -4,7 +4,7 @@ Corporate website for [Bürgler Business Solutions](https://b-business-solutions
 
 ## 🎯 Overview
 
-Professional website showcasing Publishing-Automation, Web Development, and IT Consulting services. Built with modern web technologies and optimized for performance, SEO, and user experience.
+Professional website showcasing Publishing-Automation, Web Development and Web Apps, System Integration, AI solutions and AI trainings, plus IT consulting. Built with modern web technologies and optimized for performance, SEO, accessibility and AI readability.
 
 ## 🛠 Tech Stack
 
@@ -23,22 +23,28 @@ Professional website showcasing Publishing-Automation, Web Development, and IT C
 - ✅ Performance optimized
 - ✅ Custom 404 page
 - ✅ Accessible (WCAG compliant)
-- ✅ Modern design system with CSS variables
+- ✅ Modern design system with CSS variables (light & dark theme)
 - ✅ No tracking, no cookies (privacy-first)
+- ✅ `llms.txt` for AI readability
+- ✅ Free website check via a Netlify Function proxy
 
 ## 📄 Pages
 
 ### Main Pages
 
 - **Home** (`/`) - Hero, Services Overview, About Preview
-- **Services** (`/services`) - Detailed service offerings with sticky navigation
-- **Über mich** (`/ueber-mich`) - Journey timeline, Expertise, Personal info
-- **Kontakt** (`/kontakt`) - Contact methods, Availability, Process, Social links
+- **Services** (`/services/`) - Five service areas with sticky navigation
+- **Über mich** (`/ueber-mich/`) - Journey timeline, Expertise, Personal info
+- **Kontakt** (`/kontakt/`) - Contact methods, Availability, Process, Social links
+- **Website-Check** (`/website-check/`) - Free technical analysis (load time, security, legal pages, AI readiness)
+
+URLs are served with a trailing slash (`trailingSlash: "always"`); canonicals,
+sitemap and JSON-LD all use that same form.
 
 ### Legal Pages
 
-- **Impressum** (`/impressum`) - Legal information (Swiss UWG compliant)
-- **Datenschutz** (`/datenschutz`) - Privacy policy (GDPR/DSGVO compliant)
+- **Impressum** (`/impressum/`) - Legal information (Swiss UWG compliant)
+- **Datenschutz** (`/datenschutz/`) - Privacy policy (GDPR/DSGVO compliant)
 
 ### System Pages
 
@@ -49,20 +55,30 @@ Professional website showcasing Publishing-Automation, Web Development, and IT C
 ```
 src/
 ├── components/
-│   ├── layout/          # Header, Footer, Navigation, CTA, ServiceNav
-│   ├── ui/              # Reusable UI components (Button, Card, etc.)
+│   ├── layout/          # Layout, Navigation, Footer, Cta, ServiceNav, ServiceSection
+│   ├── ui/              # Reusable UI components (Button, ServiceCard, Faq, …)
 │   └── Seo.js           # SEO component (Gatsby Head API, JSON-LD)
 ├── data/                # JSON content files
 │   ├── homeContent.json
 │   ├── services.json
 │   ├── aboutContent.json
 │   ├── contactContent.json
-│   └── faq.json
-├── fonts/              # SF Pro Display & SF Mono (local)
+│   ├── faq.json
+│   └── site.js          # Shared master data (also used by gatsby-config.js)
+├── fonts/              # SF Pro Display & SF Mono (local, only the faces in use)
+├── hooks/              # motion.js (reduced motion, page visibility)
 ├── pages/              # Gatsby pages (auto-routing)
 ├── styles/             # Global styles & CSS variables
 └── assets/             # Images, icons, favicon
+
+netlify/functions/      # website-check.mjs (proxy, keeps the API token server-side)
+static/                 # robots.txt, llms.txt, og-image, client logos
+content/drafts/         # Unreleased content, gitignored (never bundled)
 ```
+
+**Content that is not cleared for publication does not belong in `src/`.**
+Everything under `src/data/` ends up in the client bundle, even when a flag
+hides it at render time. Put drafts in `content/drafts/` instead.
 
 ## 🎨 Design System
 
@@ -127,8 +143,12 @@ gatsby clean
   publish = "public/"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "22"
 ```
+
+Security headers (HSTS, CSP, X-Frame-Options, nosniff, Referrer-Policy) are set
+in `netlify.toml`. They only apply to static files, so the Netlify Function sets
+its own headers.
 
 ## 🔍 SEO Features
 
@@ -139,7 +159,8 @@ gatsby clean
 - ✅ Automatic sitemap generation (`sitemap-index.xml`)
 - ✅ Robots.txt
 - ✅ Semantic HTML
-- ✅ Structured data ready
+- ✅ JSON-LD graph (Organization, Person, WebSite, WebPage, BreadcrumbList, Service, FAQPage)
+- ✅ `llms.txt` describing the site for AI agents
 
 ## 🔒 Privacy & Legal
 
@@ -150,6 +171,8 @@ gatsby clean
 - No third-party scripts
 - Locally hosted fonts (no Google Fonts)
 - Server logs only (Netlify)
+- Local storage is used for one thing only: the light/dark theme choice (`bbs-theme`)
+- The website check is the only form; what it stores is documented in `/datenschutz/#website-check`
 
 ### Legal Pages
 
@@ -186,14 +209,17 @@ Content is managed via JSON files in `src/data/`:
 
 ### Layout
 
-- `Header.js` - Sticky navigation with mobile menu
+- `Layout.js` - Page shell (skip link, main landmark)
+- `Navigation.js` - Sticky navigation with mobile menu and theme toggle
 - `Footer.js` - Legal links & copyright
-- `ServiceNav.js` - Sticky service quick navigation (collapsible)
+- `ServiceNav.js` - Sticky service quick navigation (collapsible, scroll spy)
 
 ### UI Components
 
-- `Button.js` - Primary, Secondary, Tertiary variants
-- `Card.js` - ServiceCard, InfoCard, WhyUsCard, etc.
+- `Button.js` - Primary, secondary and ghost variants; internal targets use Gatsby `Link`
+- `SmartLink.js` - Renders internal targets as Gatsby `Link`, everything else as `<a>`
+- `ServiceCard.js`, `OfferingCard.js`, `WhyUsCard.js` - Card variants
+- `WebsiteCheck.js` - Form, progress polling and result teaser
 - `SectionTitle.js` - Consistent section headings
 
 ### SEO
@@ -259,9 +285,11 @@ Consistent transitions on all interactive elements:
 
 - Lighthouse Score: 90+ (Performance, Accessibility, Best Practices, SEO)
 - Static site generation (SSG) for fast load times
-- Image optimization (Gatsby Image)
 - Code splitting (automatic)
 - CSS Modules (no unused CSS)
+
+Known trade-off: the seven locally hosted OTF faces total ~18 MB of source data.
+Converting them to subset WOFF2 is the biggest remaining performance win.
 
 ## 🏢 Company Information
 
@@ -300,7 +328,8 @@ Telefon: +41 78 783 28 14
 
 ## 🤝 Contributing
 
-This is a private corporate website. For inquiries, please contact:  
+This is a corporate website in a public repository. Do not commit unreleased
+client content. For inquiries, please contact:  
 **nb@b-business-solutions.ch**
 
 ## 📝 License
